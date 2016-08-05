@@ -1,36 +1,4 @@
 <!-- ####################################################################################################### -->
-<div class="wrapper col2">
-    <div id="topbar">
-        <div id="topnav">
-            <ul>
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="../../pages/style-demo.html">History</a></li>
-                <li><a href="../../pages/full-width.html">News</a></li>
-                <li><a href="#">Olympic Info</a>
-                    <ul>
-                        <li><a href="#">Stadions</a></li>
-                        <li><a href="#">Veneues</a></li>
-                        <li><a href="#">Sports</a></li>
-                        <li><a href="#">Shedule</a></li>
-                        <li><a href="#">...</a></li>
-                    </ul>
-                </li>
-                <li class="last"><a href="#">Contact Us</a></li>
-            </ul>
-        </div>
-        <div id="search">
-            <form action="#" method="post">
-                <fieldset>
-                    <legend>Site Search</legend>
-                    <input type="text" value="Search Our Website&hellip;"  onfocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;" />
-                    <input type="submit" name="go" id="go" value="Search" />
-                </fieldset>
-            </form>
-        </div>
-        <br class="clear" />
-    </div>
-</div>
-<!-- ####################################################################################################### -->
 <div class="wrapper col4">
     <div id="container">
         <div id="content">
