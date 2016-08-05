@@ -11,7 +11,7 @@
 
 </head>
 <body id="top">
-<div class="wrapper col1 span4">
+<div class="wrapper col1">
     <div id="header">
         <div class="fl_left">
             <h1><a href="index.html">Olympic Games 2016</a></h1>
