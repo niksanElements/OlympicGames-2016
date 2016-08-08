@@ -3,12 +3,7 @@
 <head>
     <title>Olympic Games 2016</title>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-    <link rel="stylesheet" href="content/styles/css/layout.css" type="text/css" />
-    <link rel="stylesheet" href="content/styles/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="content/styles/css/bootstrap-theme.min.css"/>
-    <script src="content/styles/js/jquery-3.1.0.min.js"></script>
-    <script src="content/styles/js/bootstrap.min.js"></script>
-
+    <link rel="stylesheet" href="content/styles/layout.css" type="text/css" />
 </head>
 <body id="top">
 <div class="wrapper col1">
@@ -24,14 +19,17 @@
     </div>
 </div>
 
+<?php require_once('show-notify-messages.php'); ?>
+
+<!-- ####################################################################################################### -->
 <div class="wrapper col2">
     <div id="topbar">
         <div id="topnav">
-            <ul class="row">
-                <li ><a href="index.html">Home</a></li>
-                <li ><a href="../../pages/style-demo.html">History</a></li>
-                <li ><a href="../../pages/full-width.html">News</a></li>
-                <li ><a href="#">Olympic Info</a>
+            <ul>
+                <li<?php if($this->controllerName == "home") echo " class=\"active\"" ?>><a href="index.html">Home</a></li>
+                <li><a href="../../pages/style-demo.html">History</a></li>
+                <li><a href="../../pages/full-width.html">News</a></li>
+                <li><a href="#">Olympic Info</a>
                     <ul>
                         <li><a href="#">Stadions</a></li>
                         <li><a href="#">Veneues</a></li>
@@ -55,5 +53,4 @@
         <br class="clear" />
     </div>
 </div>
-
-<?php require_once('show-notify-messages.php'); ?>
+<!-- ####################################################################################################### -->
