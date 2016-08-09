@@ -34,10 +34,10 @@
 <div class="wrapper col4">
     <div id="container">
         <div id="content">
-            <form id='register' action='./user/registration' method='post'
+            <form id='register' method='post'
                   accept-charset='UTF-8'>
                 <fieldset >
-                    <legend>Please Register</legend>
+                    <legend>Please, Register!</legend>
                     <input type='hidden' name='submitted' id='submitted' value='1'/>
 
                     <label for='fullName' >Write your Full Name*: </label>

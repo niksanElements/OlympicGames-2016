@@ -22,7 +22,7 @@ class UserController extends BaseController
                 $this -> setValidationError("password", "Invalid Password - password must be at least 3 symbols.");
             }
             if ($password != $passwordRepeat) {
-                $this -> setValidationError("password", "the 2 passwords do not match.");
+                $this -> setValidationError("password", "The 2 passwords do not match.");
             }
 
             $fullName =$_POST['fullName'];
