@@ -54,10 +54,25 @@ class UserController extends BaseController
 
     public function login()
     {
+        if($this->isPost){
+            $username = $_POST['username'];
+            $password = $_POST['password'];
+            $loggedUserID = $this->model->login($username, $password);
+            if ($loggedUserID){
+                $_SESSION['username']= $username;
+                $_SESSION['userID'] = $loggedUserID;
+                $this->addInfoMessage("Loggin successful.");
+                return $this->redirect("posts");
+            } else{
+                $this->addErrorMessage("Error: Login failed.");
+            }
+        }
 
     }
     public function logout()
     {
-
+        session_destroy();
+        $this->addInfoMessage("Logout successful.");
+        $this->redirect("");
     }
 }
