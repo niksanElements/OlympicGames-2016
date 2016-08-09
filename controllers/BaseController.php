@@ -51,6 +51,7 @@ abstract class BaseController
             $viewFileName = 'views/' . $this->controllerName . '/' . $viewName . '.php';
             include($viewFileName);
             $htmlFromView = ob_get_contents();
+
             ob_end_clean();
             if ($includeLayout) {
                 include('views/_layout/header.php');
