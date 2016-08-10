@@ -41,7 +41,7 @@ class UserController extends BaseController
                     $_SESSION['username'] = $username;
                     $_SESSION['userID'] = $userID;
                     $this -> addInfoMessage("Registration successful.");
-                    $this -> redirect('index.php');
+                    $this -> redirect('home');
                 }else{
                     $this->addErrorMessage("Registration failed. Try again.");
                 }
@@ -49,7 +49,7 @@ class UserController extends BaseController
 
             }
 
-            }
+        }
     }
 
     public function login()
@@ -62,7 +62,7 @@ class UserController extends BaseController
                 $_SESSION['username']= $username;
                 $_SESSION['userID'] = $loggedUserID;
                 $this->addInfoMessage("Loggin successful.");
-                return $this->redirect("posts");
+                return $this->redirect('home');
             } else{
                 $this->addErrorMessage("Error: Login failed.");
             }
@@ -73,6 +73,6 @@ class UserController extends BaseController
     {
         session_destroy();
         $this->addInfoMessage("Logout successful.");
-        $this->redirect("");
+        $this->redirect("home");
     }
 }

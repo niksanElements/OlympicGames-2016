@@ -3,6 +3,7 @@
 <head>
     <title>Olympic Games 2016</title>
     <mata charset="utf-8"></mata>
+    <link rel="stylesheet" href="<?=APP_ROOT?>/content/styles/layout.css"/>
     <link rel="stylesheet" href="<?=APP_ROOT?>/content/styles/css/bootstrap.min.css" type="text/css"/>
     <script src="<?=APP_ROOT?>/content/styles/js/jquery-3.1.0.min.js"></script>
     <script src="<?=APP_ROOT?>/content/styles/js/bootstrap.min.js"></script>
@@ -27,14 +28,21 @@
                         <li><a href="#">Sports</a></li>
                         <li><a href="#">Shedule</a></li>
                         <li><a href="#">...</a></li>
-                    </ul>
+                    </ul>`
                 </li>
                 <li class="last text-center"><a href="#">Contact Us</a></li>
             </ul>
         </div>
         <div class="col-lg-1 col-md-1 col-sm-12 text-center">
-            <a class="col-lg-offset-1 col-md-offset-1 "href="#">Login</a>
-            <a href="#">Registrete</a>
+            <?php if(!$this->isLoggedIn): ?>
+                <a class="col-lg-offset-1 col-md-offset-1 "href="<?=APP_ROOT?>/user/login">Login</a>
+                <a class="col-lg-offset-1 col-md-offset-1 " href="<?=APP_ROOT?>/user/registration"">Registrete</a>
+            <?php else: ?>
+                <span class="col8">Hello, <b><?=htmlspecialchars($_SESSION['username'])?></b></span>
+                <form class="col-lg-1" method="post" action="<?=APP_ROOT?>/user/logout">
+                    <input type="submit" value="Logout"/>
+                </form>
+            <?php endif; ?>
         </div>
         <form action="#" method="post" class="pull-right">
             <input type="text" value="Search Our Website&hellip;"  onfocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;" />
