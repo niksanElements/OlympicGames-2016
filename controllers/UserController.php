@@ -66,7 +66,6 @@ class UserController extends BaseController
                 $this->addErrorMessage("Error: Login failed.");
             }
         }
-
     }
     public function logout()
     {

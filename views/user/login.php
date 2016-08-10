@@ -1,4 +1,3 @@
-
 <div id="content">
             <form id='login' method='post'
                   accept-charset='UTF-8'>
@@ -16,3 +15,4 @@
                 </fieldset>
             </form>
 </div>
+
