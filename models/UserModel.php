@@ -25,7 +25,7 @@ class UserModel extends BaseModel
         $statement->execute();
         if ($statement->affected_rows !=1)
             return false;
-        $userID = self::$db -> query("select last_insert_id()")->fetch_row()[0];
+        $userID = self::$db -> query("SELECT LAST_INSERT_ID()")->fetch_row()[0];
         return $userID;
     }
     public function login(string $username, string $password)

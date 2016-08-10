@@ -45,8 +45,7 @@ class UserController extends BaseController
                 }else{
                     $this->addErrorMessage("Registration failed. Try again.");
                 }
-
-
+                
             }
 
         }
