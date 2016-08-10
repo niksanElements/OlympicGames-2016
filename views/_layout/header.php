@@ -14,17 +14,13 @@
             <div>
                 <h3 class="col-lg-4 col-md-4 col-sm-4"><a href="<?=APP_ROOT?>">Olympic Games 2016</a></h3>
             </div>
-            <div class="pull-right">
-                <a href="#">Login</a>
-                <a href="#">Registrete</a>
-            </div>
         </header>
-        <div class="container-fluid">
+        <div class="container-fluid col-lg-6 col-md-6 col-sm-12">
             <ul class="nav navbar-nav">
-                <li><a href="<?=APP_ROOT?>/">Home</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="<?=APP_ROOT?>/news/">News</a></li>
-                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"  href="#">Olympic Info</a>
+                <li class="text-center"><a href="<?=APP_ROOT?>/">Home</a></li>
+                <li class="text-center"><a href="#">History</a></li>
+                <li class="text-center"><a href="<?=APP_ROOT?>/news/">News</a></li>
+                <li class="dropdow text-center"><a class="dropdown-toggle" data-toggle="dropdown"  href="#">Olympic Info</a>
                     <ul class="dropdown-menu">
                         <li><a href="#">Stadions</a></li>
                         <li><a href="#">Veneues</a></li>
@@ -33,8 +29,12 @@
                         <li><a href="#">...</a></li>
                     </ul>
                 </li>
-                <li class="last"><a href="#">Contact Us</a></li>
+                <li class="last text-center"><a href="#">Contact Us</a></li>
             </ul>
+        </div>
+        <div class="col-lg-1 col-md-1 col-sm-12 text-center">
+            <a class="col-lg-offset-1 col-md-offset-1 "href="#">Login</a>
+            <a href="#">Registrete</a>
         </div>
         <form action="#" method="post" class="pull-right">
             <input type="text" value="Search Our Website&hellip;"  onfocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;" />
