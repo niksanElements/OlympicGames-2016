@@ -39,6 +39,5 @@ class UserModel extends BaseModel
             return $result['id'];
         return false;
     }
-
 }
 
