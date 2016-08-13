@@ -17,4 +17,15 @@ class NewsModel extends BaseModel
         return  $statement->fetch_all(MYSQLI_ASSOC);
     }
 
+    public function getById(int $id){
+        $statement = self::$db->prepare(
+            "SELECT news.id, title, body, date, full_name
+            FROM news LEFT JOIN users on news.users_id = users.id
+            WHERE news.id = ?"
+        );
+        $statement->bind_param("i",$id);
+        $statement->execute();
+        $result = $statement->get_result()->fetch_assoc();
+        return $result;
+    }
 }
