@@ -7,6 +7,7 @@ abstract class BaseController
     protected $isViewRendered = false;
     protected $isPost = false;
     protected $isLoggedIn = false;
+    protected $isAdmin = false;
     protected $title = "";
     protected $model;
     protected $validationErrors = [];
@@ -96,6 +97,13 @@ abstract class BaseController
         }
     }
 
+    public function authorizeAdmin() {
+      if(!$this->$isAdmin) {
+        $this->addErrorMessage("Access denied!");
+        $this->redirect("home", "index");
+      }
+    }
+
     function addMessage(string $msg, string $type)
     {
         if (!isset($_SESSION['messages'])) {
@@ -124,5 +132,5 @@ abstract class BaseController
     {
         return count($this->validationErrors) == 0;
     }
-    
+
 }
