@@ -21,7 +21,8 @@ abstract class BaseController
             $this->isPost = true;
         }
 
-        $this->isLoggedIn = isset($_SESSION['username']);
+        $this->isLoggedIn = isset($_SESSION['userID']);
+        $this->isAdmin = $_SESSION['admin'] ?? false;
 
         // Load the default model class for the current controller
         $modelClassName = ucfirst(strtolower($controllerName)) . 'Model';

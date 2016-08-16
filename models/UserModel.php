@@ -30,14 +30,22 @@ class UserModel extends BaseModel
     }
     public function login(string $username, string $password)
     {
-    $statement = self::$db->prepare(
-    "SELECT id, password_hash FROM users WHERE username = ?");
+        $returnResult = Array();
+        $statement = self::$db->prepare(
+        "SELECT id, password_hash, status FROM users WHERE username = ?");
         $statement ->bind_param("s", $username);
         $statement->execute();
         $result = $statement ->get_result()->fetch_assoc();
-        if (password_verify($password, $result['password_hash']))
-            return $result['id'];
+        if (password_verify($password, $result['password_hash'])){
+          $returnResult["userID"] = $result["id"];
+          if($result['status'] == 'A'){
+            $returnResult["status"] = "A";
+          }
+          else {
+            $returnResult["status"] = "U";
+          }
+          return $returnResult;
+        }
         return false;
     }
 }
-

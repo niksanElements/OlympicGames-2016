@@ -40,12 +40,15 @@ class UserController extends BaseController
                 if ($userID){
                     $_SESSION['username'] = $username;
                     $_SESSION['userID'] = $userID;
+                    if($userID == 1){
+                      $_SESSION['admin'] = true;
+                    }
                     $this -> addInfoMessage("Registration successful.");
                     $this -> redirect('home');
                 }else{
                     $this->addErrorMessage("Registration failed. Try again.");
                 }
-                
+
             }
 
         }
@@ -56,10 +59,16 @@ class UserController extends BaseController
         if($this->isPost){
             $username = $_POST['username'];
             $password = $_POST['password'];
-            $loggedUserID = $this->model->login($username, $password);
-            if ($loggedUserID){
-                $_SESSION['username']= $username;
-                $_SESSION['userID'] = $loggedUserID;
+            $loginResult = $this->model->login($username, $password);
+            if (is_array($loginResult)){
+                $_SESSION['userID'] = $loginResult["userID"];
+                $_SESSION['username'] = $username;
+                if($loginResult["status"] === 'A'){
+                  $_SESSION['admin'] = true;
+                }
+                else {
+                  $_SESSION['admin'] = false;
+                }
                 $this->addInfoMessage("Loggin successful.");
                 return $this->redirect('home');
             } else{
