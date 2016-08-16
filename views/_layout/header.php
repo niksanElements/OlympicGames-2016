@@ -2,11 +2,12 @@
 <html>
 <head>
     <title>Olympic Games 2016</title>
-    <mata charset="utf-8"></mata>
-    <link rel="stylesheet" href="<?=APP_ROOT?>/content/styles/layout.css"/>
     <link rel="stylesheet" href="<?=APP_ROOT?>/content/styles/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="<?=APP_ROOT?>/content/styles/layout.css"/>
     <script src="<?=APP_ROOT?>/content/styles/js/jquery-3.1.0.min.js"></script>
     <script src="<?=APP_ROOT?>/content/styles/js/bootstrap.min.js"></script>
+    <mata charset="utf-8"></mata>
+
 </head>
 <body>
 <header>
