@@ -78,8 +78,13 @@ abstract class BaseController
             $url .= '/' . urlencode($actionName);
         }
         if ($params != null) {
-            $encodedParams = array_map($params, 'urlencode');
-            $url .= implode('/', $encodedParams);
+            $encodedParams = array_map('urlencode',$params);
+            if(count($params) == 1){
+                $url.= '/'.$encodedParams[0];
+            }
+            else {
+                $url .= implode('/', $encodedParams);
+            }
         }
         $this->redirectToUrl($url);
     }
@@ -119,4 +124,5 @@ abstract class BaseController
     {
         return count($this->validationErrors) == 0;
     }
+    
 }
