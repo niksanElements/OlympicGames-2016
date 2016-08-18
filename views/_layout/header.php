@@ -7,7 +7,6 @@
     <script src="<?=APP_ROOT?>/content/styles/js/jquery-3.1.0.min.js"></script>
     <script src="<?=APP_ROOT?>/content/styles/js/bootstrap.min.js"></script>
     <mata charset="utf-8"></mata>
-
 </head>
 <body>
 <header>
@@ -22,13 +21,13 @@
                 <li class="text-center"><a href="<?=APP_ROOT?>/">Home</a></li>
                 <li class="text-center"><a href="#">History</a></li>
                 <li class="text-center"><a href="<?=APP_ROOT?>/news/">News</a></li>
-                <li class="dropdow text-center"><a class="dropdown-toggle" data-toggle="dropdown"  href="#">Olympic Info</a>
+                <li class="dropdown text-center"><a class="dropdown-toggle" data-toggle="dropdown"  href="#">Olympic Info</a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Stadions</a></li>
-                        <li><a href="#">Veneues</a></li>
+                        <li><a href="<?=APP_ROOT?>/countries/">Countries</a></li>
+                        <li><a href="<?=APP_ROOT?>/medals/">Medals</a></li>
                         <li><a href="#">Sports</a></li>
-                        <li><a href="#">Shedule</a></li>
-                        <li><a href="#">...</a></li>
+                        <li><a href="#">Athlets</a></li>
+                        <li><a href="#">Stadions</a></li>
                     </ul>`
                 </li>
                 <li class="last text-center"><a href="#">Contact Us</a></li>
