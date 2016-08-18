@@ -30,6 +30,9 @@
                         <li><a href="#">Stadions</a></li>
                     </ul>`
                 </li>
+                <?php if($this->isAdmin): ?>
+                    <li class="text-center"><a href="<?=APP_ROOT?>/manageusers/">Users</a></li>
+                <?php endif; ?>
                 <li class="last text-center"><a href="#">Contact Us</a></li>
             </ul>
         </div>

@@ -99,7 +99,7 @@ abstract class BaseController
     }
 
     public function authorizeAdmin() {
-      if(!$this->$isAdmin) {
+      if(!$this->isAdmin) {
         $this->addErrorMessage("Access denied!");
         $this->redirect("home", "index");
       }
