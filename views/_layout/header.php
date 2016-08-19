@@ -33,7 +33,7 @@
                 <?php if($this->isAdmin): ?>
                     <li class="text-center"><a href="<?=APP_ROOT?>/manageusers/">Users</a></li>
                 <?php endif; ?>
-                <li class="last text-center"><a href="#">Contact Us</a></li>
+                <li class="last text-center"><a href="<?=APP_ROOT?>/contactus">Contact Us</a></li>
             </ul>
         </div>
         <div class="col-lg-1 col-md-1 col-sm-12 text-center">
