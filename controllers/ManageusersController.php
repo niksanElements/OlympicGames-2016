@@ -11,6 +11,7 @@ class ManageusersController extends BaseController
     function index()
     {
         $this->authorizeAdmin();
+        $this->users = $this->model->getAllUsers();
     }
 
     function edit()

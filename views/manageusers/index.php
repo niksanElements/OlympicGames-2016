@@ -19,29 +19,30 @@
             Actions:
         </th>
     </tr>
-    <?php
-    $users = $this->model->getAllUsers();
-    $content = "";
-    foreach ($users as $user)
-    {
-        $content .= "<tr>";
-        $content .= "<th>" . $user["id"] . "</th>";
-        $content .= "<th>" . $user["username"] . "</th>";
-        $content .= "<th>" . $user["full_name"] . "</th>";
-        $content .= "<th>" . $user["email"] . "</th>";
-        if($user["status"] == "A")
-        {
-            $content .= "<th>Admin</th>";
-        }
-        else
-        {
-            $content .= "<th>User</th>";
-        }
-        $content .= "<th>";
-        $content .= "<a href='" . APP_ROOT . "/manageusers/edit/" . $user["id"] . "'>Edit</a>";
-        $content .= "</th>";
-        $content .= "</tr>";
-    }
-    echo $content;
-    ?>
+    <?php foreach($this->users as $user): ?>
+    <tr>
+      <th>
+        <?=$user["id"]?>
+      </th>
+      <th>
+        <?=$user["username"]?>
+      </th>
+      <th>
+        <?=$user["full_name"]?>
+      </th>
+      <th>
+        <?=$user["email"]?>
+      </th>
+      <th>
+        <?php if($user["status"] == "A"): ?>
+        Admin
+        <?php else: ?>
+          User
+        <?php endif ?>
+      </th>
+      <th>
+        <a href="<?=APP_ROOT?>/manageusers/edit/<?=$user["id"]?>">Edit</a>
+      </th>
+    </tr>
+    <?php endforeach ?>
 </table>
