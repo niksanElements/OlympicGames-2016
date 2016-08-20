@@ -14,10 +14,6 @@ class UserModel extends BaseModel
         $username = htmlspecialchars($username);
         $fullName = htmlspecialchars($fullName);
         $email = htmlspecialchars($email);
-        var_dump($username);
-        var_dump($fullName);
-        var_dump($email);
-        var_dump($password_hash);
 
         $statement = self:: $db->prepare(
             "INSERT INTO users (username, password_hash, full_name, email) values (?,?,?,?)");

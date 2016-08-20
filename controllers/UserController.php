@@ -18,7 +18,7 @@ class UserController extends BaseController
             }
             $passwordRepeat =$_POST['password-repeat'];
             $password =$_POST['password'];
-            if (strlen($username) < 3) {
+            if (strlen($password) < 3) {
                 $this -> setValidationError("password", "Invalid Password - password must be at least 3 symbols.");
             }
             if ($password != $passwordRepeat) {
@@ -33,7 +33,6 @@ class UserController extends BaseController
                 $email = $_POST['email'];
                 if (strlen($email) < 2 || strlen($email) > 80) {
                     $this->setValidationError("email", "Please, enter your email address.");
-
                 }
             if($this->formValid()){
                 $userID = $this->model->registration ($username, $password, $fullName, $email);

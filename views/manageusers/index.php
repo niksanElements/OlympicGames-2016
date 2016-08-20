@@ -41,7 +41,8 @@
         <?php endif ?>
       </th>
       <th>
-        <a href="<?=APP_ROOT?>/manageusers/edit/<?=$user["id"]?>">Edit</a>
+        <a href="<?=APP_ROOT?>/manageusers/edit/<?=$user["id"]?>">Edit</a>&nbsp;
+        <a href="<?=APP_ROOT?>/manageusers/delete/<?=$user["id"]?>" onclick="return confirm('Are you sure?')">Delete</a>
       </th>
     </tr>
     <?php endforeach ?>
