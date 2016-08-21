@@ -36,11 +36,12 @@ class ManagemedalsModel extends BaseModel
 
   public function editMedal($id, $name, $type) : bool
   {
-    $name = htmlspecialchars($name, $type);
+    $name = htmlspecialchars($name);
+    $type = htmlspecialchars($type);
     $statement = self::$db->prepare("UPDATE medals SET name = ?, type =? WHERE id = ?");
-    $statement->bind_param("iss",$id, $name, $type);
+    $statement->bind_param("ssi",$name, $type, $id);
     $statement->execute();
-    if($statement->affected_rows == 1)
+      if(!$statement->errno)
     {
       return true;
     }

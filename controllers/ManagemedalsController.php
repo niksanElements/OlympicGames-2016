@@ -53,7 +53,7 @@ class ManagemedalsController extends BaseController
 
       if($this->formValid())
       {
-        $result = $this->model->editMedals($id, $name, $type);
+        $result = $this->model->editMedal($id, $name, $type);
         if($result === true)
         {
           $this->addInfoMessage("Edit successful.");
