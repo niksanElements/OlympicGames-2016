@@ -11,6 +11,7 @@ class ManagemedalsModel extends BaseModel
   public function addMedal($name, $type) : bool
   {
     $name = htmlspecialchars($name);
+    $type = htmlspecialchars($type);
     $statement = self::$db->prepare("INSERT INTO medals (name, type ) VALUES (?,?)");
     $statement->bind_param("ss", $name, $type);
     $statement->execute();

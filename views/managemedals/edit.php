@@ -23,9 +23,21 @@
       </th>
       <th>
         <select name="type">
-          <option value="1">Gold</option>
-          <option value="2">Silver</option>
-          <option value="3">Bronze</option>
+          <?php if($this->medals["type"] == 1): ?>
+            <option value="1" selected="selected">Gold</option>
+          <?php else: ?>
+            <option value="1">Gold</option>
+          <?php endif ?>
+          <?php if($this->medals["type"] == 2): ?>
+            <option value="2" selected="selected">Silver</option>
+          <?php else: ?>
+            <option value="2">Silver</option>
+          <?php endif ?>
+          <?php if($this->medals["type"] == 3): ?>
+            <option value="3" selected="selected">Bronze</option>
+          <?php else: ?>
+            <option value="3">Bronze</option>
+          <?php endif ?>
         </select>
       </th>
     </tr>
