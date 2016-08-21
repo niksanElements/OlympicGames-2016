@@ -32,7 +32,7 @@
                     </ul>`
                 </li>
                 <?php if($this->isAdmin): ?>
-                    <li class="text-center"><a href="<?=APP_ROOT?>/manageusers/">Users</a></li>
+                    <li class="text-center"><a href="<?=APP_ROOT?>/adminpanel/">Admin panel</a></li>
                 <?php endif; ?>
                 <li class="last text-center"><a href="<?=APP_ROOT?>/contactus">Contact Us</a></li>
             </ul>
