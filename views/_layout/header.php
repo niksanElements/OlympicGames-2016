@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="<?=APP_ROOT?>/content/styles/layout.css"/>
     <script src="<?=APP_ROOT?>/content/styles/js/jquery-3.1.0.min.js"></script>
     <script src="<?=APP_ROOT?>/content/styles/js/bootstrap.min.js"></script>
+    <script src="<?=APP_ROOT?>/content/styles/js/blog-scripts.js"></script>
     <link rel="stylesheet" type="text/css" href="<?=APP_ROOT?>/content/styles/nav-icons.css">
     <mata charset="utf-8"></mata>
 </head>
@@ -55,3 +56,4 @@
     </nav>
 </header>
 <?php require_once('show-notify-messages.php'); ?>
+<?php require_once('show-validation-errors.php'); ?>
