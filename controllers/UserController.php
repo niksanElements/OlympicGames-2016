@@ -81,4 +81,38 @@ class UserController extends BaseController
         $this->addInfoMessage("Logout successful.");
         $this->redirect("home");
     }
+    public function account()
+    {
+        $this->authorize();
+
+        if($this->isPost)
+        {
+            $full_name = $_POST["full_name"];
+            $email = $_POST["email"];
+            $password = $_POST["password"];
+            $password_confirm = $_POST["password_confirm"];
+
+            if (strlen($full_name) < 2|| strlen ($full_name)> 200) {
+                $this->setValidationError("fullName", "Full Name must be between 2 and 200 characters.");
+            }
+            if (strlen($email) < 2 || strlen($email) > 80) {
+                $this->setValidationError("email", "Please, enter your email address.");
+            }
+
+            if($this->formValid())
+            {
+                $result = $this->model->editUserAccount($_SESSION["userID"], $full_name, $email, $password);
+                if($result === true)
+                {
+                    $this->addInfoMessage("Edit successful.");
+                }
+                else
+                {
+                    $this->addErrorMessage("Edit failed. Try again.");
+                }
+            }
+        }
+
+        $this->user = $this->model->getUserAccount($_SESSION["userID"]);
+    }
 }

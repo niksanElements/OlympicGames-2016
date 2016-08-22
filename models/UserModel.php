@@ -44,4 +44,44 @@ class UserModel extends BaseModel
         }
         return false;
     }
+
+    public function getUserAccount($id)
+    {
+        $statement = self::$db->prepare(
+            "SELECT * FROM users WHERE id = ?");
+        $statement ->bind_param("i", $id);
+        $statement->execute();
+        $result = $statement ->get_result()->fetch_assoc();
+        return $result;
+    }
+
+    public function editUserAccount($id, $full_name, $email, $password)
+    {
+        $id = htmlspecialchars($id);
+        $full_name = htmlspecialchars($full_name);
+        $email = htmlspecialchars($email);
+
+        if($password != NULL) {
+            $password_hash = password_hash($password, PASSWORD_DEFAULT);
+            $statement = self::$db->prepare(
+                "UPDATE users SET full_name = ?, email = ?, password_hash = ? 
+            WHERE id = ?");
+            $statement->bind_param("sssi", $full_name, $email, $password_hash, $id);
+            $statement->execute();
+        }
+        else {
+            $statement = self::$db->prepare(
+                "UPDATE users SET full_name = ?, email = ? 
+            WHERE id = ?");
+            $statement->bind_param("ssi", $full_name, $email, $id);
+            $statement->execute();
+        }
+        if($statement->errno)
+        {
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
 }
