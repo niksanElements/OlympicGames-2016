@@ -29,7 +29,7 @@
                         <li><a href="<?=APP_ROOT?>/medals/">Medals</a></li>
                         <li><a href="#">Sports</a></li>
                         <li><a href="#">Athletes</a></li>
-                        <li><a href="#">Venues</a></li>
+                        <li><a href="<?=APP_ROOT?>/venues/">Venues</a></li>
                     </ul>`
                 </li>
                 <?php if($this->isAdmin): ?>
