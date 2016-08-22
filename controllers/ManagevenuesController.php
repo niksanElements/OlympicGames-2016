@@ -55,7 +55,7 @@ class ManagevenuesController extends BaseController
         $this->setValidationError("venues", "Invalid venue sport");
       }
       $capacity = $_POST["capacity"];
-      if ($capacity < 0 and $capacity > 1000000) {
+      if ($capacity < 0 || $capacity > 1000000) {
         $this->setValidationError("venues", "Invalid venue capacity");
       }
       if($this->formValid())
