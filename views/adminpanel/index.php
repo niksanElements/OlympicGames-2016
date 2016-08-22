@@ -5,7 +5,4 @@
   <li>
     <a href="<?=APP_ROOT?>/managesports/">Manage sports</a>
   </li>
-  <li>
-    <a href="<?=APP_ROOT?>/managemedals/">Manage medals</a>
-  </li>
 </ul>

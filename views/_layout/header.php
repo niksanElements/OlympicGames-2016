@@ -49,8 +49,8 @@
                 </form>
             <?php endif; ?>
         </div>
-        <form action="#" method="post" class="pull-right">
-            <input type="text" value="Search Our Website&hellip;"  onfocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;" />
+        <form action="<?=APP_ROOT?>/search" method="post" class="pull-right">
+            <input type="text" name="search" value="Search Our Website&hellip;"  onfocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;" />
             <input type="submit" name="go" id="go" value="Search" />
         </form>
     </nav>
