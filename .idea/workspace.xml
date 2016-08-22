@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1cf9b0e-f7e1-4377-9a64-5521b0f640fc" name="Default" comment="Add aside.php for dyspl">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="newserific.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -478,7 +478,7 @@
       <workItem from="1471104192724" duration="4471000" />
       <workItem from="1471109956813" duration="594000" />
       <workItem from="1471175278439" duration="38448000" />
-      <workItem from="1471892378434" duration="1195000" />
+      <workItem from="1471892378434" duration="1303000" />
     </task>
     <task id="LOCAL-00001" summary="Add read view at news and connet it and modify index view.">
       <created>1471110355864</created>
@@ -533,10 +533,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85161000" />
+    <option name="totallyTimeSpent" value="85269000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1370" height="744" extended-state="1" />
+    <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24351145" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
