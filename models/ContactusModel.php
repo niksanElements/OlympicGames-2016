@@ -28,4 +28,15 @@ class ContactusModel extends BaseModel
         $result = $statement->get_result()->fetch_assoc();
         return $result;
     }
+
+    public function edit(string $name, string $body,int $age,string $education,string $work,string $passion,int $id ) : bool{
+        $statement = self::$db->prepare(
+            "UPDATE contactus 
+            SET name = ?, body=?, age=?, education=?, work=?, passion = ?
+            WHERE id=?"
+        );
+        $statement->bind_param("ssisssi",$name,$body,$age,$education,$work,$passion,$id);
+        $statement->execute();
+        return $statement->affected_rows == 1;
+    }
 }

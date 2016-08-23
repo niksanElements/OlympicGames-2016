@@ -32,6 +32,9 @@
                         <li><a href="<?=APP_ROOT?>/venues/">Venues</a></li>
                     </ul>`
                 </li>
+                <?php if($this->isLoggedIn): ?>
+                    <li class="text-center"><a href="<?=APP_ROOT?>/user/account">Account</a></li>
+                <?php endif ?>
                 <?php if($this->isAdmin): ?>
                     <li class="text-center"><a href="<?=APP_ROOT?>/adminpanel/">Admin panel</a></li>
                 <?php endif; ?>

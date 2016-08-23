@@ -40,8 +40,10 @@ class ManagevenuesModel extends BaseModel
     $venue_name = htmlspecialchars($venue_name);
     $sport = htmlspecialchars($sport);
     $capacity = htmlspecialchars($capacity);
-    $statement = self::$db->prepare("UPDATE venues SET venue_name = ?, sport =?, capacity =? WHERE id = ?");
-    $statement->bind_param("ssi", $venue_name, $sport, $capacity);
+    
+    $statement = self::$db->prepare("UPDATE venues SET venue_name = ?, sport = ?, capacity = ?
+      WHERE id = ?");
+    $statement->bind_param("sssi", $venue_name, $sport, $capacity, $id);
     $statement->execute();
       if(!$statement->errno)
     {

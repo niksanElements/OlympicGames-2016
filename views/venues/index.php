@@ -14,6 +14,7 @@
             Venue Capacity
         </th>
     </tr>
+    <?php foreach($this->venues as $venue): ?>
     <tr>
         <th>
             <?=$venue["venue_name"]?>
@@ -25,5 +26,6 @@
             <?=$venue["capacity"]?>
         </th>
     </tr>
+  <?php endforeach ?>
 </table>
 </main>

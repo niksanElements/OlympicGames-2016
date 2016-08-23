@@ -14,7 +14,7 @@
         Venue name:
       </th>
       <th>
-        <input type="text" name="name" value="<?=$this->venues["venue_name"]?>" />
+        <input type="text" name="venue_name" value="<?=$this->venues["venue_name"]?>" />
       </th>
       </tr>
     <tr>
