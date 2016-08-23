@@ -6,22 +6,22 @@
 <script>tinymce.init({ selector:'textarea' });</script>
 
 <form class="form-horizontal" method="post" accept-charset="UTF-8">
-    <label class="control-label" for="title">Title</label>
-    <input class="form-control" type="text" name="title"
+    <label class="control-label" for="name">Title</label>
+    <input class="form-control" type="text" name="name"
            value="<?= htmlspecialchars($this->contactus['name'])?>" maxlength="300"/><br/>
-    <label class="control-label" for="title">Age</label>
-    <input class="form-control" type="text" name="title"
+    <label class="control-label" for="age">Age</label>
+    <input class="form-control" type="text" name="age"
            value="<?= htmlspecialchars($this->contactus['age'])?>" maxlength="300"/><br/>
-    <label class="control-label" for="title">Education</label>
-    <input class="form-control" type="text" name="title"
+    <label class="control-label" for="education">Education</label>
+    <input class="form-control" type="text" name="education"
            value="<?= htmlspecialchars($this->contactus['education'])?>" maxlength="300"/><br/>
-    <label class="control-label" for="title">Work</label>
-    <input class="form-control" type="text" name="title"
+    <label class="control-label" for="work">Work</label>
+    <input class="form-control" type="text" name="work"
            value="<?= htmlspecialchars($this->contactus['work'])?>" maxlength="300"/><br/>
-    <label class="control-label" for="title">Passion</label>
-    <input class="form-control" type="text" name="title"
+    <label class="control-label" for="passion">Passion</label>
+    <input class="form-control" type="text" name="passion"
            value="<?= htmlspecialchars($this->contactus['passion'])?>" maxlength="300"/><br/>
-    <label class="control-label" for="title">BODY</label>
+    <label class="control-label" for="body">BODY</label>
 
     <textarea class="content" name="body"><?= htmlspecialchars($this->contactus['body'])?></textarea>
     <br/>

@@ -35,7 +35,7 @@ class ContactusModel extends BaseModel
             SET name = ?, body=?, age=?, education=?, work=?, passion = ?
             WHERE id=?"
         );
-        $statement->bind_param("ississs",$id,$name,$body,$age,$education,$work,$passion);
+        $statement->bind_param("ssisssi",$name,$body,$age,$education,$work,$passion,$id);
         $statement->execute();
         return $statement->affected_rows == 1;
     }

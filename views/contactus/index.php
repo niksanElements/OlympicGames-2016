@@ -29,7 +29,7 @@
                                     echo APP_ROOT.'/content/styles/images/dawe.jpg';
                                 }
                             }
-                            ?>" class="img-responsive img-rounded" alt="Ne Zarejda PICTURE" width="100%" height="100%">
+                            ?>" class="img-responsive img-rounded" alt="Ne Zarejda PICTURE" width="50%" height="50%">
                             <div style="color: orangered">
                                 <div>Name : <?= htmlspecialchars($contact['name']) ?></div>
                                 <div>Age : <?= htmlspecialchars($contact['age']) ?></div>
