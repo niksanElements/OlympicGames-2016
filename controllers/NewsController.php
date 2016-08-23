@@ -8,8 +8,11 @@ class NewsController extends BaseController
     public function index()
     {
         $this->news = $this->model->getLastNews(8);
-        $user_id = intval($_SESSION['userID']);
-        $this->userNews = $this->model->getUserNewsTitles($user_id);
+        $this->last10News = $this->model->getLastNews(10);
+        if($this->isRedactor) {
+            $user_id = intval($_SESSION['userID']);
+            $this->userNews = $this->model->getUserNewsTitles($user_id);
+        }
     }
 
     public function read(int $id)
@@ -24,25 +27,33 @@ class NewsController extends BaseController
 
     public function create()
     {
-        if($this->isPost){
-            $title=$_POST['title'];
-            $body = $_POST['body'];
+        if($this->isRedactor) {
+            if ($this->isPost) {
+                $title = $_POST['title'];
+                $body = $_POST['body'];
 
-            if($this->checkContent($title,$body) &&
-                $this->model->insert($title,$body,$_SESSION['userID'])) {
+                if ($this->checkContent($title, $body) &&
+                    $this->model->insert($title, $body, $_SESSION['userID'])
+                ) {
 
-                $this->addInfoMessage('Successful creaate!');
-                $this->redirect("news");
+                    $this->addInfoMessage('Successful creaate!');
+                    $this->redirect("news");
+                }
             }
+        }
+        else{
+            $this->addErrorMessage("You must't be logged in as redacotr!!");
+            $this->redirect("news");
         }
     }
 
     public function remove(int $id)
     {
-        $news = $this->model->getById($id);
+        if($this->isRedactor) {
+            $news = $this->model->getById($id);
             if ($this->isPost) {
                 $title = $_POST['title'];
-                if($title === $news['title']) {
+                if ($title === $news['title']) {
                     if ($this->model->remove($id)) {
                         $this->addInfoMessage("Successful delete!!");
                         $this->redirect("news");
@@ -51,26 +62,37 @@ class NewsController extends BaseController
 
                         $this->redirect("news", "read", array($id));
                     }
-                }
-                else{
+                } else {
                     $this->addErrorMessage("Wrong title.");
                     $this->redirect("news", "read", array($id));
                 }
             }
         }
+        else{
+            $this->addErrorMessage("You must't be logged in as redacotr!!");
+            $this->redirect("news");
+        }
+    }
 
     public function edit(int $id)
     {
-        $this->news = $this->model->getById($id);
-        if($this->isPost){
-            $title = $_POST['title'];
-            $body = $_POST['body'];
-            if($this->checkContent($title,$body)
-                && $this->model->update($id,$title,$body)){
+        if($this->isRedactor) {
+            $this->news = $this->model->getById($id);
+            if ($this->isPost) {
+                $title = $_POST['title'];
+                $body = $_POST['body'];
+                if ($this->checkContent($title, $body)
+                    && $this->model->update($id, $title, $body)
+                ) {
 
-                $this->addInfoMessage('Successful change!');
-                $this->redirect("news");
+                    $this->addInfoMessage('Successful change!');
+                    $this->redirect("news");
+                }
             }
+        }
+        else{
+            $this->addErrorMessage("You must't be logged in as redacotr!!");
+            $this->redirect("news");
         }
     }
 

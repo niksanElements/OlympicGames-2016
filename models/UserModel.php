@@ -14,10 +14,6 @@ class UserModel extends BaseModel
         $username = htmlspecialchars($username);
         $fullName = htmlspecialchars($fullName);
         $email = htmlspecialchars($email);
-        var_dump($username);
-        var_dump($fullName);
-        var_dump($email);
-        var_dump($password_hash);
 
         $statement = self:: $db->prepare(
             "INSERT INTO users (username, password_hash, full_name, email) values (?,?,?,?)");
@@ -30,14 +26,62 @@ class UserModel extends BaseModel
     }
     public function login(string $username, string $password)
     {
-    $statement = self::$db->prepare(
-    "SELECT id, password_hash FROM users WHERE username = ?");
+        $returnResult = Array();
+        $statement = self::$db->prepare(
+        "SELECT id, password_hash, status FROM users WHERE username = ?");
         $statement ->bind_param("s", $username);
         $statement->execute();
         $result = $statement ->get_result()->fetch_assoc();
-        if (password_verify($password, $result['password_hash']))
-            return $result['id'];
+        if (password_verify($password, $result['password_hash'])){
+          $returnResult["userID"] = $result["id"];
+          if($result['status'] == 'A'){
+            $returnResult["status"] = "A";
+          }
+          else {
+            $returnResult["status"] = "U";
+          }
+          return $returnResult;
+        }
         return false;
     }
-}
 
+    public function getUserAccount($id)
+    {
+        $statement = self::$db->prepare(
+            "SELECT * FROM users WHERE id = ?");
+        $statement ->bind_param("i", $id);
+        $statement->execute();
+        $result = $statement ->get_result()->fetch_assoc();
+        return $result;
+    }
+
+    public function editUserAccount($id, $full_name, $email, $password)
+    {
+        $id = htmlspecialchars($id);
+        $full_name = htmlspecialchars($full_name);
+        $email = htmlspecialchars($email);
+
+        if($password != NULL) {
+            $password_hash = password_hash($password, PASSWORD_DEFAULT);
+            $statement = self::$db->prepare(
+                "UPDATE users SET full_name = ?, email = ?, password_hash = ? 
+            WHERE id = ?");
+            $statement->bind_param("sssi", $full_name, $email, $password_hash, $id);
+            $statement->execute();
+        }
+        else {
+            $statement = self::$db->prepare(
+                "UPDATE users SET full_name = ?, email = ? 
+            WHERE id = ?");
+            $statement->bind_param("ssi", $full_name, $email, $id);
+            $statement->execute();
+        }
+        if($statement->errno)
+        {
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+}

@@ -19,4 +19,11 @@ article.news{width:80%;}
 div.action{font-size:1.5em;}
 input.submit{width: 15%; height: auto;}
 
-.scroll{height: 200px; overflow: auto}
+.scroll{height: 400px; overflow: auto}
+
+th
+{
+    margin: 5px;
+    padding: 5px;
+    border: 1px #000000 solid;
+}

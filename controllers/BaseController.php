@@ -21,7 +21,8 @@ abstract class BaseController
             $this->isPost = true;
         }
 
-        $this->isLoggedIn = isset($_SESSION['username']);
+        $this->isLoggedIn = isset($_SESSION['userID']);
+        $this->isAdmin = $_SESSION['admin'] ?? false;
 
         // Load the default model class for the current controller
         $modelClassName = ucfirst(strtolower($controllerName)) . 'Model';
@@ -98,7 +99,7 @@ abstract class BaseController
     }
 
     public function authorizeAdmin() {
-      if(!$this->$isAdmin) {
+      if(!$this->isAdmin) {
         $this->addErrorMessage("Access denied!");
         $this->redirect("home", "index");
       }

@@ -18,7 +18,7 @@ class UserController extends BaseController
             }
             $passwordRepeat =$_POST['password-repeat'];
             $password =$_POST['password'];
-            if (strlen($username) < 3) {
+            if (strlen($password) < 3) {
                 $this -> setValidationError("password", "Invalid Password - password must be at least 3 symbols.");
             }
             if ($password != $passwordRepeat) {
@@ -33,19 +33,21 @@ class UserController extends BaseController
                 $email = $_POST['email'];
                 if (strlen($email) < 2 || strlen($email) > 80) {
                     $this->setValidationError("email", "Please, enter your email address.");
-
                 }
             if($this->formValid()){
                 $userID = $this->model->registration ($username, $password, $fullName, $email);
                 if ($userID){
                     $_SESSION['username'] = $username;
                     $_SESSION['userID'] = $userID;
+                    if($userID == 1){
+                      $_SESSION['admin'] = true;
+                    }
                     $this -> addInfoMessage("Registration successful.");
                     $this -> redirect('home');
                 }else{
                     $this->addErrorMessage("Registration failed. Try again.");
                 }
-                
+
             }
 
         }
@@ -56,10 +58,16 @@ class UserController extends BaseController
         if($this->isPost){
             $username = $_POST['username'];
             $password = $_POST['password'];
-            $loggedUserID = $this->model->login($username, $password);
-            if ($loggedUserID){
-                $_SESSION['username']= $username;
-                $_SESSION['userID'] = $loggedUserID;
+            $loginResult = $this->model->login($username, $password);
+            if (is_array($loginResult)){
+                $_SESSION['userID'] = $loginResult["userID"];
+                $_SESSION['username'] = $username;
+                if($loginResult["status"] === 'A'){
+                  $_SESSION['admin'] = true;
+                }
+                else {
+                  $_SESSION['admin'] = false;
+                }
                 $this->addInfoMessage("Loggin successful.");
                 return $this->redirect('home');
             } else{
@@ -72,5 +80,39 @@ class UserController extends BaseController
         session_destroy();
         $this->addInfoMessage("Logout successful.");
         $this->redirect("home");
+    }
+    public function account()
+    {
+        $this->authorize();
+
+        if($this->isPost)
+        {
+            $full_name = $_POST["full_name"];
+            $email = $_POST["email"];
+            $password = $_POST["password"];
+            $password_confirm = $_POST["password_confirm"];
+
+            if (strlen($full_name) < 2|| strlen ($full_name)> 200) {
+                $this->setValidationError("fullName", "Full Name must be between 2 and 200 characters.");
+            }
+            if (strlen($email) < 2 || strlen($email) > 80) {
+                $this->setValidationError("email", "Please, enter your email address.");
+            }
+
+            if($this->formValid())
+            {
+                $result = $this->model->editUserAccount($_SESSION["userID"], $full_name, $email, $password);
+                if($result === true)
+                {
+                    $this->addInfoMessage("Edit successful.");
+                }
+                else
+                {
+                    $this->addErrorMessage("Edit failed. Try again.");
+                }
+            }
+        }
+
+        $this->user = $this->model->getUserAccount($_SESSION["userID"]);
     }
 }
