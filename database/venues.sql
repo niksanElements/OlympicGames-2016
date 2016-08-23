@@ -30,7 +30,7 @@ CREATE TABLE `venues` (
   `id` int(10) UNSIGNED NOT NULL,
   `venue_name` varchar(100) DEFAULT NULL,
   `sport` varchar(100) NOT NULL,
-  `capacity` int(10) UNSIGNED ZEROFILL DEFAULT NULL
+  `capacity` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
