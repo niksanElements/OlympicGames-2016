@@ -34,7 +34,7 @@ class ContactusController extends BaseController
         $this->contactus = $contactus;
     }
     public function edit(int $id)
-    {var_dump($_POST);
+    {
         $this->contactus = $this->model->getById($id);
         if($this->isPost){
             if (isset($_POST["name"]) && isset($_POST["body"]) && isset($_POST["age"])

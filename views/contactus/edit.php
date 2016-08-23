@@ -12,19 +12,19 @@
 
     <label class="control-label" for="age">Age</label>
     <input class="form-control" type="number" name="age"
-           value="<?= htmlspecialchars($this->contactus['age'])?>" maxlength="300"/><br/>
+           value="<?= htmlspecialchars($this->contactus['age'])?>" maxlength="100"/><br/>
 
     <label class="control-label" for="education">Education</label>
     <input class="form-control" type="text" name="education"
-           value="<?= htmlspecialchars($this->contactus['education'])?>" maxlength="300"/><br/>
+           value="<?= htmlspecialchars($this->contactus['education'])?>" maxlength="100"/><br/>
 
     <label class="control-label" for="work">Work</label>
     <input class="form-control" type="text" name="work"
-           value="<?= htmlspecialchars($this->contactus['work'])?>" maxlength="300"/><br/>
+           value="<?= htmlspecialchars($this->contactus['work'])?>" maxlength="100"/><br/>
 
     <label class="control-label" for="passion">Passion</label>
     <input class="form-control" type="text" name="passion"
-           value="<?= htmlspecialchars($this->contactus['passion'])?>" maxlength="300"/><br/>
+           value="<?= htmlspecialchars($this->contactus['passion'])?>" maxlength="100"/><br/>
 
     <label class="control-label" for="body">BODY</label>
 
