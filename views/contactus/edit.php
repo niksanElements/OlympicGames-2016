@@ -1,7 +1,33 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: User
- * Date: 19.8.2016 г.
- * Time: 18:29 ч.
- */
+<?php $this->title = 'edit'; ?>
+
+<h1><?=htmlspecialchars($this->title)?></h1>
+
+<script src="<?=APP_ROOT?>/content/tinymce/tinymce.min.js"></script>
+<script>tinymce.init({ selector:'textarea' });</script>
+
+<form class="form-horizontal" method="post" accept-charset="UTF-8">
+    <label class="control-label" for="title">Title</label>
+    <input class="form-control" type="text" name="title"
+           value="<?= htmlspecialchars($this->contactus['name'])?>" maxlength="300"/><br/>
+    <label class="control-label" for="title">Age</label>
+    <input class="form-control" type="text" name="title"
+           value="<?= htmlspecialchars($this->contactus['age'])?>" maxlength="300"/><br/>
+    <label class="control-label" for="title">Education</label>
+    <input class="form-control" type="text" name="title"
+           value="<?= htmlspecialchars($this->contactus['education'])?>" maxlength="300"/><br/>
+    <label class="control-label" for="title">Work</label>
+    <input class="form-control" type="text" name="title"
+           value="<?= htmlspecialchars($this->contactus['work'])?>" maxlength="300"/><br/>
+    <label class="control-label" for="title">Passion</label>
+    <input class="form-control" type="text" name="title"
+           value="<?= htmlspecialchars($this->contactus['passion'])?>" maxlength="300"/><br/>
+    <label class="control-label" for="title">BODY</label>
+
+    <textarea class="content" name="body"><?= htmlspecialchars($this->contactus['body'])?></textarea>
+    <br/>
+    <label class="control-label" for="tags">Tags</label>
+    <input class="form-control" type="text" name="tags"/><br/>
+    <input class="submit" type="submit" name="submit" value="submit"/>
+
+</form>
+<div class="action pull-right">[<a href="<?= APP_ROOT ?>/news">back</a>]</div>

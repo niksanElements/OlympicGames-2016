@@ -29,8 +29,31 @@ class ContactusController extends BaseController
         $contactus = $this->model->getByID($id);
         if(!$contactus){
             $this->addErrorMessage("Can't find this page.");
-            $this->redirect("news");
+            $this->redirect("contactus");
         }
         $this->contactus = $contactus;
+    }
+    public function edit(int $id)
+    {
+        $this->contactus = $this->model->getById($id);
+        if($this->isPost){
+            if (isset($_POST["username"]) && isset($_POST["body"]) && isset($_POST["age"])
+            && isset($_POST["education"]) && isset($_POST["work"]) && isset($_POST["passion"])) {
+
+                $name = $_POST['name'];
+                $body = $_POST['body'];
+                $age = $_POST['age'];
+                $education = $_POST['education'];
+                $work = $_POST['work'];
+                $passion = $_POST['passion'];
+
+
+                if ($this->model->edit($id ,$name, $body, $age, $education, $work, $passion)) {
+
+                    $this->addInfoMessage('Successful change!');
+                    $this->redirect("contactus");
+                }
+            }
+        }
     }
 }
