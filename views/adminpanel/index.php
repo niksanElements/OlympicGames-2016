@@ -11,4 +11,7 @@
   <li>
     <a href="<?=APP_ROOT?>/managevenues/">Manage venues</a>
   </li>
+  <li>
+    <a href="<?=APP_ROOT?>/managecontactus/">Manage contact and team details</a>
+  </li>
 </ul>
