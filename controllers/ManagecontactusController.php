@@ -58,7 +58,7 @@ class ManagecontactusController extends BaseController
     $this->authorizeAdmin();
     if ($this->isPost) {
       $name = $_POST["name"];
-      if (strlen($name) < 2 || strlen($name) > 100) {
+      if (strlen($name) < 2 or strlen($name) > 100) {
         $this->setValidationError("contactus", "Invalid team member name");
       }
 
@@ -68,25 +68,25 @@ class ManagecontactusController extends BaseController
       }
 
       $body = $_POST["body"];
-      if (strlen($body) < 1 || strlen($body) > 10000) {
+      if (strlen($body) < 1 or strlen($body) > 10000) {
         $this->setValidationError("contactus", "Invalid text size");
       }
 
       $education = $_POST["education"];
-      if (strlen($education) < 1 || strlen($education) > 1000) {
+      if (strlen($education) < 1 or strlen($education) > 1000) {
         $this->setValidationError("contactus", "Invalid text size");
       }
       $passion = $_POST["passion"];
-      if (strlen($passion) < 1 || strlen($passion) > 100) {
+      if (strlen($passion) < 1 or strlen($passion) > 100) {
         $this->setValidationError("contactus", "Invalid text size");
       }
       $work = $_POST["work"];
-      if (strlen($work) < 1 || strlen($work) > 100) {
+      if (strlen($work) < 1 or strlen($work) > 100) {
         $this->setValidationError("contactus", "Invalid text size");
       }
 
       if ($this->formValid()) {
-        $result = $this->model->editContact($name, $age, $body, $education, $passion, $work);
+        $result = $this->model->editContact($id, $name, $age, $body, $education, $passion, $work);
         if ($result === true) {
           $this->addInfoMessage("Edit successful.");
           $this->redirect("managecontactus", "index");

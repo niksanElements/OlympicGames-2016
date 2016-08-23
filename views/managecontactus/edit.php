@@ -23,7 +23,7 @@
   <input class="form-control" type="text" name="passion"
          value="<?= htmlspecialchars($this->contactus['passion'])?>" maxlength="100"/><br/>
 
-  <label class="control-label" for="body">BODY</label>
+  <label class="control-label" for="body">Other Comments</label>
 
   <textarea class="content" name="body"><?= htmlspecialchars($this->contactus['body'])?></textarea>
   <br/>

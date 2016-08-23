@@ -1,8 +1,8 @@
-<?php $this->title = 'ContactUs'; ?>
+<?php $this->title = 'Fresh Team Contacts'; ?>
 
 <h1><?=htmlspecialchars($this->title)?></h1>
 <section >
-    <h2>Email Address : <a>tukate@abv.bg</a></h2>
+    <h2>Email Address: <a>tukate@abv.bg</a></h2>
 </section>
 <main style="background-color: #1F1F1F">
     <form >
@@ -41,5 +41,5 @@
                 </ul>
             </div>
     </form>
-    <h2><a href="<?= APP_ROOT ?>/contactus/create">ADD MEMBER</a></h2>
+    <!-- <h2><a href="<?= APP_ROOT ?>/contactus/create">ADD MEMBER</a></h2>-->
 </main>

@@ -36,7 +36,7 @@
                    <?= htmlspecialchars($this->contactus['body']) ?>
                </textarea>
         </div>
-        <h2>[<a href="<?= APP_ROOT ?>/contactus/edit/<?=$this->contactus['id']?>">edit</a>]</h2>
+        <!--<h2>[<a href="<?= APP_ROOT ?>/contactus/edit/<?=$this->contactus['id']?>">edit</a>]</h2>-->
     </div>
 </form>
 

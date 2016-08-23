@@ -49,7 +49,7 @@ class ManagecontactusModel extends BaseModel
     
     $statement = self::$db->prepare("UPDATE contactus SET name = ?, age = ?, body = ?, education =?, passion =?, work = ?
       WHERE id = ?");
-    $statement->bind_param("sisssi", $name, $age, $body, $education, $passion, $work, $id);
+    $statement->bind_param("sissssi", $name, $age, $body, $education, $passion, $work, $id);
     $statement->execute();
       if(!$statement->errno)
     {

@@ -6,35 +6,53 @@
       ID:
     </th>
     <th>
-      Venue Name:
+      Team Member Name:
     </th>
     <th>
-      Sports:
+      Age:
     </th>
     <th>
-      Capacity:
+      Comments:
+    </th>
+    <th>
+      Education:
+    </th>
+    <th>
+      Passion:
+    </th>
+    <th>
+      Work:
     </th>
     <th>
       Actions:
     </th>
   </tr>
-  <?php foreach($this->venues as $venue): ?>
+  <?php foreach($this->contactus as $contact): ?>
     <tr>
       <th>
-        <?=$venue["id"]?>
+        <?=$contact["id"]?>
       </th>
       <th>
-        <?=$venue["venue_name"]?>
+        <?=$contact["name"]?>
       </th>
       <th>
-        <?=$venue["sport"]?>
+        <?=$contact["age"]?>
       </th>
       <th>
-        <?=$venue["capacity"]?>
+        <?=$contact["body"]?>
       </th>
       <th>
-        <a href="<?=APP_ROOT?>/managevenues/edit/<?=$venue["id"]?>">Edit</a>
-        &nbsp;<a href="<?=APP_ROOT?>/managevenues/delete/<?=$venue["id"]?>" onclick="return confirm('Are you sure?')">Delete</a>
+        <?=$contact["education"]?>
+      </th>
+      <th>
+        <?=$contact["passion"]?>
+      </th>
+      <th>
+        <?=$contact["work"]?>
+      </th>
+      <th>
+        <a href="<?=APP_ROOT?>/managecontactus/edit/<?=$contact["id"]?>">Edit</a>
+        &nbsp;<a href="<?=APP_ROOT?>/managecontactus/delete/<?=$contact["id"]?>" onclick="return confirm('Are you sure?')">Delete</a>
       </th>
     </tr>
   <?php endforeach ?>
