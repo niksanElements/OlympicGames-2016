@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <list default="true" id="f1cf9b0e-f7e1-4377-9a64-5521b0f640fc" name="Default" comment="Add aside.php for dyspl">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
 =======
@@ -14,6 +15,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/contactus/profil.php" afterPath="$PROJECT_DIR$/views/contactus/profil.php" />
 >>>>>>> 4c064f3e9f0081b14283ca893a224d2f35c4969f
     </list>
+=======
+    <list default="true" id="f1cf9b0e-f7e1-4377-9a64-5521b0f640fc" name="Default" comment="" />
+>>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
 =======
     <list default="true" id="f1cf9b0e-f7e1-4377-9a64-5521b0f640fc" name="Default" comment="" />
 >>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
@@ -62,6 +66,7 @@
         </entry>
       </file>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <file leaf-file-name="navi.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/content/styles/navi.css">
 >>>>>>> 4c064f3e9f0081b14283ca893a224d2f35c4969f
@@ -73,6 +78,11 @@
       <file leaf-file-name="ManagevenuesModel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/ManagevenuesModel.php">
           <provider selected="true" editor-type-id="text-editor">
+=======
+      <file leaf-file-name="ManagevenuesModel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/ManagevenuesModel.php">
+          <provider selected="true" editor-type-id="text-editor">
+>>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
             <state relative-caret-position="528">
               <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
               <folding>
@@ -83,11 +93,15 @@
                 <marker date="1471902825237" expanded="true" signature="1248:1316" ph="UPDATE medal... " />
                 <marker date="1471902825237" expanded="true" signature="1603:1634" ph="DELETE FROM " />
               </folding>
+<<<<<<< HEAD
+>>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
+=======
 >>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
@@ -109,11 +123,19 @@
             <state relative-caret-position="594">
               <caret line="33" column="11" selection-start-line="28" selection-start-column="6" selection-end-line="33" selection-end-column="11" />
 >>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
+=======
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/managevenues/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="594">
+              <caret line="33" column="11" selection-start-line="28" selection-start-column="6" selection-end-line="33" selection-end-column="11" />
+>>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       <file leaf-file-name="BaseModel.php" pinned="false" current-in-tab="false">
@@ -159,11 +181,19 @@
             <state relative-caret-position="464">
               <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
 >>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
+=======
+      <file leaf-file-name="edit.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/managevenues/edit.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="464">
+              <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
+>>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <file leaf-file-name="UserModel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/UserModel.php">
@@ -197,6 +227,13 @@
             <state relative-caret-position="616">
               <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
 >>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
+=======
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/venues/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="616">
+              <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+>>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
               <folding />
             </state>
           </provider>
@@ -205,6 +242,7 @@
       <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/_layout/header.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             <state relative-caret-position="680">
@@ -233,6 +271,10 @@
             <state relative-caret-position="529">
               <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
 >>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
+=======
+            <state relative-caret-position="529">
+              <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
+>>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
               <folding />
 >>>>>>> 4c064f3e9f0081b14283ca893a224d2f35c4969f
             </state>
@@ -242,6 +284,7 @@
       <file leaf-file-name="VenuesController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/VenuesController.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             <state relative-caret-position="153">
@@ -254,11 +297,16 @@
             <state relative-caret-position="198">
               <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
 >>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
+=======
+            <state relative-caret-position="198">
+              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+>>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       <file leaf-file-name="BaseController.php" pinned="false" current-in-tab="false">
@@ -269,6 +317,10 @@
 =======
       <file leaf-file-name="bootstrap.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/content/styles/css/bootstrap.css">
+=======
+      <file leaf-file-name="VenuesModel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/VenuesModel.php">
+>>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
 =======
       <file leaf-file-name="VenuesModel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/VenuesModel.php">
@@ -287,9 +339,14 @@
         <entry file="file://$PROJECT_DIR$/views/managevenues/add.php">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="478">
               <caret line="34" column="2" selection-start-line="34" selection-start-column="2" selection-end-line="34" selection-end-column="2" />
 >>>>>>> 4c064f3e9f0081b14283ca893a224d2f35c4969f
+=======
+            <state relative-caret-position="528">
+              <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+>>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
 =======
             <state relative-caret-position="528">
               <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
@@ -374,8 +431,11 @@
         <option value="$PROJECT_DIR$/views/contactus/index.php" />
         <option value="$PROJECT_DIR$/views/contactus/profil.php" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4c064f3e9f0081b14283ca893a224d2f35c4969f
 =======
+=======
+>>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
         <option value="$PROJECT_DIR$/models/ManagevenuesModel.php" />
         <option value="$PROJECT_DIR$/views/managevenues/edit.php" />
         <option value="$PROJECT_DIR$/views/managevenues/add.php" />
@@ -386,6 +446,9 @@
         <option value="$PROJECT_DIR$/models/VenuesModel.php" />
         <option value="$PROJECT_DIR$/controllers/ManagevenuesController.php" />
         <option value="$PROJECT_DIR$/views/venues/index.php" />
+<<<<<<< HEAD
+>>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
+=======
 >>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
       </list>
     </option>
@@ -432,7 +495,10 @@
     </navigator>
     <panes>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
       <pane id="Scratches" />
 >>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
       <pane id="ProjectPane">
@@ -470,6 +536,23 @@
               <option name="myItemId" value="venues" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+<<<<<<< HEAD
+=======
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OlympicGames-2016" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OlympicGames-2016" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+>>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -487,6 +570,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="OlympicGames-2016" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
@@ -499,6 +583,8 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+=======
+>>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
               <option name="myItemId" value="managevenues" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -548,6 +634,7 @@
             <PATH_ELEMENT>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -587,6 +674,9 @@
 =======
               <option name="myItemId" value="controllers" />
 >>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
+=======
+              <option name="myItemId" value="controllers" />
+>>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -603,6 +693,7 @@
               <option name="myItemId" value="content" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+<<<<<<< HEAD
 <<<<<<< HEAD
           </PATH>
 <<<<<<< HEAD
@@ -625,13 +716,18 @@
             </PATH_ELEMENT>
 =======
 >>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
+=======
+>>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
           </PATH>
 =======
 >>>>>>> 4c064f3e9f0081b14283ca893a224d2f35c4969f
         </subPane>
       </pane>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <pane id="Scratches" />
+=======
+>>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
 =======
 >>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
       <pane id="Scope" />
@@ -655,6 +751,12 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      <recent name="C:\xampp\htdocs\OlympicGames-2016\models" />
+      <recent name="C:\xampp\htdocs\OlympicGames-2016\controllers" />
+      <recent name="C:\xampp\htdocs\OlympicGames-2016\views" />
+>>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
 =======
       <recent name="C:\xampp\htdocs\OlympicGames-2016\models" />
       <recent name="C:\xampp\htdocs\OlympicGames-2016\controllers" />
@@ -762,6 +864,7 @@
       <workItem from="1471615893471" duration="12940000" />
       <workItem from="1471712567703" duration="14758000" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4c064f3e9f0081b14283ca893a224d2f35c4969f
     </task>
     <task id="LOCAL-00004" summary="Edit the head section.">
@@ -777,6 +880,9 @@
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
       <updated>1471364218665</updated>
+=======
+      <workItem from="1471900498801" duration="5719000" />
+>>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
     </task>
     <task id="LOCAL-00006" summary="Make news demo logic">
       <created>1471364280995</created>
@@ -801,10 +907,14 @@
   <component name="TimeTrackingManager">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="85269000" />
 =======
     <option name="totallyTimeSpent" value="79115000" />
 >>>>>>> 4c064f3e9f0081b14283ca893a224d2f35c4969f
+=======
+    <option name="totallyTimeSpent" value="84834000" />
+>>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
 =======
     <option name="totallyTimeSpent" value="84834000" />
 >>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
@@ -815,10 +925,14 @@
     <layout>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24351145" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
 =======
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23054332" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
 >>>>>>> 4c064f3e9f0081b14283ca893a224d2f35c4969f
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23020834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
 =======
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23020834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
 >>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
@@ -882,6 +996,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/pages/full-width.html" />
@@ -1013,6 +1128,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
 =======
 >>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
     <entry file="file://$PROJECT_DIR$/content/styles/js/bootstrap.min.js">
@@ -1179,6 +1296,7 @@
       </provider>
     </entry>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/views/_layout/show-notify-messages.php">
 >>>>>>> 4c064f3e9f0081b14283ca893a224d2f35c4969f
       <provider selected="true" editor-type-id="text-editor">
@@ -1195,6 +1313,8 @@
         <state relative-caret-position="153">
           <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
 =======
+=======
+>>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
 =======
 >>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
     <entry file="file://$PROJECT_DIR$/views/medals/index.php">
@@ -1216,8 +1336,11 @@
         <state relative-caret-position="153">
           <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4c064f3e9f0081b14283ca893a224d2f35c4969f
           <folding />
+=======
+>>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
 =======
 >>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
         </state>
@@ -1249,12 +1372,15 @@
         <state relative-caret-position="425">
           <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
 <<<<<<< HEAD
+<<<<<<< HEAD
           <folding>
             <marker date="1471631214911" expanded="true" signature="150:173" ph="SELECT * FRO... contactus" />
             <marker date="1471631214911" expanded="true" signature="410:497" ph="INSERT INTO posts... " />
             <marker date="1471631214911" expanded="true" signature="775:901" ph="SELECT conta... " />
           </folding>
 >>>>>>> 4c064f3e9f0081b14283ca893a224d2f35c4969f
+=======
+>>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
 =======
 >>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
         </state>
@@ -1283,8 +1409,11 @@
         <state relative-caret-position="289">
           <caret line="17" column="93" selection-start-line="17" selection-start-column="93" selection-end-line="17" selection-end-column="93" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4c064f3e9f0081b14283ca893a224d2f35c4969f
           <folding />
+=======
+>>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
 =======
 >>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
         </state>
@@ -1301,8 +1430,11 @@
         <state relative-caret-position="221">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4c064f3e9f0081b14283ca893a224d2f35c4969f
           <folding />
+=======
+>>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
 =======
 >>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
         </state>
@@ -1318,6 +1450,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="16" selection-start-line="5" selection-start-column="7" selection-end-line="21" selection-end-column="16" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4c064f3e9f0081b14283ca893a224d2f35c4969f
           <folding />
@@ -1378,6 +1511,8 @@
         <state relative-caret-position="85">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="5" />
           <folding />
+=======
+>>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
 =======
 >>>>>>> aafcc5e901d41adef0ed64692ce9a09621859557
         </state>
@@ -1494,6 +1629,149 @@
         <state relative-caret-position="66">
           <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
 >>>>>>> 4c064f3e9f0081b14283ca893a224d2f35c4969f
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/ManagemedalsModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1471783795173" expanded="true" signature="130:150" ph="SELECT * FRO... medals" />
+            <marker date="1471783795173" expanded="true" signature="395:440" ph="INSERT INTO medals... " />
+            <marker date="1471783795173" expanded="true" signature="716:749" ph="SELECT * FRO... medals" />
+            <marker date="1471783795173" expanded="true" signature="1068:1116" ph="UPDATE medal... " />
+            <marker date="1471783795173" expanded="true" signature="1389:1420" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/home/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/_layout/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/_layout/show-notify-messages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/_layout/show-validation-errors.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/ManagevenuesModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+          <folding>
+            <marker date="1471902825237" expanded="true" signature="130:144" ph="SELECT * FRO... medals" />
+            <marker date="1471902825237" expanded="true" signature="130:150" ph="SELECT * FRO... venues" />
+            <marker date="1471902825237" expanded="true" signature="472:536" ph="INSERT INTO medals... " />
+            <marker date="1471902825237" expanded="true" signature="819:852" ph="SELECT * FRO... medals" />
+            <marker date="1471902825237" expanded="true" signature="1248:1316" ph="UPDATE medal... " />
+            <marker date="1471902825237" expanded="true" signature="1603:1634" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/adminpanel/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/_layout/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/VenuesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/VenuesModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding>
+            <marker date="1471904909558" expanded="true" signature="144:164" ph="SELECT * FRO... venues" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/ManagevenuesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="596">
+          <caret line="57" column="26" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/managevenues/edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/managevenues/add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/managevenues/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="33" column="11" selection-start-line="28" selection-start-column="6" selection-end-line="33" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/venues/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
           <folding />
         </state>
       </provider>
