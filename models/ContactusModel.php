@@ -29,7 +29,7 @@ class ContactusModel extends BaseModel
         return $result;
     }
 
-    public function edit( int $id ,string $name, string $body,int $age,string $education,string $work,string $passion) : bool{
+    public function edit(string $name, string $body,int $age,string $education,string $work,string $passion,int $id ) : bool{
         $statement = self::$db->prepare(
             "UPDATE contactus 
             SET name = ?, body=?, age=?, education=?, work=?, passion = ?

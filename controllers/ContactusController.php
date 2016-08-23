@@ -47,7 +47,7 @@ class ContactusController extends BaseController
                 $work = $_POST['work'];
                 $passion = $_POST['passion'];
 
-                if ($this->model->edit($id ,$name, $body, $age, $education, $work, $passion)) {
+                if ($this->model->edit($name, $body, $age, $education, $work, $passion,$id )) {
 
                     $this->addInfoMessage('Successful change!');
                     $this->redirect("contactus");
