@@ -17,6 +17,6 @@
         </div>
     <?php
     }
+    include ("_layout\comments.php");
     ?>
-
 </article>

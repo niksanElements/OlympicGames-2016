@@ -3,8 +3,16 @@
 
 class NewsController extends BaseController
 {
+    protected $commentModel;
     // Here we get the last 8 news and pass them in  $this->news
     // We get the users news title  too, and pass them in $this->userNews
+
+    function __construct($controllerName, $actionName)
+    {
+        parent::__construct($controllerName, $actionName);
+        $this->commentModel = new CommentsModel();
+    }
+
     public function index()
     {
         $this->news = $this->model->getLastNews(8);
@@ -23,6 +31,18 @@ class NewsController extends BaseController
             $this->redirect("news");
         }
         $this->news = $news;
+        $this->comments = $this->commentModel->getNewsComments($id);
+        if($this->isPost){
+            $comment = $_POST['comment'];
+            if(strlen($comment) == 0){
+                $this->addErrorMessage("You must enter same comment!");
+            }
+            else{
+                if($this->commentModel->addNewsComment($comment,$id,$_SESSION['userID'])){
+                    $this->redirect("news", "read", array($id));
+                }
+            }
+        }
     }
 
     public function create()
