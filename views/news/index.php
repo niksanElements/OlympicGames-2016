@@ -5,7 +5,10 @@
 <main>
 
     <?php
+    if($this->isRedactor)
         include("_layout/user-aside.php");
+    else
+        include ("_layout/aside.php");
     ?>
     <section class="col-lg-10 col-md-10 col-sm-10">
         <?php foreach ($this->news as $element):?>
