@@ -62,6 +62,12 @@ class UserController extends BaseController
             if (is_array($loginResult)){
                 $_SESSION['userID'] = $loginResult["userID"];
                 $_SESSION['username'] = $username;
+                if($loginResult['status'] === 'R') {
+                    $_SESSION['redactor'] = true;
+                }
+                else{
+                    $_SESSION['redactor'] = false;
+                }
                 if($loginResult["status"] === 'A'){
                   $_SESSION['admin'] = true;
                 }

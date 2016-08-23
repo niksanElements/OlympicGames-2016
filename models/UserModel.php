@@ -37,6 +37,9 @@ class UserModel extends BaseModel
           if($result['status'] == 'A'){
             $returnResult["status"] = "A";
           }
+          else if($result['status'] == 'R'){
+              $returnResult['status'] = 'R';
+          }
           else {
             $returnResult["status"] = "U";
           }

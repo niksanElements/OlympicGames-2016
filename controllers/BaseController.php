@@ -8,6 +8,7 @@ abstract class BaseController
     protected $isPost = false;
     protected $isLoggedIn = false;
     protected $isAdmin = false;
+    protected $isRedactor = false;
     protected $title = "";
     protected $model;
     protected $validationErrors = [];
@@ -23,6 +24,7 @@ abstract class BaseController
 
         $this->isLoggedIn = isset($_SESSION['userID']);
         $this->isAdmin = $_SESSION['admin'] ?? false;
+        $this->isRedactor = $_SESSION['redactor'] ?? false;
 
         // Load the default model class for the current controller
         $modelClassName = ucfirst(strtolower($controllerName)) . 'Model';
