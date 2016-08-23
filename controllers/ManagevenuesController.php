@@ -58,9 +58,10 @@ class ManagevenuesController extends BaseController
       if ($capacity < 0 || $capacity > 1000000) {
         $this->setValidationError("venues", "Invalid venue capacity");
       }
+
       if($this->formValid())
       {
-        $result = $this->model->addVenue($venue_name, $sport, $capacity);
+        $result = $this->model->editVenue($id, $venue_name, $sport, $capacity);
         if($result === true)
         {
           $this->addInfoMessage("Edit successful.");
