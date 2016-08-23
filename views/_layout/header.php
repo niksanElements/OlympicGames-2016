@@ -28,8 +28,8 @@
                         <li><a href="<?=APP_ROOT?>/countries/">Countries</a></li>
                         <li><a href="<?=APP_ROOT?>/medals/">Medals</a></li>
                         <li><a href="#">Sports</a></li>
-                        <li><a href="#">Athlets</a></li>
-                        <li><a href="#">Stadions</a></li>
+                        <li><a href="#">Athletes</a></li>
+                        <li><a href="<?=APP_ROOT?>/venues/">Venues</a></li>
                     </ul>`
                 </li>
                 <?php if($this->isAdmin): ?>
@@ -40,8 +40,8 @@
         </div>
         <div class="col-lg-1 col-md-1 col-sm-12 text-center">
             <?php if(!$this->isLoggedIn): ?>
-                <a class="col-lg-offset-1 col-md-offset-1 "href="<?=APP_ROOT?>/user/login">Login</a>
-                <a class="col-lg-offset-1 col-md-offset-1 " href="<?=APP_ROOT?>/user/registration"">Registrete</a>
+                <a class="col-lg-offset-1 col-md-offset-1 "href="<?=APP_ROOT?>/user/login">Log In</a>
+                <a class="col-lg-offset-1 col-md-offset-1 " href="<?=APP_ROOT?>/user/registration"">Register</a>
             <?php else: ?>
                 <span class="col8">Hello, <b><?=htmlspecialchars($_SESSION['username'])?></b></span>
                 <form class="col-lg-1" method="post" action="<?=APP_ROOT?>/user/logout">
