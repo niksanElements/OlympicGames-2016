@@ -9,8 +9,13 @@
     <label class="control-label" for="name">Title</label>
     <input class="form-control" type="text" name="name"
            value="<?= htmlspecialchars($this->contactus['name'])?>" maxlength="300"/><br/>
+<<<<<<< HEAD
     <label class="control-label" for="age">Age</label>
     <input class="form-control" type="text" name="age"
+=======
+    <label class="control-label" for="each">Age</label>
+    <input class="form-control" type="text" name="each"
+>>>>>>> f21879e0e26bdba7403fc226f607f1987f281d3b
            value="<?= htmlspecialchars($this->contactus['age'])?>" maxlength="300"/><br/>
     <label class="control-label" for="education">Education</label>
     <input class="form-control" type="text" name="education"
