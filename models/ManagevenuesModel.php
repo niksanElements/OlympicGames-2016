@@ -8,13 +8,17 @@ class ManagevenuesModel extends BaseModel
     return $result;
   }
 
-  public function addVenue($venue_name, $sport, $capacity) : bool
+  public function addVenue($venue_name, $sport, $capacity, $lon, $lat) : bool
   {
     $venue_name = htmlspecialchars($venue_name);
     $sport = htmlspecialchars($sport);
     $capacity = htmlspecialchars($capacity);
-    $statement = self::$db->prepare("INSERT INTO venues (venue_name, sport, capacity ) VALUES (?,?,?)");
-    $statement->bind_param("ssi", $venue_name, $sport, $capacity);
+    $lon = htmlspecialchars($lon);
+    $lat = htmlspecialchars($lat);
+
+    $statement = self::$db->prepare("INSERT INTO venues (venue_name, sport, capacity, lon, lat)
+    VALUES (?, ?, ?, ?, ?)");
+    $statement->bind_param("ssidd", $venue_name, $sport, $capacity, $lon, $lat);
     $statement->execute();
     if(!$statement->errno)
     {
@@ -35,15 +39,17 @@ class ManagevenuesModel extends BaseModel
     return $result;
   }
 
-  public function editVenue($id, $venue_name, $sport, $capacity) : bool
+  public function editVenue($id, $venue_name, $sport, $capacity, $lon, $lat) : bool
   {
     $venue_name = htmlspecialchars($venue_name);
     $sport = htmlspecialchars($sport);
     $capacity = htmlspecialchars($capacity);
-    
-    $statement = self::$db->prepare("UPDATE venues SET venue_name = ?, sport = ?, capacity = ?
+    $lon = htmlspecialchars($lon);
+    $lat = htmlspecialchars($lat);
+
+    $statement = self::$db->prepare("UPDATE venues SET venue_name = ?, sport = ?, capacity = ?, lon = ?, lat = ?
       WHERE id = ?");
-    $statement->bind_param("sssi", $venue_name, $sport, $capacity, $id);
+    $statement->bind_param("sssddi", $venue_name, $sport, $capacity, $lon, $lat, $id);
     $statement->execute();
       if(!$statement->errno)
     {

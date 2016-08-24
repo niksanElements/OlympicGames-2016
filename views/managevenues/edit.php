@@ -34,6 +34,22 @@
       </th>
     </tr>
     <tr>
+      <th>
+        Latitude:
+      </th>
+      <th>
+        <input type="number" step="0.0000001" name="lat" value="<?=$this->venues["lat"]?>" />
+      </th>
+    </tr>
+    <tr>
+      <th>
+        Longitude:
+      </th>
+      <th>
+        <input type="number" step="0.00000001" name="lon" value="<?=$this->venues["lon"]?>" />
+      </th>
+    </tr>
+    <tr>
       <th colspan="2">
         <input type="submit" name="submit-edit" value="Save" />
       </th>

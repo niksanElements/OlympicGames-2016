@@ -26,6 +26,22 @@
       </th>
     </tr>
     <tr>
+      <th>
+        Latitude:
+      </th>
+      <th>
+        <input type="number" step="0.0000001" name="lat" />
+      </th>
+    </tr>
+    <tr>
+      <th>
+        Longitude:
+      </th>
+      <th>
+        <input type="number" step="0.00000001" name="lon" />
+      </th>
+    </tr>
+    <tr>
       <th colspan="2">
         <input type="submit" name="submit-add" value="Add" />
       </th>

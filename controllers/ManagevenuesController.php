@@ -24,9 +24,12 @@ class ManagevenuesController extends BaseController
       if ($capacity < 0 and $capacity > 1000000) {
         $this->setValidationError("venues", "Invalid venue capacity");
       }
+      $lon = $_POST["lon"];
+      $lat = $_POST["lat"];
+
       if($this->formValid())
       {
-        $result = $this->model->addVenue($venue_name, $sport, $capacity);
+        $result = $this->model->addVenue($venue_name, $sport, $capacity, $lon, $lat);
         if($result === true)
         {
           $this->addInfoMessage("Add successful.");
@@ -58,10 +61,12 @@ class ManagevenuesController extends BaseController
       if ($capacity < 0 || $capacity > 1000000) {
         $this->setValidationError("venues", "Invalid venue capacity");
       }
+      $lon = $_POST["lon"];
+      $lat = $_POST["lat"];
 
       if($this->formValid())
       {
-        $result = $this->model->editVenue($id, $venue_name, $sport, $capacity);
+        $result = $this->model->editVenue($id, $venue_name, $sport, $capacity, $lon, $lat);
         if($result === true)
         {
           $this->addInfoMessage("Edit successful.");
