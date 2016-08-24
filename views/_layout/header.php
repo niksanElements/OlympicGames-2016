@@ -38,6 +38,7 @@
                 <?php if($this->isAdmin): ?>
                     <li class="text-center"><a href="<?=APP_ROOT?>/adminpanel/">Admin panel</a></li>
                 <?php endif; ?>
+                <li class="text-center"><a href="<?=APP_ROOT?>/forum/">Forum</a></li>
                 <li class="last text-center"><a href="<?=APP_ROOT?>/contactus">Contact Us</a></li>
             </ul>
         </div>
