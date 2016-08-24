@@ -28,3 +28,60 @@ th
     padding: 5px;
     border: 1px #000000 solid;
 }
+.icons{
+    background: #0f0f0f;
+    text-align: center;
+    padding: 30px;
+    width: 80%;
+    border-radius: 10px;
+    margin-left: 8%;
+    margin-right: 10%;
+
+}
+.icons li{
+    display: inline-block;
+    width: 33%;
+}
+.icons li a{
+    display: block;
+    width: 100%;
+    padding: 20px 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    font: bold 12pt Ariel;
+    color: white;
+}
+.icons li a:hover{
+    background: black;
+    color: #F0E0C9;
+    border: 2px solid orangered;
+    margin: -2px;
+}
+.asd{
+    display: inline-block;
+}
+h1 { color: #0077aa; background-color: black; font-family: 'Rouge Script', cursive; font-size: 4.9em; font-weight: normal;
+    line-height: 48px; margin: 0 0 50px; text-align: center; text-shadow: 1px 1px 2px #082b34;width: auto }
+h2 { color: #0077aa; text-align: center; font-family: 'Julius Sans One', sans-serif; font-size: 22px; font-weight: bold;
+    line-height: 32px; margin: 0 0 24px; text-shadow: 1px 1px 1px #082b34;background-color: black; }
+h4 { color: #0077aa; text-align: center; font-family: 'Julius Sans One', sans-serif; font-size: 18px; font-weight: bold;
+    line-height: 32px; margin: 0 0 24px; text-shadow: 1px 1px 1px #082b34;background-color: black; }
+li{
+    text-align: center;
+
+    margin: 2px;
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.special{
+    color: #0077aa; background-color: black; font-family: 'Rouge Script'; font-size: 1.1em; font-weight: 600;
+         margin: 0 0 0px; text-align: center; width: auto
+}

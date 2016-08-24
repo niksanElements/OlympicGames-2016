@@ -15,7 +15,7 @@
         <?php foreach ($this->medals as $medal):?>
             <tr>
                 <td><?= htmlspecialchars($medal['name']) ?></td>
-                <td><?= htmlspecialchars($medal['medal_type']) ?></td>
+                <td><?= htmlspecialchars($medal['type']) ?></td>
             </tr>
         <?php endforeach ?>
 </main>
