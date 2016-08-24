@@ -28,7 +28,7 @@
                         <li><a href="<?=APP_ROOT?>/countries/">Countries</a></li>
                         <li><a href="<?=APP_ROOT?>/medals/">Medals</a></li>
                         <li><a href="#">Sports</a></li>
-                        <li><a href="#">Athletes</a></li>
+                        <li><a href="<?=APP_ROOT?>/athletes/">Athletes</a></li>
                         <li><a href="<?=APP_ROOT?>/venues/">Venues</a></li>
                     </ul>`
                 </li>
