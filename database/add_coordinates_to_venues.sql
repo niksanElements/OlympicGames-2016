@@ -1,3 +1,3 @@
 ALTER TABLE `venues`
-ADD `lon` double NULL,
-ADD `lat` double NULL AFTER `lon`;
+ADD `lat` double NULL,
+ADD `lon` double NULL AFTER `lon`;
