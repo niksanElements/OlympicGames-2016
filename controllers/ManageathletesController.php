@@ -5,7 +5,7 @@ class ManageathletesController extends BaseController
   {
     $this->authorizeAdmin();
 
-    $this->athletes = $this->model->getAthletes();
+    $this->athletes = $this->model->getAllAthletes();
   }
 
   function add()
@@ -14,9 +14,9 @@ class ManageathletesController extends BaseController
 
     if($this->isPost)
     {
-      $name = $_POST["name"];
-      if (strlen($name) < 2 || strlen ($name)> 200) {
-          $this->setValidationError("name", "Invalid name");
+      $full_name = $_POST["full_name"];
+      if (strlen($full_name) < 2 || strlen ($full_name)> 200) {
+          $this->setValidationError("full_name", "Invalid name");
       }
       $age = $_POST["age"];
       $sportID = $_POST["sportID"];
@@ -24,7 +24,7 @@ class ManageathletesController extends BaseController
 
       if($this->formValid())
       {
-        $result = $this->model->addAthlete($name, $age, $sportID, $countryID);
+        $result = $this->model->addAthlete($full_name, $age, $sportID, $countryID);
         if($result === true)
         {
           $this -> addInfoMessage("Add successful.");
@@ -39,6 +39,54 @@ class ManageathletesController extends BaseController
 
     $this->countries = $this->model->getCountries();
     $this->sports = $this->model->getSports();
+  }
+
+  function edit($id)
+  {
+    $this->authorizeAdmin();
+    $this->athlete = $this->model->getAthlete($id);
+    $this->countries = $this->model->getCountries();
+    $this->sports = $this->model->getSports();
+
+    if($this->isPost)
+    {
+      $full_name = $_POST["full_name"];
+      if (strlen($full_name) < 2 || strlen ($full_name)> 200) {
+          $this->setValidationError("full_name", "Invalid name");
+      }
+      $age = $_POST["age"];
+      $sportID = $_POST["sportID"];
+      $countryID = $_POST["countryID"];
+
+      if($this->formValid())
+      {
+        $result = $this->model->editAthlete($id, $full_name, $age, $sportID, $countryID);
+        if($result === true)
+        {
+          $this -> addInfoMessage("Edit successful.");
+          $this -> redirect('manageathletes', 'index');
+        }
+        else
+        {
+          $this->addErrorMessage("Edit failed. Try again.");
+        }
+      }
+    }
+  }
+
+  function delete($id)
+  {
+    $this->authorizeAdmin();
+    $result = $this->model->deleteAthlete($id);
+    if($result === true)
+    {
+      $this -> addInfoMessage("Delete successful.");
+      $this -> redirect('manageathletes', 'index');
+    }
+    else
+    {
+      $this->addErrorMessage("Delete failed. Try again.");
+    }
   }
 }
 ?>

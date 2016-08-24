@@ -15,7 +15,7 @@ class ManageathletesModel extends BaseModel
     return $result;
   }
 
-  public function getAthletes() : array
+  public function getAllAthletes() : array
   {
     $statement = self::$db->query("SELECT players.id AS playerID, players.full_name AS playerName,
       players.age AS playerAge,
@@ -28,15 +28,15 @@ class ManageathletesModel extends BaseModel
     return $result;
   }
 
-  public function addAthlete($name, $age, $sportID, $countryID) : bool
+  public function addAthlete($full_name, $age, $sportID, $countryID) : bool
   {
-    $name = htmlspecialchars($name);
+    $full_name = htmlspecialchars($full_name);
     $age = htmlspecialchars($age);
     $sportID = htmlspecialchars($sportID);
     $countryID = htmlspecialchars($countryID);
 
     $statement = self::$db->prepare("INSERT INTO players (full_name, age, sports_id) VALUES (?, ?, ?)");
-    $statement->bind_param("sii", $name, $age, $sportID);
+    $statement->bind_param("sii", $full_name, $age, $sportID);
     $statement->execute();
     if($statement->affected_rows == 1)
     {
@@ -44,6 +44,84 @@ class ManageathletesModel extends BaseModel
       $statement = self::$db->prepare("INSERT INTO players_has_countries (players_id, countries_id)
       VALUES (?, ?)");
       $statement->bind_param("ii", $playerID, $countryID);
+      $statement->execute();
+      if($statement->affected_rows == 1)
+      {
+        return true;
+      }
+      else
+      {
+        return false;
+      }
+    }
+    else
+    {
+      return false;
+    }
+  }
+
+  public function getAthlete($id) : array
+  {
+    $id = htmlspecialchars($id);
+    $statement = self::$db->prepare("SELECT players.id AS playerID, players.full_name AS playerName,
+      players.age AS playerAge,
+      sports.id AS sportID, sports.name AS sportName,
+      countries.id AS countryID, countries.full_name AS countryName
+      FROM players
+      JOIN sports ON players.sports_id = sports.id
+      JOIN players_has_countries ON players.id = players_has_countries.players_id
+      JOIN countries ON players_has_countries.countries_id = countries.id
+      WHERE players.id = ?");
+    $statement->bind_param("i", $id);
+    $statement->execute();
+    $result = $statement->get_result()->fetch_assoc();
+    return $result;
+  }
+
+  public function editAthlete($id, $full_name, $age, $sportID, $countryID) : bool
+  {
+    $id = htmlspecialchars($id);
+    $full_name = htmlspecialchars($full_name);
+    $age = htmlspecialchars($age);
+    $sportID = htmlspecialchars($sportID);
+    $countryID = htmlspecialchars($countryID);
+
+    $statement = self::$db->prepare("UPDATE players SET full_name = ?, age = ?, sports_id = ?
+    WHERE id = ?");
+    $statement->bind_param("siii", $full_name, $age, $sportID, $id);
+    $statement->execute();
+    if(!$statement->errno)
+    {
+      $statement = self::$db->prepare("UPDATE players_has_countries SET countries_id = ?
+      WHERE players_id = ?");
+      $statement->bind_param("ii", $countryID, $id);
+      $statement->execute();
+      if(!$statement->errno)
+      {
+        return true;
+      }
+      else
+      {
+        return false;
+      }
+    }
+    else
+    {
+      return false;
+    }
+  }
+
+  public function deleteAthlete($id) : bool
+  {
+    $id = htmlspecialchars($id);
+    $statement = self::$db->prepare("DELETE FROM players_has_countries WHERE players_id = ?");
+    $statement->bind_param("i", $id);
+    $statement->execute();
+    var_dump($statement->error);
+    if($statement->affected_rows == 1)
+    {
+      $statement = self::$db->prepare("DELETE FROM players WHERE id = ?");
+      $statement->bind_param("i", $id);
       $statement->execute();
       if($statement->affected_rows == 1)
       {
