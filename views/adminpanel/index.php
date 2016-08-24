@@ -14,4 +14,7 @@
   <li>
     <a href="<?=APP_ROOT?>/managecontactus/">Manage contact and team details</a>
   </li>
+  <li>
+    <a href="<?=APP_ROOT?>/manageathletes/">Manage athletes</a>
+  </li>
 </ul>
