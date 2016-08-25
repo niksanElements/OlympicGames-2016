@@ -10,6 +10,7 @@ class ManagemedalsController extends BaseController
   function add()
   {
     $this->authorizeAdmin();
+    $this->athletes = $this->model->getAllAthletes();
     if($this->isPost)
     {
       $name = $_POST["name"];
@@ -20,9 +21,10 @@ class ManagemedalsController extends BaseController
       if ($type < 1 or $type > 3){
         $this->setValidationError("medal", "Invalid medal input");
       }
+      $playerID = $_POST["playerID"];
       if($this->formValid())
       {
-        $result = $this->model->addMedal($name, $type);
+        $result = $this->model->addMedal($name, $type, $playerID);
         if($result === true)
         {
           $this->addInfoMessage("Add successful.");
@@ -39,6 +41,7 @@ class ManagemedalsController extends BaseController
   function edit($id)
   {
     $this->authorizeAdmin();
+    $this->athletes = $this->model->getAllAthletes();
 
     if($this->isPost)
     {
@@ -50,10 +53,11 @@ class ManagemedalsController extends BaseController
       if ($type < 1 and $type > 3) {
         $this->setValidationError("medal", "Invalid medal info");
       }
+      $playerID = $_POST["playerID"];
 
       if($this->formValid())
       {
-        $result = $this->model->editMedal($id, $name, $type);
+        $result = $this->model->editMedal($id, $name, $type, $playerID);
         if($result === true)
         {
           $this->addInfoMessage("Edit successful.");

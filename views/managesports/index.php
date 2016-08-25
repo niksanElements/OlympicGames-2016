@@ -9,6 +9,9 @@
       Sport:
     </th>
     <th>
+      Venue:
+    </th>
+    <th>
       Actions:
     </th>
   </tr>
@@ -19,6 +22,9 @@
       </th>
       <th>
         <?=$sport["name"]?>
+      </th>
+      <th>
+        <?=$sport["venue"]?>
       </th>
       <th>
         <a href="<?=APP_ROOT?>/managesports/edit/<?=$sport["id"]?>">Edit</a>
