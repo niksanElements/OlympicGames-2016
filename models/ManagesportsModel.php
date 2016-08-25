@@ -3,16 +3,25 @@ class ManagesportsModel extends BaseModel
 {
   public function getAllSports() : array
   {
-    $statement = self::$db->query("SELECT * FROM sports");
+    $statement = self::$db->query("SELECT sports.*, venues.venue_name AS venue FROM sports
+    LEFT JOIN venues ON venues.id = sports.venue");
     $result = $statement -> fetch_all(MYSQLI_ASSOC);
     return $result;
   }
 
-  public function addSport($name) : bool
+  public function getAllVenues() : array
+  {
+    $statement = self::$db->query("SELECT * FROM venues");
+    $result = $statement -> fetch_all(MYSQLI_ASSOC);
+    return $result;
+  }
+
+  public function addSport($name, $venueID) : bool
   {
     $name = htmlspecialchars($name);
-    $statement = self::$db->prepare("INSERT INTO sports (name) VALUES (?)");
-    $statement->bind_param("s", $name);
+    $venueID = htmlspecialchars($venueID);
+    $statement = self::$db->prepare("INSERT INTO sports (name, venue) VALUES (?, ?)");
+    $statement->bind_param("si", $name, $venueID);
     $statement->execute();
     if($statement->affected_rows == 1)
     {
@@ -33,11 +42,11 @@ class ManagesportsModel extends BaseModel
     return $result;
   }
 
-  public function editSport($id, $name) : bool
+  public function editSport($id, $name, $venueID) : bool
   {
     $name = htmlspecialchars($name);
-    $statement = self::$db->prepare("UPDATE sports SET name = ? WHERE id = ?");
-    $statement->bind_param("si", $name, $id);
+    $statement = self::$db->prepare("UPDATE sports SET name = ?, venue = ? WHERE id = ?");
+    $statement->bind_param("sii", $name, $venueID, $id);
     $statement->execute();
     if($statement->affected_rows == 1)
     {
