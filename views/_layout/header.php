@@ -28,7 +28,6 @@
                 <li class="dropdown text-center"><a class="dropdown-toggle" data-toggle="dropdown"  href="#">Olympic Info</a>
                     <ul class="dropdown-menu" style="font-size:1.15em;font-weight: 500;color: #1C5E82">
                         <li class="special"><a style="color: #1C5E82" href="<?=APP_ROOT?>/countries/" >Countries</a></li>
-                        <li class="special"><a style="color: #1C5E82" href="<?=APP_ROOT?>/medals/">Medals</a></li>
                         <li class="special"><a style="color: #1C5E82" href="<?=APP_ROOT?>/sports/">Sports</a></li>
                         <li class="special"><a style="color: #1C5E82" href="#">Athletes</a></li>
                         <li class="special"><a style="color: #1C5E82" href="<?=APP_ROOT?>/venues/">Venues</a></li>

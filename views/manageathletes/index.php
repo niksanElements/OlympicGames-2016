@@ -9,6 +9,9 @@
       Name:
     </th>
     <th>
+      Team or Athlete
+    </th>
+    <th>
       Age:
     </th>
     <th>
@@ -28,6 +31,13 @@
       </th>
       <th>
         <?=$athlete["playerName"]?>
+      </th>
+      <th>
+        <?php if($athlete["isTeam"] == 1): ?>
+          Team
+        <?php else: ?>
+          Athlete
+        <?php endif ?>
       </th>
       <th>
         <?=$athlete["playerAge"]?>
