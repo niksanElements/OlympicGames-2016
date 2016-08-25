@@ -55,5 +55,6 @@ class ForumController extends BaseController
     public function dictionary($char)
     {
         $this->posts = $this->commentsModel->getForumComments($char);
+        $this->recentPosts = $this->commentsModel->getRecantComments();
     }
 }
