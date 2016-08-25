@@ -17,6 +17,22 @@
         <input type="text" name="name" value="<?=$this->medals["name"]?>" />
       </th>
       </tr>
+      <tr>
+        <th>
+          Winner
+        </th>
+        <th>
+          <select name="playerID">
+            <?php foreach($this->athletes as $athlete): ?>
+              <?php if($athlete["id"] == $this->medals["playerID"]): ?>
+                <option value="<?=$athlete["id"]?>" selected="selected"><?=$athlete["full_name"]?></option>
+              <?php else: ?>
+                <option value="<?=$athlete["id"]?>"><?=$athlete["full_name"]?></option>
+              <?php endif ?>
+            <?php endforeach ?>
+          </select>
+        </th>
+      </tr>
     <tr>
       <th>
         Medal type:

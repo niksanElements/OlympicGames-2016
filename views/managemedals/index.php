@@ -12,6 +12,9 @@
       Type:
     </th>
     <th>
+      Winner:
+    </th>
+    <th>
       Actions:
     </th>
   </tr>
@@ -31,6 +34,9 @@
         <?php else:?>
          Bronze
         <?php endif?>
+      </th>
+      <th>
+        <?=$medal["winner"]?>
       </th>
       <th>
         <a href="<?=APP_ROOT?>/managemedals/edit/<?=$medal["id"]?>">Edit</a>
