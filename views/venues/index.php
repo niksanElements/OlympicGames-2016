@@ -2,6 +2,7 @@
 
 <h1><?=htmlspecialchars($this->title)?></h1>
 <main>
+<div id="map" style="width:90%;height:400px;"></div>
 <table>
     <tr>
         <th>
@@ -12,6 +13,9 @@
         </th>
         <th>
             Venue Capacity
+        </th>
+        <th>
+          &nbsp;
         </th>
     </tr>
     <?php foreach($this->venues as $venue): ?>
@@ -25,17 +29,19 @@
         <th>
             <?=$venue["capacity"]?>
         </th>
+        <th>
+          <input type="button" id="venue<?=$venue["id"]?>" value="view" />
+        </th>
     </tr>
   <?php endforeach ?>
 </table>
-<div id="map" style="width:600px;height:300px;"></div>
 </main>
 <script src="https://maps.google.com/maps/api/js?v=3.24&key=AIzaSyB2rujYvIaXzZ_PzbGxlCvlnwlBefaVmXA"></script>
 <script>
   function initMap() {
     let LatLng = {lat: -22.908333, lng: -43.196389};
     let map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 10,
+      zoom: 11,
       center: LatLng
     });
 
@@ -58,6 +64,10 @@
         });
         marker<?=$venue["id"]?>.addListener('click', function() {
           infowindow<?=$venue["id"]?>.open(map, marker<?=$venue["id"]?>);
+        });
+        $('#venue<?=$venue["id"]?>').on('click', function() {
+          map.setZoom(16);
+          map.setCenter(marker<?=$venue["id"]?>.getPosition());
         });
       <?php endif ?>
     <?php endforeach ?>
