@@ -17,4 +17,7 @@
   <li>
     <a href="<?=APP_ROOT?>/manageathletes/">Manage athletes</a>
   </li>
+  <li>
+    <a href="<?=APP_ROOT?>/managenews/">Manage news</a>
+  </li>
 </ul>
