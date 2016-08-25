@@ -34,11 +34,13 @@
         <?=$user["email"]?>
       </th>
       <th>
-        <?php if($user["status"] == "A"): ?>
+        <?php if($user["status"] == "A"){ ?>
         Admin
-        <?php else: ?>
+        <?php }else if($user["status"] == "U") { ?>
           User
-        <?php endif ?>
+        <?php } else { ?>
+          Redactor
+          <?php } ?>
       </th>
       <th>
         <a href="<?=APP_ROOT?>/manageusers/edit/<?=$user["id"]?>">Edit</a>&nbsp;

@@ -37,17 +37,28 @@
                 Status:
             </th>
             <th>
-                <?php if($this->user["status"] == "A"): ?>
+                <?php if($this->user["status"] == "A"){ ?>
                     <input type="radio" name="status" value="A" checked="checked" />
                     Admin
                     <input type="radio" name="status" value="U" />
                     User
-                <?php else: ?>
+                    <input type="radio" name="status" value="R" />
+                    Redactor
+                <?php } else if($this->user["status"] == "U"){ ?>
                     <input type="radio" name="status" value="A" />
                     Admin
                     <input type="radio" name="status" value="U" checked="checked" />
                     User
-                <?php endif ?>
+                    <input type="radio" name="status" value="R" />
+                    Redactor
+                <?php } else{ ?>
+                    <input type="radio" name="status" value="A" />
+                    Admin
+                    <input type="radio" name="status" value="U"  />
+                    User
+                    <input type="radio" name="status" value="R" checked="checked"/>
+                    Redactor
+                <?php } ?>
             </th>
         </tr>
         <tr>

@@ -74,7 +74,7 @@ class NewsController extends BaseController
             if ($this->isPost) {
                 $title = $_POST['title'];
                 if ($title === $news['title']) {
-                    $this->commentModel->deleteNewsComments($id);
+                    $this->commentModel->deleteNewsComments($id);   
                     if ($this->model->remove($id)) {
                         $this->addInfoMessage("Successful delete!!");
                         $this->redirect("news");
