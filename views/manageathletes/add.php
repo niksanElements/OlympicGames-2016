@@ -2,8 +2,13 @@
 <form method="post">
   <table>
     <tr>
+        <th colspan="2">
+        <input type="radio" name="isTeam" value="0" checked="checked" /> Add an athlete
+        <input type="radio" name="isTeam" value="1" /> Add team<br>
+        </th>
+      </tr>
       <th>
-        Athlete's name:
+        Name:
       </th>
       <th>
         <input type="text" name="full_name" />

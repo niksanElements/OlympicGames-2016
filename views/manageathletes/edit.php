@@ -2,6 +2,20 @@
 <form method="post">
   <table>
     <tr>
+      <th colspan="2">
+        <?php if($this->athlete["isTeam"] == 0): ?>
+          <input type="radio" name="isTeam" value="0" checked="checked"> Add an athlete
+        <?php else: ?>
+          <input type="radio" name="isTeam" value="0"> Add an athlete
+        <?php endif ?>
+        <?php if($this->athlete["isTeam"] == 1): ?>
+          <input type="radio" name="isTeam" value="1" checked="checked"> Add Team
+        <?php else: ?>
+          <input type="radio" name="isTeam" value="1"> Add Team
+        <?php endif ?><br>
+      </th>
+    </tr>
+    <tr>
       <th>
         Athlete's name:
       </th>

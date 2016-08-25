@@ -14,6 +14,9 @@ class ManageathletesController extends BaseController
 
     if($this->isPost)
     {
+
+      
+      $isTeam = $_POST["isTeam"];
       $full_name = $_POST["full_name"];
       if (strlen($full_name) < 2 || strlen ($full_name)> 200) {
           $this->setValidationError("full_name", "Invalid name");
@@ -24,7 +27,7 @@ class ManageathletesController extends BaseController
 
       if($this->formValid())
       {
-        $result = $this->model->addAthlete($full_name, $age, $sportID, $countryID);
+        $result = $this->model->addAthlete($isTeam, $full_name, $age, $sportID, $countryID);
         if($result === true)
         {
           $this -> addInfoMessage("Add successful.");

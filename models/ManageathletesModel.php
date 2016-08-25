@@ -18,7 +18,7 @@ class ManageathletesModel extends BaseModel
   public function getAllAthletes() : array
   {
     $statement = self::$db->query("SELECT players.id AS playerID, players.full_name AS playerName,
-      players.age AS playerAge,
+      players.age AS playerAge, players.isTeam,
       sports.name AS sportName, countries.full_name AS countryName
       FROM players
       JOIN sports ON players.sports_id = sports.id
@@ -28,15 +28,16 @@ class ManageathletesModel extends BaseModel
     return $result;
   }
 
-  public function addAthlete($full_name, $age, $sportID, $countryID) : bool
+  public function addAthlete($isTeam, $full_name, $age, $sportID, $countryID) : bool
   {
+    $isTeam = htmlspecialchars($isTeam);
     $full_name = htmlspecialchars($full_name);
     $age = htmlspecialchars($age);
     $sportID = htmlspecialchars($sportID);
     $countryID = htmlspecialchars($countryID);
 
-    $statement = self::$db->prepare("INSERT INTO players (full_name, age, sports_id) VALUES (?, ?, ?)");
-    $statement->bind_param("sii", $full_name, $age, $sportID);
+    $statement = self::$db->prepare("INSERT INTO players (full_name, age, sports_id, isTeam) VALUES (?, ?, ?, ?)");
+    $statement->bind_param("siii", $full_name, $age, $sportID, $isTeam);
     $statement->execute();
     if($statement->affected_rows == 1)
     {
@@ -64,7 +65,7 @@ class ManageathletesModel extends BaseModel
   {
     $id = htmlspecialchars($id);
     $statement = self::$db->prepare("SELECT players.id AS playerID, players.full_name AS playerName,
-      players.age AS playerAge,
+      players.age AS playerAge, players.isTeam,
       sports.id AS sportID, sports.name AS sportName,
       countries.id AS countryID, countries.full_name AS countryName
       FROM players
@@ -78,17 +79,18 @@ class ManageathletesModel extends BaseModel
     return $result;
   }
 
-  public function editAthlete($id, $full_name, $age, $sportID, $countryID) : bool
+  public function editAthlete($id, $full_name, $age, $sportID, $countryID, $isTeam) : bool
   {
     $id = htmlspecialchars($id);
     $full_name = htmlspecialchars($full_name);
     $age = htmlspecialchars($age);
     $sportID = htmlspecialchars($sportID);
     $countryID = htmlspecialchars($countryID);
+    $isTeam = htmlspecialchars($isTeam);
 
-    $statement = self::$db->prepare("UPDATE players SET full_name = ?, age = ?, sports_id = ?
+    $statement = self::$db->prepare("UPDATE players SET full_name = ?, age = ?, sports_id = ?, isTeam = ?
     WHERE id = ?");
-    $statement->bind_param("siii", $full_name, $age, $sportID, $id);
+    $statement->bind_param("siiii", $full_name, $age, $sportID, $isTeam, $id);
     $statement->execute();
     if(!$statement->errno)
     {
