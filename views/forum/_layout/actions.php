@@ -21,4 +21,8 @@
             <?php } ?>
         </ul>
     </div>
+    <div class="action">
+        <a class="col-lg-2 col-md-2 col-sm-2" href="<?=APP_ROOT?>/forum/add">[add]</a>
+    </div>
+</div>
 </div>

@@ -2,6 +2,11 @@
 
 <h1><?=htmlspecialchars($this->title)?></h1>
 
+<?php
+    include("_layout\actions.php");
+?>
+
+
 <form class="form-horizontal" method="post" accept-charset="UTF-8">
     <h5>Place Create post!</h5>
 

@@ -3,8 +3,7 @@
 <h1><?=htmlspecialchars($this->title)?></h1>
 
 <?php
-    include("_layout\header.php");
-    include("_layout\aside.php");
+    include("_layout\actions.php");
 ?>
 
 

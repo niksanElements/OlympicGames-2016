@@ -28,6 +28,7 @@ class ForumController extends BaseController
                 $this->addErrorMessage("Can't add post in comments.");
             }
         }
+        $this->recentPosts = $this->commentsModel->getRecantComments();
     }
     
     public function read(int $id)
@@ -50,6 +51,7 @@ class ForumController extends BaseController
                 }
             }
         }
+        $this->recentPosts = $this->commentsModel->getRecantComments();
     }
 
     public function dictionary($char)

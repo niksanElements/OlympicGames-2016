@@ -1,5 +1,10 @@
 <h1><?= htmlspecialchars($this->title) ?></h1>
 
+<?php
+    include("_layout\actions.php");
+?>
+
+
 <article class="panel panel-group center-block news">
     <h4 class="panel panel-heading"><?= htmlspecialchars($this->post['title']) ?></h4>
     <div class="date panel panel-info">Post on:
