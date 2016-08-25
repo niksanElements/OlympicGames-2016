@@ -6,5 +6,5 @@ class CountriesController extends BaseController
     {
         $this->countries = $this->model->getCountries();
     }
-    
+
 }
