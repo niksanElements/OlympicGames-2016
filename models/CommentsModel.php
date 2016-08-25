@@ -39,4 +39,31 @@ class CommentsModel extends BaseModel
         return  $statement->fetch_all(MYSQLI_ASSOC);
     }
 
+    //this function return the post titles and ides
+    //order by post_comments last update
+    public function getRecantComments(int $maxComments = 5) : array
+    {
+        $statement = self::$db->query(
+            "SELECT post.title,post.id
+                FROM post
+                LEFT JOIN post_comments
+                ON post_comments.posts_id = post.id
+                GROUP BY post.id
+                ORDER BY post_comments.date DESC
+                LIMIT $maxComments"
+        );
+        return $statement->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function getForumComments(string $char)
+    {
+        $statement = self::$db->query(
+            "SELECT post.title,post.id
+            FROM post
+            WHERE LEFT(title,1) = \"$char \"
+            ORDER BY title"
+        );
+        return $statement->fetch_all(MYSQLI_ASSOC);
+    }
+
 }

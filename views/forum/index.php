@@ -2,11 +2,15 @@
 
 <h1><?=htmlspecialchars($this->title)?></h1>
 
-<?php include("_layout\header.php"); ?>
+<?php
+    include("_layout\header.php");
+    include("_layout\aside.php");
+?>
 
-<section class="col-lg-10 col-md-10 col-sm-10">
+
+<section>
     <?php foreach ($this->posts as $post):?>
-        <a href="<?=APP_ROOT?>/forum/read/<?=$post['id']?>">
+        <a  href="<?=APP_ROOT?>/forum/read/<?=$post['id']?>">
             <article class="panel panel-group">
 
                     <h4 class="panel panel-heading"><?= htmlspecialchars($post['title']) ?></h4>

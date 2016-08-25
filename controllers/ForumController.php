@@ -11,8 +11,8 @@ class ForumController extends BaseController
 
     public function index()
     {
-        $this->posts = $this->model->getLastPosts(4);
-        
+        $this->posts = $this->model->getLastPosts(10);
+        $this->recentPosts = $this->commentsModel->getRecantComments();
     }
 
     public function add()
@@ -50,5 +50,10 @@ class ForumController extends BaseController
                 }
             }
         }
+    }
+
+    public function dictionary($char)
+    {
+        $this->posts = $this->commentsModel->getForumComments($char);
     }
 }
