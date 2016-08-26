@@ -2,8 +2,48 @@
 
 class CountriesModel extends BaseModel
 {
-    public function getCountries() : array
+    public function getCountries($sort = NULL) : array
     {
+        $sortQuery = "";
+        if($sort)
+        {
+            switch($sort)
+            {
+                case "shortAsc":
+                {
+                    $sortQuery = " ORDER BY countries.short_name ASC";
+                }break;
+                case "shortDesc":
+                {
+                    $sortQuery = " ORDER BY countries.short_name DESC";
+                }break;
+                case "countryAsc":
+                {
+                    $sortQuery = " ORDER BY countries.full_name ASC";
+                }break;
+                case "countryDesc":
+                {
+                    $sortQuery = " ORDER BY countries.full_name DESC";
+                }break;
+                
+                case "athletestotalAsc":
+                {
+                    $sortQuery = " ORDER BY countries.id ASC";
+                }break;
+                case "athletestotalDesc":
+                {
+                    $sortQuery = " ORDER BY countries.id DESC";
+                }break;
+                case "medalstotalAsc":
+                {
+                    $sortQuery = " ORDER BY medals.id ASC";
+                }break;
+                case "medalstotalDesc":
+                {
+                    $sortQuery = " ORDER BY medals.id DESC";
+                }break;
+            }
+        }
         $statement  = self::$db->query(
             "SELECT countries.short_name AS countryShort, countries.full_name AS countryFull,
             COUNT(DISTINCT medals.id) AS medalsTotal, 

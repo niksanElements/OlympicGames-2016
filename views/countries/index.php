@@ -5,10 +5,26 @@
     <table class="table table-strip table-inverse">
         <thead>
 
-        <th>Short</th>
-        <th>Country</th>
-        <th>Total athlets</th>
-        <th>Total medals</th>
+        <th>
+            <a href="<?=APP_ROOT?>/countries/index/shortAsc">/\</a>
+            &nbsp;<a href="<?=APP_ROOT?>/countries/index/shortDesc">\/</a>
+            &nbsp;Short Name:
+        </th>
+        <th>
+            <a href="<?=APP_ROOT?>/countries/index/countryAsc">/\</a>
+            &nbsp;<a href="<?=APP_ROOT?>/countries/index/countryDesc">\/</a>
+            &nbsp;Country:
+        </th>
+        <th>
+            <a href="<?=APP_ROOT?>/countries/index/athletestotalAsc">/\</a>
+            &nbsp;<a href="<?=APP_ROOT?>/countries/index/athletestotalDesc">\/</a>
+            &nbsp;Total athletes:
+        </th>
+        <th>
+            <a href="<?=APP_ROOT?>/countries/index/medalstotalAsc">/\</a>
+            &nbsp;<a href="<?=APP_ROOT?>/countries/index/medalstotalDesc">\/</a>
+            &nbsp;Total medals:
+        </th>
         <th>Gold medals</th>
         <th>Silver medals</th>
         <th>Bronze medals</th>
