@@ -2,7 +2,7 @@
 
 class CountriesModel extends BaseModel
 {
-    public function getCountries($sort = NULL) : array
+    public function getCountries(int $limit = 237,string $sort = NULL) : array
     {
         $sortQuery = "";
         if($sort)
@@ -56,7 +56,7 @@ class CountriesModel extends BaseModel
             LEFT JOIN medals ON medals.id = medals_has_countries.medals_id
             RIGHT JOIN players_has_countries ON players_has_countries.countries_id = countries.id
             GROUP BY countries.full_name
-            ORDER BY countries.full_name ASC");
+            ORDER BY countries.full_name ASC LIMIT $limit");
         return  $statement->fetch_all(MYSQLI_ASSOC);
     }
 }
