@@ -28,6 +28,11 @@ class ForumController extends BaseController
                 $this->addErrorMessage("Can't add post in comments.");
             }
         }
+        else
+        {
+            $this->addErrorMessage("You must loggin!!!");
+            $this->redirect("forum");
+        }
         $this->recentPosts = $this->commentsModel->getRecantComments();
     }
     
