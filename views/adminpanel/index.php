@@ -20,4 +20,7 @@
   <li>
     <a href="<?=APP_ROOT?>/managenews/">Manage news</a>
   </li>
+  <li>
+    <a href="<?=APP_ROOT?>/managecountries/">Manage countries</a>
+  </li>
 </ul>
