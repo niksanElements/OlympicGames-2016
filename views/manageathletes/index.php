@@ -40,7 +40,11 @@
         <?php endif ?>
       </th>
       <th>
-        <?=$athlete["playerAge"]?>
+        <?php if($athlete["playerAge"] > 0): ?>
+          <?=$athlete["playerAge"]?>
+        <?php else: ?>
+          N/A
+        <?php endif ?>
       </th>
       <th>
         <?=$athlete["sportName"]?>
