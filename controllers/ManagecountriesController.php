@@ -30,4 +30,21 @@ class ManagecountriesController extends BaseController
             }
         }
     }
+
+    public function edit($id)
+    {
+        $this->authorizeAdmin();
+        $this->country = $this->model->getCountry($id);
+        if($this->isPost) {
+            $fullName = $_POST['full_name'];
+            $shortName = $_POST['short_name'];
+            if($this->model->editCountry($id, $fullName, $shortName)){
+                $this->addInfoMessage("Success!!");
+                $this->redirect("managecountries");
+            }
+            else{
+                $this->addErrorMessage("Place try again!");
+            }
+        }
+    }
 }
