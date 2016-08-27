@@ -66,6 +66,16 @@ class CommentsModel extends BaseModel
         return $statement->fetch_all(MYSQLI_ASSOC);
     }
 
+    public function getForumCommentsAll()
+    {
+        $statement = self::$db->query(
+            "SELECT post.title,post.id
+            FROM post
+            ORDER BY title"
+        );
+        return $statement->fetch_all(MYSQLI_ASSOC);
+    }
+
     public function deleteNewsComments(int $id)
     {
         $statement = self::$db->prepare("DELETE FROM news_comments WHERE news_id = ?");

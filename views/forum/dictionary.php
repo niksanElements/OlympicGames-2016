@@ -10,8 +10,8 @@
 <section>
     <?php foreach ($this->posts as $post):?>
         <a href="<?=APP_ROOT?>/forum/read/<?=$post['id']?>">
-            <article class="panel panel-group">
-                <h6 class="panel panel-heading"><?= htmlspecialchars($post['title']) ?></h6>
+            <article class="center-block center">
+                <h4><?= htmlspecialchars($post['title']) ?></h4>
             </article>
         </a>
     <?php endforeach ?>
