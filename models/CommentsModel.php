@@ -1,6 +1,7 @@
 <?php
 class CommentsModel extends BaseModel
 {
+    /**   News Comments **/
     public function addNewsComment($msg,int $newsID,int $userID = null) : bool
     {
         $comment = htmlspecialchars($msg);
@@ -20,6 +21,22 @@ class CommentsModel extends BaseModel
         return  $statement->fetch_all(MYSQLI_ASSOC);
     }
 
+    public function deleteNewsComments(int $id)
+    {
+        $statement = self::$db->prepare("DELETE FROM news_comments WHERE news_id = ?");
+        $statement->bind_param("i", $id);
+        $statement->execute();
+        if(!$statement->errno)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    /**   Post Comments **/
     public function addPostComment($msg,int $postID,int $userID = null) : bool
     {
         $comment = htmlspecialchars($msg);
@@ -76,20 +93,8 @@ class CommentsModel extends BaseModel
         return $statement->fetch_all(MYSQLI_ASSOC);
     }
 
-    public function deleteNewsComments(int $id)
-    {
-        $statement = self::$db->prepare("DELETE FROM news_comments WHERE news_id = ?");
-        $statement->bind_param("i", $id);
-        $statement->execute();
-        if(!$statement->errno)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
+
+    /** General **/
 
     public function delete(string $dbName, int $id)
     {
