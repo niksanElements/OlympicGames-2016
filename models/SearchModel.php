@@ -13,5 +13,19 @@ class SearchModel extends BaseModel
     $result = $statement->fetch_all(MYSQLI_ASSOC);
     return $result;
   }
+
+  public function searchPosts($search) : array
+  {
+    $searchArr = explode(" ", $search);
+    $query = "SELECT * FROM post WHERE 1 != 1";
+    foreach($searchArr as $searchWord)
+    {
+      $query .= " OR title LIKE '%" . $searchWord . "%' OR body LIKE '%" . $searchWord . "%'";
+    }
+    var_dump($query);
+    $statement = self::$db->query($query);
+    $result = $statement->fetch_all(MYSQLI_ASSOC);
+    return $result;
+  }
 }
 ?>
