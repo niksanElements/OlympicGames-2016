@@ -23,7 +23,6 @@
         <div class="container-fluid col-lg-6 col-md-6 col-sm-12">
             <ul class="nav navbar-nav" style="font-family: 'Harlow Solid Italic';font-size:1.15em;font-weight: 500">
                 <li class="text-center"><a href="<?=APP_ROOT?>/">Home</a></li>
-                <li class="text-center"><a href="#">History</a></li>
                 <li class="text-center"><a href="<?=APP_ROOT?>/news/">News</a></li>
                 <li class="dropdown text-center"><a class="dropdown-toggle" data-toggle="dropdown"  href="#">Olympic Info</a>
                     <ul class="dropdown-menu" style="font-size:1.15em;font-weight: 500;color: #1C5E82">
