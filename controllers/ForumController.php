@@ -17,15 +17,16 @@ class ForumController extends BaseController
 
     public function add()
     {
-        if($this->isPost && $this->isLoggedIn){
-            $title = $_POST['title'];
-            $body = $_POST['body'];
-            $post_id = $this->model->add($title,$body,$_SESSION['userID']);
-            if($post_id != 0){
-                $this->redirect("forum","read",array($post_id));
-            }
-            else{
-                $this->addErrorMessage("Can't add post in comments.");
+        if($this->isLoggedIn) {
+            if ($this->isPost) {
+                $title = $_POST['title'];
+                $body = $_POST['body'];
+                $post_id = $this->model->add($title, $body, $_SESSION['userID']);
+                if ($post_id != 0) {
+                    $this->redirect("forum", "read", array($post_id));
+                } else {
+                    $this->addErrorMessage("Can't add post in comments.");
+                }
             }
         }
         else
