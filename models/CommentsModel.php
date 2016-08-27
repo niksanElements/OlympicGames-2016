@@ -14,7 +14,7 @@ class CommentsModel extends BaseModel
     public  function  getNewsComments(int $newsId) : array
     {
         $statement  = self::$db->query(
-            "SELECT  body, users_id, date
+            "SELECT id, body, users_id, date
             FROM news_comments WHERE news_id = $newsId
             ORDER BY date DESC");
         return  $statement->fetch_all(MYSQLI_ASSOC);
@@ -30,11 +30,11 @@ class CommentsModel extends BaseModel
         $statement->execute();
         return $statement->affected_rows == 1;
     }
-    public  function  getPostComments(int $newsId) : array
+    public  function  getPostComments(int $postId) : array
     {
         $statement  = self::$db->query(
-            "SELECT  body, users_id, date
-            FROM post_comments WHERE posts_id = $newsId
+            "SELECT id,  body, users_id, date
+            FROM post_comments WHERE posts_id = $postId
             ORDER BY date DESC");
         return  $statement->fetch_all(MYSQLI_ASSOC);
     }
@@ -89,6 +89,16 @@ class CommentsModel extends BaseModel
         {
             return false;
         }
+    }
+
+    public function delete(string $dbName, int $id)
+    {
+        if($dbName === "post_comments" || $dbName === "news_comments") {
+            $statement = self::$db->prepare("DELETE FROM $dbName WHERE id = ?");
+            $statement->bind_param("i", $id);
+            $statement->execute();
+        }
+        return $statement->affected_rows == 1;
     }
 
 }

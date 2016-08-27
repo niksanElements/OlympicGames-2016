@@ -70,6 +70,5 @@ class ForumController extends BaseController
             $this->posts = $this->commentsModel->getForumComments($char);
             $this->recentPosts = $this->commentsModel->getRecantComments();
         }
-
     }
 }

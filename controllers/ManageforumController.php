@@ -2,9 +2,23 @@
 
 class ManageforumController extends BaseController
 {
+    protected $commentModel;
+
+    public function __construct($controllerName, $actionName)
+    {
+        parent::__construct($controllerName, $actionName);
+        $this->commentModel = new CommentsModel();
+    }
+
     public function index()
     {
+        $this->authorizeAdmin();
         $this->posts = $this->model->getAllPosts();
+        $index = 0;
+        foreach($this->posts as $post){
+            $this->posts[$index]['comments'] = $this->commentModel->getPostComments($post['id']);
+            $index++;
+        }
     }
 
     public function edit(int $id)

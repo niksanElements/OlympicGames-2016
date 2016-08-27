@@ -1,7 +1,7 @@
 <h3>News management</h3>
 <table>
     <tr>
-        <th>ID</th><th>Titile</th><th>User Id</th><th>Date</th>
+        <th>ID</th><th>Titile</th><th>Comments:</th><th>User Id</th><th>Date</th>
     </tr>
     <?php foreach($this->news as $element): ?>
         <tr>
@@ -10,6 +10,21 @@
             </td>
             <td>
                 <?=$element["title"]?>
+            </td>
+            <td >
+                <div class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Comments</a>
+                    <ul class="dropdown-menu" >
+                        <?php foreach($element['comments'] as $comment): ?>
+                            <li class>
+                                &nbsp;<a href="<?=APP_ROOT?>/comments/delete/news_comments/<?=$comment["id"]?>"
+                                         onclick="return confirm('Are you sure?')">Delete this
+                                    <b><?=$comment["body"]?></b>
+                                </a>
+                            </li>
+                        <?php endforeach;?>
+                    </ul>
+                </div>
             </td>
             <td>
                 <?=$element["users_id"]?>

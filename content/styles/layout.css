@@ -91,3 +91,8 @@ li{
     width: 70%;
     margin: auto;
 }
+
+.table-responsive {
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+}
