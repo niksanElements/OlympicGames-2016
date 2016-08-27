@@ -16,9 +16,6 @@
     <textarea class="content" name="body"></textarea>
     <br/>
 
-    <label class="control-label" for="tags">Tags</label>
-    <input class="form-control" type="text" name="tags"/><br/>
-
     <input class="submit" type="submit" name="submit" value="submit"/>
 
 </form>
