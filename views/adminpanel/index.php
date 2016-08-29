@@ -1,29 +1,39 @@
-<ul>
-  <li>
-    <a href="<?=APP_ROOT?>/manageusers/">Manage users</a>
-  </li>
-  <li>
-    <a href="<?=APP_ROOT?>/managesports/">Manage sports</a>
-  </li>
-  <li>
-    <a href="<?=APP_ROOT?>/managemedals/">Manage medals</a>
-  </li>
-  <li>
-    <a href="<?=APP_ROOT?>/managevenues/">Manage venues</a>
-  </li>
-  <li>
-    <a href="<?=APP_ROOT?>/managecontactus/">Manage contact and team details</a>
-  </li>
-  <li>
-    <a href="<?=APP_ROOT?>/manageathletes/">Manage athletes</a>
-  </li>
-  <li>
-    <a href="<?=APP_ROOT?>/managenews/">Manage news</a>
-  </li>
-  <li>
-    <a href="<?=APP_ROOT?>/manageforum/">Manage forum</a>
-  </li>
-  <li>
-    <a href="<?=APP_ROOT?>/managecountries/">Manage countries</a>
-  </li>
-</ul>
+<h1>Admin Panel</h1>
+<main>
+  <div class="container">
+      <form>
+      <ul class="list-group">
+        <li class="list-group-item-heading">
+          <h3><span class="glyphicon glyphicon-edit">MANAGE</span><span class="glyphicon glyphicon-menu-down"></span></h3>
+        </li>
+        <li class="list-group-item-text">
+          <a class="btn btn-primary btn-block " href="<?=APP_ROOT?>/manageusers/">Users</a>
+          <li class="list-group-item-text">
+              <a class="btn btn-primary btn-block " href="<?=APP_ROOT?>/managecountries/">Countries</a>
+          </li>
+        <li class="list-group-item-text">
+          <a class="btn btn-primary btn-block"  href="<?=APP_ROOT?>/managemedals/">Medals</a>
+        </li>
+        <li class="list-group-item">
+          <a class="btn btn-primary btn-block"  href="<?=APP_ROOT?>/managevenues/">Venues</a>
+        </li>
+        <li class="list-group-item-text">
+          <a class="btn btn-primary btn-block"  href="<?=APP_ROOT?>/managecontactus/">Team Members</a>
+        </li>
+        <li class="list-group-item">
+          <a class="btn btn-primary btn-block"  href="<?=APP_ROOT?>/manageathletes/">Athletes</a>
+        </li>
+        <li class="list-group-item-text">
+              <a class="btn btn-primary btn-block"  href="<?=APP_ROOT?>/managenews/">News</a>
+        </li>
+        <li class="list-group-item">
+              <a class="btn btn-primary btn-block"  href="<?=APP_ROOT?>/manageforum/">Forum</a>
+        </li>
+          <li class="list-group-item">
+              <a class="btn btn-primary btn-block"  href="<?=APP_ROOT?>/managesports/">Sports</a>
+          </li>
+
+      </ul>
+  </form>
+  </div>
+</main>

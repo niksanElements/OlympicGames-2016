@@ -1,6 +1,8 @@
 <?php $this->title = 'create'; ?>
 
 <h1><?=htmlspecialchars($this->title)?></h1>
+<main>
+    <div class="container">
 
 <script src="<?=APP_ROOT?>/content/tinymce/tinymce.min.js"></script>
 <script>tinymce.init({ selector:'textarea' });</script>

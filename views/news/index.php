@@ -1,7 +1,6 @@
 <?php $this->title = 'News'; ?>
 
 <h1><?=htmlspecialchars($this->title)?></h1>
-
 <main>
 
     <?php

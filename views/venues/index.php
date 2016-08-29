@@ -2,39 +2,27 @@
 
 <h1><?=htmlspecialchars($this->title)?></h1>
 <main>
+    <div class="container">
 <div id="map" style="width:90%;height:400px;"></div>
-<table>
+        <form>
+<table class="table table-responsive">
     <tr>
-        <th>
-        Venue Name
-        </th>
-        <th>
-            Sports Played
-        </th>
-        <th>
-            Venue Capacity
-        </th>
-        <th>
-          &nbsp;
-        </th>
+        <th>Venue Name</th>
+        <th>Sports Played</th>
+        <th>Venue Capacity</th>
+        <th>&nbsp;</th>
     </tr>
     <?php foreach($this->venues as $venue): ?>
     <tr>
-        <th>
-            <?=$venue["venue_name"]?>
-        </th>
-        <th>
-            <?=$venue["sport"]?>
-        </th>
-        <th>
-            <?=$venue["capacity"]?>
-        </th>
-        <th>
-          <input type="button" id="venue<?=$venue["id"]?>" value="view" />
-        </th>
+        <th><?=$venue["venue_name"]?></th>
+        <th><?=$venue["sport"]?></th>
+        <th><?=$venue["capacity"]?></th>
+        <th><input type="button" id="venue<?=$venue["id"]?>" value="view" /></th>
     </tr>
   <?php endforeach ?>
 </table>
+        </form>
+    </div>
 </main>
 <script src="https://maps.google.com/maps/api/js?v=3.24&key=AIzaSyB2rujYvIaXzZ_PzbGxlCvlnwlBefaVmXA"></script>
 <script>

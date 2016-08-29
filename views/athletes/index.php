@@ -1,32 +1,34 @@
-<?php $this->title = 'athletes'; ?>
+<?php $this->title = 'Athletes'; ?>
 
 <h1><?=htmlspecialchars($this->title)?></h1>
 <main>
-    <table class="table table-strip table-inverse">
+  <div class="container">
+    <form>
+    <table class="table table-responsive table-inverse">
         <thead>
           <th>
-            <a href="<?=APP_ROOT?>/athletes/index/athleteAsc">/\</a>
-            &nbsp;<a href="<?=APP_ROOT?>/athletes/index/athleteDesc">\/</a>
+            <a href="<?=APP_ROOT?>/athletes/index/athleteAsc"></a>
+            &nbsp;<a href="<?=APP_ROOT?>/athletes/index/athleteDesc"></a>
             &nbsp;Athlethe:
           </th>
           <th>
-            <a href="<?=APP_ROOT?>/athletes/index/ageAsc">/\</a>
-            &nbsp;<a href="<?=APP_ROOT?>/athletes/index/ageDesc">\/</a>
+            <a href="<?=APP_ROOT?>/athletes/index/ageAsc"></a>
+            &nbsp;<a href="<?=APP_ROOT?>/athletes/index/ageDesc"></a>
             &nbsp;Age:
           </th>
           <th>
-            <a href="<?=APP_ROOT?>/athletes/index/sportAsc">/\</a>
-            &nbsp;<a href="<?=APP_ROOT?>/athletes/index/sportDesc">\/</a>
+            <a href="<?=APP_ROOT?>/athletes/index/sportAsc"></a>
+            &nbsp;<a href="<?=APP_ROOT?>/athletes/index/sportDesc"></a>
             &nbsp;Sport:
           </th>
           <th>
-            <a href="<?=APP_ROOT?>/athletes/index/countryAsc">/\</a>
-            &nbsp;<a href="<?=APP_ROOT?>/athletes/index/countryDesc">\/</a>
+            <a href="<?=APP_ROOT?>/athletes/index/countryAsc"></a>
+            &nbsp;<a href="<?=APP_ROOT?>/athletes/index/countryDesc"></a>
             &nbsp;Country:
           </th>
           <th>
-            <a href="<?=APP_ROOT?>/athletes/index/medalAsc">/\</a>
-            &nbsp;<a href="<?=APP_ROOT?>/athletes/index/medalDesc">\/</a>
+            <a href="<?=APP_ROOT?>/athletes/index/medalAsc"></a>
+            &nbsp;<a href="<?=APP_ROOT?>/athletes/index/medalDesc"></a>
             &nbsp;Medal:
           </th>
         </thead>
@@ -64,4 +66,6 @@
           <?php endforeach ?>
         </tbody>
     </table>
+    </form>
+  </div>
 </main>

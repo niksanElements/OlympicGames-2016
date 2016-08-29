@@ -5,7 +5,8 @@
 <?php
     include("_layout\actions.php");
 ?>
-
+<main>
+    <div class="container">
 
 <form class="form-horizontal" method="post" accept-charset="UTF-8">
     <h5>Place Create post!</h5>
@@ -20,3 +21,5 @@
 
 </form>
 <div class="action pull-right">[<a href="<?= APP_ROOT ?>/forum">back</a>]</div>
+    </div>
+</main>
