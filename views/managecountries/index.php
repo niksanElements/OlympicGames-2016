@@ -14,20 +14,23 @@
                 <?php foreach($this->countries as $country): ?>
                     <tr>
                         <th><?=$country["id"]?></th>
-                        <th><?=$country["short_name"]?></th>
+                        <th>
+                            <i class="<?php
+                            $str = $country['short_name'];
+                            $str = strtolower($str);
+                            echo $str;
+                            ?> flag"></i>
+                            <?=$country["short_name"]?></th>
                         <th><?=$country["full_name"]?></th>
                         <th>
-                            <ul class="list-group">
-                                <li class="list-group-item-text">
-                                    <a class="text-success" href="<?=APP_ROOT?>/managecountries/edit/<?=$country["id"]?>">
-                                        <span class="glyphicon glyphicon-edit"></span> Edit</a>
-                                </li>
-                                <li class="list-group-item-text">
-                                    <a class="text-danger" href="<?=APP_ROOT?>/managecountries/delete/<?=$country["id"]?>"
-                                       onclick="return confirm('Are you sure?')">
-                                        <span class="glyphicon glyphicon-minus-sign text-danger"></span> Delete</a>
-                                </li>
-                            </ul>
+                            <div class="ui small buttons">
+                                <a class="ui positive small button" href="<?=APP_ROOT?>/managecontactus/edit/<?=$country["id"]?>">
+                                    <span class="glyphicon glyphicon-edit"></span> Edit</a>
+                                <div class="or"></div>
+                                <a class="ui negative small button" href="<?=APP_ROOT?>/managecontactus/delete/<?=$country["id"]?>"
+                                   onclick="return confirm('Are you sure?')">
+                                    <span class="glyphicon glyphicon-minus-sign"></span> Delete</a>
+                            </div>
                         </th>
                     </tr>
                 <?php endforeach ?>

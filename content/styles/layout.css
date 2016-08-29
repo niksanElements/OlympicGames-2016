@@ -195,10 +195,11 @@ ul#messages li.error {
     overflow-x: visible !important;
     overflow-y: visible !important;
 }
-form{
+form {
     margin: 0 auto;
-    width: 60%;
+    width: 70%;
 }
 .container{
     background-color: white;
 }
+

@@ -5,7 +5,10 @@
     <link rel="stylesheet" href="<?=APP_ROOT?>/content/styles/css/bootstrap.min.css" type="text/css"/>
     <link rel="stylesheet" href="<?=APP_ROOT?>/content/styles/layout.css"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="<?=APP_ROOT?>/content/semantic/semantic.min.css">
+
     <script src="<?=APP_ROOT?>/content/styles/js/jquery-3.1.0.min.js"></script>
+    <script src="<?=APP_ROOT?>/content/semantic/semantic.min.js"></script>
     <script src="<?=APP_ROOT?>/content/styles/js/bootstrap.min.js"></script>
     <script src="<?=APP_ROOT?>/content/styles/js/blog-scripts.js"></script>
     <mata charset="utf-8"></mata>
@@ -44,21 +47,25 @@
                 <li class="last text-center"><a href="<?=APP_ROOT?>/contactus">Contact Us</a></li>
                 <li class="dropdown text-center"><a class="dropdown-toggle" data-toggle="dropdown"  href="#">
                         <span class="[ glyphicon glyphicon-search ]"></span></a>
-                    <form action="<?=APP_ROOT?>/search" method="post" class="pull-right dropdown-menu">
-                        <input type="text" name="search" value="Search Our Website&hellip;"  onfocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;" />
-                        <br /><input type="checkbox" name="news" value="1" checked="checked" />News
-                        &nbsp;<input type="checkbox" name="posts" value="1" checked="checked" />Posts
-                        <br /><input type="submit" name="go" id="go" value="Search" />
+                    <form action="<?=APP_ROOT?>/search" method="post" class="dropdown-menu search">
+                        <div class="">
+                        <input class="form-control" type="text" name="search" value="Search Our Website&hellip;"
+                               onfocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;" /><br />
+                        <input type="checkbox" name="news" value="1" checked="checked" />News &nbsp;
+                        <input type="checkbox" name="posts" value="1" checked="checked" />Posts<br />
+                        <input type="submit" name="go" id="go" value="Search" />
+
+                        </div>
                     </form>
                 </li>
             </ul>
         </div>
         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 nav navbar-right">
             <?php if(!$this->isLoggedIn): ?>
-                <ul class="list-group">
-                    <li class="list-group-item"><a href="<?=APP_ROOT?>/user/login">
-                            <span class="glyphicon glyphicon-log-in"></span> Login</a>
-                        <a href="<?=APP_ROOT?>/user/registration">
+                <ul class="list-group list-inline pull-right">
+                    <li class="list-group-item-text"><a href="<?=APP_ROOT?>/user/login">
+                            <span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li class="list-group-item-text"><a href="<?=APP_ROOT?>/user/registration">
                             <span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                 </ul>
             <?php else: ?>

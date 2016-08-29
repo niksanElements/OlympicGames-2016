@@ -35,23 +35,20 @@
           <th><?=$athlete["sportName"]?></th>
           <th><?=$athlete["countryName"]?></th>
           <th>
-            <ul class="list-group">
-              <li class="list-group-item-text">
-                <a class="text-success" href="<?=APP_ROOT?>/manageathletes/edit/<?=$athlete["playerID"]?>">
-                  <span class="glyphicon glyphicon-edit"></span> Edit</a>
-              </li>
-              <li class="list-group-item-text">
-                <a class="text-danger" href="<?=APP_ROOT?>/manageathletes/delete/<?=$athlete["playerID"]?>"
-                   onclick="return confirm('Are you sure?')">
-                  <span class="glyphicon glyphicon-minus-sign text-danger"></span> Delete</a>
-              </li>
-            </ul>
+            <div class="ui  buttons">
+              <a class="ui positive compact button" href="<?=APP_ROOT?>/managecontactus/edit/<?=$athlete["playerID"]?>">
+                <span class="glyphicon glyphicon-edit"></span> Edit</a>
+              <div class="or"></div>
+              <a class="ui negative compact button" href="<?=APP_ROOT?>/managecontactus/delete/<?=$athlete["playerID"]?>"
+                 onclick="return confirm('Are you sure?')">
+                <span class="glyphicon glyphicon-minus-sign"></span> Delete</a>
+            </div>
           </th>
         </tr>
       <?php endforeach ?>
     </table>
+    </form>
     <a class="btn btn-primary pull-right" href="<?=APP_ROOT?>/adminpanel" >
       <span class="glyphicon glyphicon-backward"> <b>Back</b></span></a>
-    </form>
   </div>
 </main>

@@ -7,6 +7,9 @@
             <table class="table table-responsive table-inverse">
                 <thead>
                 <th>
+                    Flag
+                </th>
+                <th>
                     <a href="<?=APP_ROOT?>/countries/index/shortAsc"></a>
                     &nbsp;<a href="<?=APP_ROOT?>/countries/index/shortDesc"></a>
                     &nbsp;Short:
@@ -34,6 +37,11 @@
                 <?php foreach ($this->countries as $country):?>
 
                     <tr>
+                        <td><i class="<?php
+                            $str = $country['countryShort'];
+                            $str = strtolower($str);
+                            echo $str;
+                            ?> flag"></i></td>
                         <td><?=$country['countryShort']?></td>
                         <td><?=$country['countryFull']?></td>
                         <td><?=$country['playersTotal']?></td>
