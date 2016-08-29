@@ -14,24 +14,22 @@
         <li class="list-group-item-text">
           <a class="btn btn-primary btn-block"  href="<?=APP_ROOT?>/managemedals/">Medals</a>
         </li>
-        <li class="list-group-item">
+        <li class="list-group-item-text">
           <a class="btn btn-primary btn-block"  href="<?=APP_ROOT?>/managevenues/">Venues</a>
         </li>
         <li class="list-group-item-text">
           <a class="btn btn-primary btn-block"  href="<?=APP_ROOT?>/managecontactus/">Team Members</a>
         </li>
-        <li class="list-group-item">
+        <li class="list-group-item-text">
           <a class="btn btn-primary btn-block"  href="<?=APP_ROOT?>/manageathletes/">Athletes</a>
         </li>
         <li class="list-group-item-text">
               <a class="btn btn-primary btn-block"  href="<?=APP_ROOT?>/managenews/">News</a>
         </li>
-        <li class="list-group-item">
+        <li class="list-group-item-text">
               <a class="btn btn-primary btn-block"  href="<?=APP_ROOT?>/manageforum/">Forum</a>
         </li>
-          <li class="list-group-item">
-              <a class="btn btn-primary btn-block"  href="<?=APP_ROOT?>/managesports/">Sports</a>
-          </li>
+
 
       </ul>
   </form>

@@ -1,6 +1,6 @@
 <h4>Search results for "<?=$this->search?>"</h4>
 <?php if(count($this->newsResults) > 0 or count($this->postsResults) > 0): ?>
-  <table>
+  <table class="ui table tablet stackable">
     <?php if(count($this->newsResults) > 0): ?>
       <tr>
         <td>

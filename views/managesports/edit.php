@@ -4,10 +4,6 @@
 <form method="post">
   <table class="table table-responsive">
     <tr>
-      <th>ID:</th>
-      <th><?=$this->sport["id"]?></th>
-    </tr>
-    <tr>
       <th>Sport:</th>
       <th><input class="form-control" type="text" name="name" value="<?=$this->sport["name"]?>" /></th>
     </tr>

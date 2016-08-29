@@ -4,7 +4,7 @@
 <main>
     <div class="container">
         <form>
-            <table class="table table-responsive">
+            <table class="ui table tablet stackable">
                 <tr>
                     <th>ID:</th>
                     <th>Medal:</th>

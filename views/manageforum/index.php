@@ -2,21 +2,20 @@
 <main>
     <div class="container">
         <form>
-            <table class="table table-responsive">
-                <thead>
+            <table class="ui table tablet stackable">
+
                 <th>ID:</th>
                 <th>Titile:</th>
                 <th>Comments:</th>
                 <th>User Id</th>
                 <th>Date</th>
                 <th>Actions:</th>
-                </thead>
                 <tbody>
                 <?php foreach($this->posts as $post): ?>
                     <tr>
-                        <td><?=$post["id"]?></td>
-                        <td><?=$post["title"]?></td>
-                        <td >
+                        <th><?=$post["id"]?></th>
+                        <th><?=$post["title"]?></th>
+                        <th >
                             <div class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Comments</a>
                                 <ul class="dropdown-menu" >
@@ -30,26 +29,30 @@
                                     <?php endforeach;?>
                                 </ul>
                             </div>
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             <?=$post["user_id"]?>
-                        </td>
-                        <td>
+                        </th>
+                        <th>
                             <?= $post["Date"] ?>
-                        </td>
-                        <td>
-                            <ul class="list-group">
-                                <li class="list-group-item-text">
-                                    <a class="text-success"href=" <?=APP_ROOT?>/manageforum/edit/<?=$post["id"]?>">
-                                        <span class="glyphicon glyphicon-edit"></span> Edit</a>
-                                </li>
-                                <li class="list-group-item-text">
-                                    <a class="text-danger" href="<?=APP_ROOT?>/manageforum/delete/<?=$post["id"]?>"
-                                       onclick="return confirm('Are you sure?')">
-                                        <span class="glyphicon glyphicon-minus-sign text-danger"></span> Delete</a>
-                                </li>
-                            </ul>
-                        </td>
+                        </th>
+                        <th>
+<!--                            <ul class="list-group">-->
+<!--                                <li class="list-group-item-text">-->
+<!--                                    <a class="text-success"href=" --><?//=APP_ROOT?><!--/manageforum/edit/--><?//=$post["id"]?><!--">-->
+<!--                                        <span class="glyphicon glyphicon-edit"></span> Edit</a>-->
+<!--                                </li>-->
+<!--                                <li class="list-group-item-text">-->
+<!--                                    <a class="text-danger" href="--><?//=APP_ROOT?><!--/manageforum/delete/--><?//=$post["id"]?><!--"-->
+<!--                                       onclick="return confirm('Are you sure?')">-->
+<!--                                        <span class="glyphicon glyphicon-minus-sign text-danger"></span> Delete</a>-->
+<!--                                </li>-->
+<!--                            </ul>-->
+                            <a href="<?=APP_ROOT?>/manageforum/edit/<?=$post["id"]?>">
+                                <i class="glyphicon glyphicon-edit"></i></a>
+                            <a href="<?=APP_ROOT?>/manageforum/delete/<?=$post["id"]?>"
+                               onclick="return confirm('Are you sure?')"><i class="glyphicon glyphicon-trash text-danger"></i></a>
+                        </th>
                     </tr>
                 <?php endforeach ?>
                 </tbody>

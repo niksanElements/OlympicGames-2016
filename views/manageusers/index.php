@@ -2,9 +2,8 @@
 <main>
     <div class="container">
         <form>
-            <table class="table table-responsive">
+            <table class="ui table tablet stackable">
                 <tr>
-                    <th>ID:</th>
                     <th>Username:</th>
                     <th>Full name:</th>
                     <th>E-mail:</th>
@@ -13,7 +12,6 @@
                 </tr>
                 <?php foreach($this->users as $user): ?>
                     <tr>
-                        <th><?=$user["id"]?></th>
                         <th><?=$user["username"]?></th>
                         <th><?=$user["full_name"]?></th>
                         <th><?=$user["email"]?></th>
@@ -27,17 +25,10 @@
                             <?php } ?>
                         </th>
                         <th>
-                            <ul class="list-group">
-                                <li class="list-group-item-text">
-                                    <a class="text-success"  href="<?=APP_ROOT?>/manageusers/edit/<?=$user["id"]?>">
-                                        <span class="glyphicon glyphicon-edit"></span> Edit</a>
-                                </li>
-                                <li class="list-group-item-text">
-                                    <a class="text-danger" href="<?=APP_ROOT?>/manageusers/delete/<?=$user["id"]?>"
-                                       onclick="return confirm('Are you sure?')">
-                                        <span class="glyphicon glyphicon-minus-sign text-danger"></span> Delete</a>
-                                </li>
-                            </ul>
+                            <a href="<?=APP_ROOT?>/manageusers/edit/<?=$user["id"]?>">
+                                <i class="glyphicon glyphicon-edit"></i></a>
+                            <a href="<?=APP_ROOT?>/manageusers/delete/<?=$user["id"]?>"
+                               onclick="return confirm('Are you sure?')"><i class="glyphicon glyphicon-trash text-danger"></i></a>
                         </th>
                     </tr>
                 <?php endforeach ?>

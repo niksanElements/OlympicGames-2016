@@ -4,10 +4,6 @@
         <form method="post">
             <table class="table table-responsive">
                 <tr>
-                    <th>ID:</th>
-                    <th><input class="form-control text-center" type="number" name="id" readonly value="<?=$this->country["id"]?>" /></th>
-                </tr>
-                <tr>
                     <th>Short name:</th>
                     <th><input class="form-control text-center" type="text" name="short_name" value="<?=$this->country["short_name"]?>" /></th>
                 </tr>

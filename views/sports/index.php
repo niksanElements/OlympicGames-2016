@@ -4,54 +4,52 @@
 <main>
     <div class="container">
         <form>
-            <table class="table table-strip table-inverse">
-                <thead>
+            <table class="ui table tablet stackable">
                 <th>Sport</th>
                 <th>Venue</th>
                 <th>Gold winner</th>
                 <th>Silver winner</th>
                 <th>Bronze winner</th>
-                </thead>
                 <tbody>
                 <?php foreach ($this->sports as $sport):?>
                     <tr>
-                        <td><?=$sport['sportName']?></td>
-                        <td><?=$sport['venue']?></td>
+                        <th><?=$sport['sportName']?></th>
+                        <th><?=$sport['venue']?></th>
 
                         <?php if($sport['winnerGold']): ?>
-                            <td><?=$sport['winnerGold']?>(
+                            <th><?=$sport['winnerGold']?>(
                                 <i class="<?php
                                 $str = $sport['countryGold'];
                                 $str = strtolower($str);
                                 echo $str;?> flag">
                                 </i><?=$sport['countryGold']?>)
-                            </td>
+                            </th>
                         <?php else: ?>
-                            <td>N/A</td>
+                            <th>N/A</th>
                         <?php endif ?>
 
                         <?php if($sport['winnerSilver']): ?>
-                            <td><?=$sport['winnerSilver']?>(
+                            <th><?=$sport['winnerSilver']?>(
                                 <i class="<?php
                                 $str = $sport['countrySilver'];
                                 $str = strtolower($str);
                                 echo $str;?> flag">
                                 </i><?=$sport['countrySilver']?>)
-                            </td>
+                            </th>
                         <?php else: ?>
-                            <td>N/A</td>
+                            <th>N/A</th>
                         <?php endif ?>
 
                         <?php if($sport['winnerBronze']): ?>
-                            <td><?=$sport['winnerBronze']?>(
+                            <th><?=$sport['winnerBronze']?>(
                                 <i class="<?php
                                 $str = $sport['countryBronze'];
                                 $str = strtolower($str);
                                 echo $str;?> flag">
                                 </i><?=$sport['countryBronze']?>)
-                            </td>
+                            </th>
                         <?php else: ?>
-                            <td>N/A</td>
+                            <th>N/A</th>
                         <?php endif ?>
                     </tr>
                 <?php endforeach ?>

@@ -50,7 +50,7 @@ li{
          /*margin: 0 0 0px; text-align: center; width: auto*/
 /*}*/
 main{
-    background-color:#CDF4FF   /* #e9ebee*/
+    background-color:#e9ebee   /* #e9ebee*/
 }
 footer{
     width: 100%;
@@ -61,7 +61,7 @@ footer{
 
 tr{
 
-    background-color: #39D3FF;
+    background-color: white;
 }
 input{
     word-break: break-all;
@@ -70,7 +70,7 @@ input{
 td, th {
     word-break: break-all;
     color: #0077aa;
-    background-color: #bce8f1;
+    background-color: white;
     font-family: 'Roboto', sans-serif;
     font-size: medium;
     font-weight: normal;
@@ -201,5 +201,27 @@ form {
 }
 .container{
     background-color: white;
+}
+.ui.table.tablet.stackable tr{
+   background-color: white;
+}
+
+@media all and (min-width:992px){
+    .fitin{
+        white-space: nowrap;
+    }
+}
+.limtiCharClass {
+    -o-text-overflow: ellipsis;
+    text-overflow:    ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+    width: 100px;
+    margin: 0 auto;
+}
+.map{
+    width:90%;
+    height:400px;
+    margin: 0 auto;
 }
 

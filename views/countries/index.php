@@ -4,8 +4,7 @@
 <main>
     <div class="container">
         <form>
-            <table class="table table-responsive table-inverse">
-                <thead>
+            <table class="ui table tablet stackable">
                 <th>
                     Flag
                 </th>
@@ -32,23 +31,22 @@
                 <th>Gold</th>
                 <th>Silver</th>
                 <th>Bronze</th>
-                </thead>
                 <tbody>
                 <?php foreach ($this->countries as $country):?>
 
                     <tr>
-                        <td><i class="<?php
+                        <th><i class="<?php
                             $str = $country['countryShort'];
                             $str = strtolower($str);
                             echo $str;
-                            ?> flag"></i></td>
-                        <td><?=$country['countryShort']?></td>
-                        <td><?=$country['countryFull']?></td>
-                        <td><?=$country['playersTotal']?></td>
-                        <td><?=$country['medalsTotal']?></td>
-                        <td><?=$country['medalsGold']?></td>
-                        <td><?=$country['medalsSilver']?></td>
-                        <td><?=$country['medalsBronze']?></td>
+                            ?> flag"></i></th>
+                        <th><?=$country['countryShort']?></th>
+                        <th><?=$country['countryFull']?></th>
+                        <th><?=$country['playersTotal']?></th>
+                        <th><?=$country['medalsTotal']?></th>
+                        <th><?=$country['medalsGold']?></th>
+                        <th><?=$country['medalsSilver']?></th>
+                        <th><?=$country['medalsBronze']?></th>
                     </tr>
 
                 <?php endforeach ?>

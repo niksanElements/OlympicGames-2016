@@ -1,10 +1,12 @@
 <h1>Manage Medals</h1>
-<a class="btn btn-lg btn-primary"  href="<?=APP_ROOT?>/managemedals/add">
-  <span class="glyphicon glyphicon-plus">Add Medals</span> </a><br /><br />
 <main>
   <div class="container">
     <form>
-      <table class="table table-responsive">
+      <div class="text-right ">
+        <a class="positive ui button"  href="<?=APP_ROOT?>/managemedals/add">
+          <span class="glyphicon glyphicon-plus">Add Medal</span> </a><br /><br />
+      </div>
+      <table class="ui table tablet stackable">
         <tr>
           <th>ID:</th>
           <th>Medal:</th>
@@ -27,17 +29,10 @@
             </th>
             <th><?=$medal["winner"]?></th>
             <th>
-             <ul class="list-group">
-              <li class="list-group-item-text">
-                <a class="text-success" href="<?=APP_ROOT?>/managemedals/edit/<?=$medal["id"]?>">
-                  <span class="glyphicon glyphicon-edit"></span> Edit</a>
-              </li>
-              <li class="list-group-item-text">
-                <a class="text-danger" href="<?=APP_ROOT?>/managemedals/delete/<?=$medal["id"]?>"
-                   onclick="return confirm('Are you sure?')">
-                  <span class="glyphicon glyphicon-minus-sign text-danger"></span> Delete</a>
-              </li>
-            </ul>
+              <a href="<?=APP_ROOT?>/managemedals/edit/<?=$medal["id"]?>">
+                <i class="glyphicon glyphicon-edit"></i></a>
+              <a href="<?=APP_ROOT?>/managemedals/delete/<?=$medal["id"]?>"
+                 onclick="return confirm('Are you sure?')"><i class="glyphicon glyphicon-trash text-danger"></i></a>
             </th>
           </tr>
         <?php endforeach ?>

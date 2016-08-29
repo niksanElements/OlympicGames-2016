@@ -4,8 +4,7 @@
 <main>
   <div class="container">
     <form>
-    <table class="table table-responsive table-inverse">
-        <thead>
+    <table class="ui table tablet stackable">
           <th>
             <a href="<?=APP_ROOT?>/athletes/index/athleteAsc"></a>
             &nbsp;<a href="<?=APP_ROOT?>/athletes/index/athleteDesc"></a>
@@ -31,27 +30,31 @@
             &nbsp;<a href="<?=APP_ROOT?>/athletes/index/medalDesc"></a>
             &nbsp;Medal:
           </th>
-        </thead>
         <tbody>
           <?php foreach($this->athletes as $athlete): ?>
             <tr>
-              <td>
+              <th>
                 <?=$athlete["playerName"]?>
-              </td>
-              <td>
+              </th>
+              <th>
                 <?php if($athlete["playerAge"] > 0): ?>
                   <?=$athlete["playerAge"]?>
                 <?php else: ?>
                   N/A
                 <?php endif ?>
-              </td>
-              <td>
+              </th>
+              <th>
                 <?=$athlete["sportName"]?>
-              </td>
-              <td>
+              </th>
+              <th>
+                <i class="<?php
+                $str = $athlete['countryName'];
+                $str = strtolower($str);
+                echo $str;
+                ?> flag"></i>
                 <?=$athlete["countryName"]?>
-              </td>
-              <td>
+              </th>
+              <th>
                 <?php if($athlete["medalType"] == 1): ?>
                   Gold
                 <?php elseif($athlete["medalType"] == 2): ?>
@@ -61,7 +64,7 @@
                 <?php else: ?>
                   None
                 <?php endif ?>
-              </td>
+              </th>
             </tr>
           <?php endforeach ?>
         </tbody>

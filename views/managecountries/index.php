@@ -1,10 +1,13 @@
 <h1>Manage Countries</h1>
-<a class="btn btn-lg btn-primary"  href="<?=APP_ROOT?>/managecountries/add">
-    <span class="glyphicon glyphicon-plus">Add Country</span> </a><br /><br />
+<br>
 <main>
     <div class="container">
         <form>
-            <table class="table table-responsive">
+            <div class="text-right ">
+                <a class="positive ui button"  href="<?=APP_ROOT?>/managecountries/add">
+                    <span class="glyphicon glyphicon-plus">Add Country</span> </a><br /><br />
+            </div>
+            <table class="ui table tablet stackable">
                 <tr>
                     <th>ID:</th>
                     <th>Short name:</th>
@@ -23,14 +26,18 @@
                             <?=$country["short_name"]?></th>
                         <th><?=$country["full_name"]?></th>
                         <th>
-                            <div class="ui small buttons">
-                                <a class="ui positive small button" href="<?=APP_ROOT?>/managecontactus/edit/<?=$country["id"]?>">
-                                    <span class="glyphicon glyphicon-edit"></span> Edit</a>
-                                <div class="or"></div>
-                                <a class="ui negative small button" href="<?=APP_ROOT?>/managecontactus/delete/<?=$country["id"]?>"
-                                   onclick="return confirm('Are you sure?')">
-                                    <span class="glyphicon glyphicon-minus-sign"></span> Delete</a>
-                            </div>
+<!--                            <div class="ui small buttons">-->
+<!--                                <a class="ui positive small button" href="--><?//=APP_ROOT?><!--/managecontactus/edit/--><?//=$country["id"]?><!--">-->
+<!--                                    <span class="glyphicon glyphicon-edit"></span></a>-->
+<!--                                <div class="or"></div>-->
+<!--                                <a class="ui negative small button" href="--><?//=APP_ROOT?><!--/managecontactus/delete/--><?//=$country["id"]?><!--"-->
+<!--                                   onclick="return confirm('Are you sure?')">-->
+<!--                                    <span class="glyphicon glyphicon-minus-sign"></span></a>-->
+<!--                            </div>-->
+                            <a href="<?=APP_ROOT?>/managecountries/edit/<?=$country["id"]?>">
+                                <i class="glyphicon glyphicon-edit"></i></a>
+                            <a href="<?=APP_ROOT?>/managecontactus/delete/<?=$country["id"]?>"
+                               onclick="return confirm('Are you sure?')"><i class="glyphicon glyphicon-trash text-danger"></i></a>
                         </th>
                     </tr>
                 <?php endforeach ?>

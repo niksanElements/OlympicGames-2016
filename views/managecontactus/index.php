@@ -1,12 +1,12 @@
 <h1>Manage Team Members</h1>
-<a class="btn btn-lg btn-primary"  href="<?=APP_ROOT?>/managecontactus/add">
-  <span class="glyphicon glyphicon-plus"> Add-New</span> </a><br /><br />
 <main>
   <div class="container">
     <form>
-
-      <table class="table table-responsive" cellpadding="0" border="0" cellspacing="0">
-        <thead>
+      <div class="text-right ">
+        <a class="positive ui button  " href="<?=APP_ROOT?>/managecontactus/add">
+          <span class=" glyphicon glyphicon-plus-sign" style="vertical-align: middle">Add-Member</span> </a><br />
+      </div>
+      <table class="ui table tablet stackable">
         <th>ID:</th>
         <th>Team Member Name:</th>
         <th>Age:</th>
@@ -15,30 +15,22 @@
         <th>Passion:</th>
         <th>Work:</th>
         <th>Actions:</th>
-        </thead>
         <?php foreach($this->contactus as $contact): ?>
-          <tr>
-            <td><?=$contact["id"]?></td>
-            <td><?=$contact["name"]?></td>
-            <td><?=$contact["age"]?></td>
-            <td><?=$contact["body"]?></td>
-            <td><?=$contact["education"]?></td>
-            <td><?=$contact["passion"]?></td>
-            <td><?=$contact["work"]?></td>
-            <td>
-              <ul class="list-group">
-                <li class="list-group-item-text">
-                  <a class="text-success" href="<?=APP_ROOT?>/managecontactus/edit/<?=$contact["id"]?>">
-                    <span class="glyphicon glyphicon-edit"></span> Edit</a>
-                </li>
-                <li class="list-group-item-text">
-                  <a class="text-danger" href="<?=APP_ROOT?>/managecontactus/delete/<?=$contact["id"]?>"
-                     onclick="return confirm('Are you sure?')">
-                    <span class="glyphicon glyphicon-minus-sign text-danger"></span> Delete</a>
-                </li>
-              </ul>
-            </td>
-          </tr>
+            <tr>
+            <th><?=$contact["id"]?></th>
+            <th><?=$contact["name"]?></th>
+            <th><?=$contact["age"]?></th>
+            <th><div class="limtiCharClass"><?=$contact["body"]?></div></th>
+            <th><?=$contact["education"]?></th>
+            <th><?=$contact["passion"]?></th>
+            <th><?=$contact["work"]?></th>
+            <th>
+              <a href="<?=APP_ROOT?>/managecontactus/edit/<?=$contact["id"]?>">
+                <i class="glyphicon glyphicon-edit"></i></a>
+              <a href="<?=APP_ROOT?>/managecontactus/delete/<?=$contact["id"]?>"
+                            " onclick="return confirm('Are you sure?')"><i class="glyphicon glyphicon-trash text-danger"></i></a>
+            </th>
+            </tr>
         <?php endforeach ?>
       </table>
       </form>
