@@ -10,7 +10,7 @@
 <section>
     <?php foreach ($this->posts as $post):?>
         <a  href="<?=APP_ROOT?>/forum/read/<?=$post['id']?>">
-            <article class="panel panel-group">
+            <article class="panel panel-group news center-block">
 
                     <h4 class="panel panel-heading"><?= htmlspecialchars($post['title']) ?></h4>
 

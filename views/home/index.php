@@ -68,32 +68,32 @@
     </div>
     <section class="col-lg-12 col-md-12 col-sm-12">
         <aside class="col-lg-4 col-md-4 col-sm-6">
-            <h4>News</h4>
+            <h4 class="text-align-center">News</h4>
             <ul>
                 <?php foreach ($this->news as $el): ?>
-                    <li class="news">
+                    <li>
                         <a href="<?= APP_ROOT?>/news/read/<?= $el['id']?>"><?= $el['title'] ?></a>
                     </li>
                 <?php endforeach; ?>
             </ul>
         </aside>
         <aside class="col-lg-4 col-md-4 col-sm-6">
-            <h4>Forum</h4>
+            <h4 class="text-align-center">Forum</h4>
             <ul>
                 <?php foreach ($this->posts as $el): ?>
-                    <li class="posts">
+                    <li>
                         <a href="<?= APP_ROOT?>/forum/read/<?= $el['id']?>"><?= $el['title'] ?></a>
                     </li>
                 <?php endforeach; ?>
             </ul>
         </aside>
         <aside class="col-lg-4 col-md-4 col-sm-6">
-            <h4>Countries</h4>
+            <h4 class="text-align-center">Countries</h4>
             <ul>
                 <?php foreach ($this->countries as $el): ?>
-                    <li class="countries">
-                        <div><?= $el['countryShort'] ?></div> -
-                        <div><?= $el['medalsTotal'] ?> </div>
+                    <li>
+                        <spam><?= $el['countryShort'] ?></spam> -
+                        <spam><?= $el['medalsTotal'] ?> </spam>
                     </li>
                 <?php endforeach; ?>
             </ul>

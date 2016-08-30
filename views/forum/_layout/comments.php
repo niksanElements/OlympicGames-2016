@@ -1,6 +1,6 @@
 <?php $this->title = 'Comments'; ?>
 
-<h4 xmlns="http://www.w3.org/1999/html"><?=htmlspecialchars($this->title)?></h4>
+<h4 class="text-align-center"><?=htmlspecialchars($this->title)?></h4>
 
 <ul class="comments">
     <?php foreach ($this->comments as $comment): ?>
