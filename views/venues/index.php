@@ -17,7 +17,7 @@
                         <th><?=$venue["venue_name"]?></th>
                         <th><?=$venue["sport"]?></th>
                         <th><?=$venue["capacity"]?></th>
-                        <th><button class="ui teal icon button" id="venue<?=$venue["id"]?>" >
+                        <th><button class="ui teal icon button" id="venue<?=$venue["id"]?>" type="button" >
                                 <i class="eye icon"></i>View
                             </button></th>
                     </tr>

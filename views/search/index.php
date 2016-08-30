@@ -56,5 +56,5 @@
     <?php endif ?>
   </table>
 <?php else: ?>
-Nothing found
+<h2>Nothing found</h2>
 <?php endif ?>
