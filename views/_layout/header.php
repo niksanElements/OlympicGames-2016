@@ -11,7 +11,10 @@
     <script src="<?=APP_ROOT?>/content/semantic/semantic.min.js"></script>
     <script src="<?=APP_ROOT?>/content/styles/js/bootstrap.min.js"></script>
     <script src="<?=APP_ROOT?>/content/styles/js/blog-scripts.js"></script>
-    <mata charset="utf-8"></mata>
+    <meta charset="utf-8"></meta>
+    <style>
+      .navbar-inverse {background-color: #EEE;}
+    </style>
 </head>
 <body>
 <header>
