@@ -30,7 +30,6 @@
                 <li class="dropdown text-center "><a class="dropdown-toggle" data-toggle="dropdown"  href="#">Olympic Info</a>
                     <ul class="dropdown dropdown-menu">
                         <li class="special"><a  href="<?=APP_ROOT?>/countries/" >Countries</a></li>
-                        <li class="special"><a  href="<?=APP_ROOT?>/medals/">Medals</a></li>
                         <li class="special"><a  href="<?=APP_ROOT?>/sports/">Sports</a></li>
                         <li class="special"><a  href="<?=APP_ROOT?>/athletes/">Athletes</a></li>
                         <li class="special"><a  href="<?=APP_ROOT?>/venues/">Venues</a></li>
@@ -48,9 +47,9 @@
                 <li class="dropdown text-center"><a class="dropdown-toggle" data-toggle="dropdown"  href="#">
                         <span class="[ glyphicon glyphicon-search ]"></span></a>
                     <form action="<?=APP_ROOT?>/search" method="post" class="dropdown-menu search">
-                        <div class="">
-                        <input class="form-control" type="text" name="search" value="Search Our Website&hellip;"
-                               onfocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;" /><br />
+                        <div>
+                        <input class="form-control" type="text" name="search" value="Search"
+                               onfocus="this.value=(this.value=='Search')? '' : this.value ;" style="width:150px;" /><br />
                         <input type="checkbox" name="news" value="1" checked="checked" />News &nbsp;
                         <input type="checkbox" name="posts" value="1" checked="checked" />Posts<br />
                         <input type="submit" name="go" id="go" value="Search" />
@@ -83,4 +82,3 @@
 </header>
 <?php require_once('show-notify-messages.php'); ?>
 <?php require_once('show-validation-errors.php'); ?>
-

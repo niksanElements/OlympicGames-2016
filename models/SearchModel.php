@@ -22,7 +22,6 @@ class SearchModel extends BaseModel
     {
       $query .= " OR title LIKE '%" . $searchWord . "%' OR body LIKE '%" . $searchWord . "%'";
     }
-    var_dump($query);
     $statement = self::$db->query($query);
     $result = $statement->fetch_all(MYSQLI_ASSOC);
     return $result;
