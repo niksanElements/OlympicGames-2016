@@ -20,9 +20,9 @@ class ContactusModel extends BaseModel
     public function getById(int $id) :array
     {
         $statement = self::$db->prepare(
-            "SELECT contactus.id, name, body, age, education, work , passion
-            FROM contactus 
-            WHERE contactus.id = ?");
+            "SELECT id, name, body, age, education, work , passion
+            FROM contactus
+            WHERE id = ?");
         $statement->bind_param("i",$id);
         $statement->execute();
         $result = $statement->get_result()->fetch_assoc();
@@ -31,7 +31,7 @@ class ContactusModel extends BaseModel
 
     public function edit(string $name, string $body,int $age,string $education,string $work,string $passion,int $id ) : bool{
         $statement = self::$db->prepare(
-            "UPDATE contactus 
+            "UPDATE contactus
             SET name = ?, body=?, age=?, education=?, work=?, passion = ?
             WHERE id=?"
         );

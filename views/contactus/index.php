@@ -34,11 +34,8 @@
                                 if ($contact['id'] == 6) {
                                     echo APP_ROOT . '/content/styles/images/stefan_delchev.jpg';
                                 }
-                                if ($contact['id'] >= 7) {
-                                    echo APP_ROOT . '/content/styles/images/dawe.jpg';
-                                }
                             }
-                            ?>" class="img-responsive img-rounded img-center" alt="Ne Zarejda PICTURE">
+                            ?>" class="img-responsive img-rounded img-center" alt="">
                             <div class="panel-card-info">
                                 <div class="panel-heading-card">
                                     <h4><?= htmlspecialchars($contact['name']) ?></h4>

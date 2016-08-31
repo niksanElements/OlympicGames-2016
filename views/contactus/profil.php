@@ -6,7 +6,28 @@
             <div class="panel">
                 <div class="img-responsive panel-heading panel-group container-fluid">
                     <div class="col-lg-5">
-                        <img src="<?=APP_ROOT?>/content/styles/images/dawe.jpg" class="img-thumbnail " width="auto" height="250">
+                      <img  src="<?php
+                      if(isset($this->contactus['id'])) {
+                          if ($this->contactus['id'] == 1) {
+                              echo APP_ROOT . '/content/styles/images/dawe.jpg';
+                          }
+                          if ($this->contactus['id'] == 2) {
+                              echo APP_ROOT . '/content/styles/images/dawe.jpg';
+                          }
+                          if ($this->contactus['id'] == 3) {
+                              echo APP_ROOT . '/content/styles/images/dawe.jpg';
+                          }
+                          if ($this->contactus['id'] == 4) {
+                              echo APP_ROOT . '/content/styles/images/dawe.jpg';
+                          }
+                          if ($this->contactus['id'] == 5) {
+                              echo APP_ROOT . '/content/styles/images/dawe.jpg';
+                          }
+                          if ($this->contactus['id'] == 6) {
+                              echo APP_ROOT . '/content/styles/images/stefan_delchev.jpg';
+                          }
+                      }
+                      ?>" class="img-responsive img-rounded img-center" alt="">
                     </div>
                     <h1 class="col-lg-7 text-info"><?= htmlspecialchars($this->contactus['name']) ?></h1>
                 </div>
