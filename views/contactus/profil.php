@@ -16,10 +16,10 @@
                               echo APP_ROOT . '/content/styles/images/dawe.jpg';
                           }
                           if ($this->contactus['id'] == 3) {
-                              echo APP_ROOT . '/content/styles/images/dawe.jpg';
+                              echo APP_ROOT . '/content/styles/images/tani.JPG';
                           }
                           if ($this->contactus['id'] == 4) {
-                              echo APP_ROOT . '/content/styles/images/dawe.jpg';
+                              echo APP_ROOT . '/content/styles/images/neli.JPG';
                           }
                           if ($this->contactus['id'] == 5) {
                               echo APP_ROOT . '/content/styles/images/dawe.jpg';
