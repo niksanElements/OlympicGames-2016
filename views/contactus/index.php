@@ -20,7 +20,7 @@
                                     echo APP_ROOT . '/content/styles/images/dawe.jpg';
                                 }
                                 if ($contact['id'] == 2) {
-                                    echo APP_ROOT . '/content/styles/images/dawe.jpg';
+                                    echo APP_ROOT . '/content/styles/images/niki.jpg';
                                 }
                                 if ($contact['id'] == 3) {
                                     echo APP_ROOT . '/content/styles/images/tani.JPG';
@@ -29,7 +29,7 @@
                                     echo APP_ROOT . '/content/styles/images/neli.jpg';
                                 }
                                 if ($contact['id'] == 5) {
-                                    echo APP_ROOT . '/content/styles/images/dawe.jpg';
+                                    echo APP_ROOT . '/content/styles/images/IgorChelikov.jpg';
                                 }
                                 if ($contact['id'] == 6) {
                                     echo APP_ROOT . '/content/styles/images/stefan_delchev.jpg';
