@@ -21,6 +21,9 @@
           <a class="btn btn-primary btn-block"  href="<?=APP_ROOT?>/managecontactus/">Team Members</a>
         </li>
         <li class="list-group-item-text">
+          <a class="btn btn-primary btn-block"  href="<?=APP_ROOT?>/managesports/">Sports</a>
+        </li>
+        <li class="list-group-item-text">
           <a class="btn btn-primary btn-block"  href="<?=APP_ROOT?>/manageathletes/">Athletes</a>
         </li>
         <li class="list-group-item-text">
