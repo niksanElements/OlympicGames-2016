@@ -5,7 +5,7 @@ class ContactusController extends BaseController
     {
         $this->contactus = $this->model->getContactus();
     }
-    
+
     public function create()
     {
         if($this->isPost){
