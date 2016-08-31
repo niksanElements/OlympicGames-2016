@@ -4,7 +4,6 @@
         <form>
             <div class="text-right ">
                 <a class="positive ui button"  href="<?=APP_ROOT?>/news/create">
-                    <span class="glyphicon glyphicon-plus">Add News</span> </a><br /><br />
             </div>
         <table class="ui table tablet stackable">
                 <th>ID</th>
