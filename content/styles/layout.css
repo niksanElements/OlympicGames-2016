@@ -225,6 +225,10 @@ form {
     margin: 0 auto;
 }
 
+p{
+    word-wrap:break-word;
+}
+
 .text-align-center{
     text-align:center;
 }
