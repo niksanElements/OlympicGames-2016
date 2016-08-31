@@ -1,7 +1,7 @@
 <h1><?= htmlspecialchars($this->title) ?></h1>
 
 <?php
-    include("_layout\actions.php");
+    include("_layout/actions.php");
 ?>
 
 
@@ -14,4 +14,4 @@
     <p class="body panel panel-body"><?= $this->post['body']?></p>
     
 </article>
- <?php include ("_layout\comments.php"); ?>
+ <?php include ("_layout/comments.php"); ?>
