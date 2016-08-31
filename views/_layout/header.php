@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="<?=APP_ROOT?>/content/styles/layout.css"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="<?=APP_ROOT?>/content/semantic/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="<?=APP_ROOT?>/content/styles/css/fix-tinymce.css"/>
 
     <script src="<?=APP_ROOT?>/content/styles/js/jquery-3.1.0.min.js"></script>
     <script src="<?=APP_ROOT?>/content/semantic/semantic.min.js"></script>
