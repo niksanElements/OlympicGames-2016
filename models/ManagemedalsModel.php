@@ -120,17 +120,17 @@ class ManagemedalsModel extends BaseModel
     $statement = self::$db->prepare("DELETE FROM medals_has_countries WHERE medals_id = ?");
     $statement->bind_param("i", $id);
     $statement->execute();
-    if($statement->affected_rows == 1)
+    if(!$statement->errno)
     {
       $statement = self::$db->prepare("DELETE FROM medals_has_players WHERE medals_id = ?");
       $statement->bind_param("i", $id);
       $statement->execute();
-      if($statement->affected_rows == 1)
+      if(!$statement->errno)
       {
         $statement = self::$db->prepare("DELETE FROM medals WHERE id = ?");
         $statement->bind_param("i", $id);
         $statement->execute();
-        if($statement->affected_rows == 1)
+        if(!$statement->errno)
         {
           return true;
         }
