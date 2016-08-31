@@ -22,7 +22,7 @@ class ManagecontactusController extends BaseController
       }
 
       $body = $_POST["body"];
-      if (strlen($body) < 1 or strlen($body) > 10000) {
+      if (strlen($body) < 0 or strlen($body) > 10000) {
         $this->setValidationError("contactus", "Invalid text size");
       }
 
