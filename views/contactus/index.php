@@ -38,13 +38,13 @@
                             ?>" class="img-responsive img-rounded img-center" alt="">
                             <div class="panel-card-info">
                                 <div class="panel-heading-card">
-                                    <h4><?= htmlspecialchars($contact['name']) ?></h4>
+                                    <h4><?= htmlspecialchars_decode($contact['name']) ?></h4>
                                 </div>
                                 <div class="panel-info">
-                                    <h5><?= htmlspecialchars($contact['work']) ?></h5>
+                                    <h5><?= htmlspecialchars_decode($contact['work']) ?></h5>
                                 </div>
                                 <div class="panel-card-text content-2">
-                                    <?= htmlspecialchars($contact['body']) ?>
+                                    <?= htmlspecialchars_decode($contact['body']) ?>
                                 </div>
                             </div>
                         </a>
