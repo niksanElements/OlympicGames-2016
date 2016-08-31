@@ -13,7 +13,7 @@
 
 <form class="form-horizontal"  method="post" accept-charset="UTF-8">
     <textarea class="content-2" name="comment"></textarea><br/>
-    <input class="submit input-sm" type="submit" name="submit" value="commenting"/>
+    <input class="input-sm" type="submit" name="submit" value="commenting"/>
 
 </form>
 
