@@ -1,7 +1,6 @@
 <h1>Edit Team Member</h1>
 <main>
   <div class="container">
-    <form>
 
     <script src="<?=APP_ROOT?>/content/tinymce/tinymce.min.js"></script>
     <script>tinymce.init({ selector:'textarea' });</script>
@@ -39,6 +38,5 @@
     </form>
       <a class="btn btn-primary pull-right" href="<?=APP_ROOT?>/managecontactus" >
         <span class="glyphicon glyphicon-backward"> <b>Back</b></span></a>
-    </form>
   </div>
 </main>
