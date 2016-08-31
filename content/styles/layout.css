@@ -1,4 +1,4 @@
-@charset "utf-8";
+ @charset "utf-8";
 /*
 Template Name: Newserific
 Author: <a href="http://www.os-templates.com/">OS Templates</a>
@@ -227,5 +227,12 @@ form {
 
 .text-align-center{
     text-align:center;
+}
+.comments{
+    width: 60%;
+    margin: 0 auto;
+}
+.stepin{
+    width: 100%;margin: 0 auto;
 }
 

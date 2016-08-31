@@ -1,6 +1,7 @@
-<div class="container-fluid">
-    <div class="dropdown col-lg-2 col-md-2 col-sm-2">
-        <button class=" btn-block dropdown-toggle" data-toggle="dropdown">recent</button>
+<form>
+    <div class="ui violet button dropdown col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <i class=" btn-block dropdown-toggle" data-toggle="dropdown">
+            <span class="glyphicon glyphicon-arrow-down"> Recent</span></i>
         <ul class="dropdown-menu">
             <?php foreach ($this->recentPosts as $post) : ?>
                 <li>
@@ -11,8 +12,9 @@
             <?php endforeach; ?>
         </ul>
     </div>
-    <div class="dropdown col-lg-2 col-md-2 col-sm-2">
-        <button class=" btn-block dropdown-toggle" data-toggle="dropdown">dictionary</button>
+    <div class="ui violet button dropdown col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <div class=" btn-block dropdown-toggle" data-toggle="dropdown">
+            <span class="glyphicon glyphicon-book"> Dictionary</span></div>
         <ul class="dropdown-menu">
             <li><a href="<?= APP_ROOT ?>/forum/dictionary/all">all</a> </li>
             <?php for ($i = 65;$i <= 90;$i++) { ?>
@@ -23,9 +25,11 @@
         </ul>
     </div>
     <?php if($this->isLoggedIn){ ?>
-        <div class="action">
-            <a class="col-lg-2 col-md-2 col-sm-2" href="<?=APP_ROOT?>/forum/add">[add]</a>
-        </div>
+    <a href="<?=APP_ROOT?>/forum/add">
+    <div class="ui green button col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <i><span class=" glyphicon glyphicon-plus-sign">Add</span></i>
+    </div>
+        </a>
     <?php } ?>
-</div>
-</div>
+
+</form>
