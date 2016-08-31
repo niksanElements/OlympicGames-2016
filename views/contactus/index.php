@@ -32,7 +32,7 @@
                                     echo APP_ROOT . '/content/styles/images/dawe.jpg';
                                 }
                                 if ($contact['id'] == 6) {
-                                    echo APP_ROOT . '/content/styles/images/dawe.jpg';
+                                    echo APP_ROOT . '/content/styles/images/stefan_delchev.jpg';
                                 }
                                 if ($contact['id'] >= 7) {
                                     echo APP_ROOT . '/content/styles/images/dawe.jpg';
