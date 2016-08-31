@@ -1,19 +1,26 @@
 <?php $this->title = 'Comments'; ?>
 
-<h4 xmlns="http://www.w3.org/1999/html"><?=htmlspecialchars($this->title)?></h4>
+<h3 class="text-center"><?=htmlspecialchars($this->title)?></h3>
 
-<ul class="comments">
+<div class="comments">
+    <div class="ui vertical steps stepin">
     <?php foreach ($this->comments as $comment): ?>
-        <li>
-            <div class="cdata"><?= (new DateTime($comment['date']))->format('d-M-Y') ?> </div>
-            <div class="content-2"><?=$comment['body']?></div>
-        </li>
-    <?php endforeach; ?>
-</ul>
+        <div class="ui active step teal segment">
+            <i class="comment icon"></i>
+            <div class="center-block">
+                <div class="title"><?= (new DateTime($comment['date']))->format('d-M-Y') ?> </div>
+                <div class="description"><?=$comment['body']?></div>
+            </div>
+        </div>
+        <?php endforeach; ?>
+</div>
 
-<form class="form-horizontal"  method="post" accept-charset="UTF-8">
-    <textarea class="content-2" name="comment"></textarea><br/>
-    <input class="input-sm" type="submit" name="submit" value="commenting"/>
-
+<form class="ui reply form" method="post" accept-charset="UTF-8">
+    <div class="field">
+        <textarea class="content-2" name="comment"></textarea>
+    </div>
+    <button class="ui blue labeled submit icon button" type="submit" name="submit" >
+        <i class="icon edit"></i> Add Reply
+    </button>
 </form>
 

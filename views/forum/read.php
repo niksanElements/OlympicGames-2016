@@ -7,7 +7,7 @@
             ?>
         </div>
 
-        <form>
+        <form method="post">
             <div class="ui attached segment">
                 <div class="ui violet segment">
 
