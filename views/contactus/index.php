@@ -23,7 +23,7 @@
                                     echo APP_ROOT . '/content/styles/images/dawe.jpg';
                                 }
                                 if ($contact['id'] == 3) {
-                                    echo APP_ROOT . '/content/styles/images/tani.jpg';
+                                    echo APP_ROOT . '/content/styles/images/tani.JPG';
                                 }
                                 if ($contact['id'] == 4) {
                                     echo APP_ROOT . '/content/styles/images/neli.jpg';
