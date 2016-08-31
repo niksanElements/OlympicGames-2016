@@ -65,38 +65,58 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-    </div>
-    <section class="col-lg-12 col-md-12 col-sm-12">
+
+    <form class="col-lg-12 col-md-12 col-sm-12">
         <aside class="col-lg-4 col-md-4 col-sm-6">
-            <h4 class="text-align-center">News</h4>
-            <ul>
+            <h3 class="text-align-center">News</h3>
+            <div class=" ui secondary segment header">
                 <?php foreach ($this->news as $el): ?>
-                    <li>
-                        <a href="<?= APP_ROOT?>/news/read/<?= $el['id']?>"><?= $el['title'] ?></a>
-                    </li>
+                    <div class="ui teal segment">
+                        <a href="<?= APP_ROOT?>/news/read/<?= $el['id']?>">
+                        <div class="text-center"><?= $el['title'] ?></div>
+                        </a>
+                    </div>
                 <?php endforeach; ?>
-            </ul>
+            </div>
         </aside>
         <aside class="col-lg-4 col-md-4 col-sm-6">
-            <h4 class="text-align-center">Forum</h4>
-            <ul>
+            <h3 class="text-align-center">Forum</h3>
+            <div class=" ui secondary segment header">
                 <?php foreach ($this->posts as $el): ?>
-                    <li>
-                        <a href="<?= APP_ROOT?>/forum/read/<?= $el['id']?>"><?= $el['title'] ?></a>
-                    </li>
+                    <div class="ui teal segment">
+                        <a href="<?= APP_ROOT?>/forum/read/<?= $el['id']?>">
+                        <div class="text-center"><?= $el['title'] ?></div>
+                        </a>
+                    </div>
                 <?php endforeach; ?>
-            </ul>
+                </div>
         </aside>
         <aside class="col-lg-4 col-md-4 col-sm-6">
-            <h4 class="text-align-center">Countries</h4>
-            <ul>
+            <h3 class="text-align-center">Countries</h3>
+            <div class=" ui secondary segment header">
                 <?php foreach ($this->countries as $el): ?>
-                    <li>
-                        <spam><?= $el['countryShort'] ?></spam> -
-                        <spam><?= $el['medalsTotal'] ?> </spam>
-                    </li>
+                    <div class="ui teal segment">
+                        <div class="text-center">
+                            <a href="<?= APP_ROOT?>/countries">
+                            <i class="<?php
+                            $str = $el['countryShort'];
+                            $str = strtolower($str);
+                            echo $str;
+                            ?> flag"></i>
+                            <?= $el['countryShort'] ?></div>
+
+                        <div class="text-center">
+
+                           <i>Medals</i>
+                            <?= $el['medalsTotal'] ?>
+
+                        </div>
+                        </a>
+
+                    </div>
                 <?php endforeach; ?>
-            </ul>
+                </div>
         </aside>
-    </section>
+    </form>
+    </div>
 </main>

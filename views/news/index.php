@@ -13,12 +13,14 @@
         <?php foreach ($this->news as $element):?>
 
             <article class="panel panel-group col-lg-5 col-md-5 col-sm-5">
+                <div class="ui teal segment">
                 <a href="<?=APP_ROOT?>/news/read/<?=$element['id']?>">
-                    <h4 class="panel panel-heading"><?= htmlspecialchars($element['title']) ?></h4>
+                    <h3 class="panel panel-heading"><?= htmlspecialchars($element['title']) ?></h3>
                 </a>
                 <div class="date panel panel-info">Post on:
                     <?= (new DateTime($element['date']))->format('d-M-Y') ?>
                     <i>by</i> <?= htmlspecialchars($element['full_name']) ?>
+                </div>
                 </div>
             </article>
         <?php endforeach ?>
