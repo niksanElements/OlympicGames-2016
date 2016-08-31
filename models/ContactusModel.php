@@ -5,7 +5,7 @@ class ContactusModel extends BaseModel
     public function getContactus() : array
     {
         $statement  = self::$db->query(
-            "SELECT * FROM contactus");
+            "SELECT * FROM contactus ORDER BY id ASC");
         return  $statement->fetch_all(MYSQLI_ASSOC);
     }
 
