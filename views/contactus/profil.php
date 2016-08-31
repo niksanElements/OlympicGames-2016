@@ -53,7 +53,7 @@
                         <tr>
                             <th ><img src="<?=APP_ROOT?>/content/styles/images/age.png"></th>
                             <td>Age:</td>
-                            <td><?= htmlspecialchars_decode($this->contactus['education']) ?></td>
+                            <td><?= htmlspecialchars_decode($this->contactus['age']) ?></td>
                         </tr>
                     </table>
                 </div>
