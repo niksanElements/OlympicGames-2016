@@ -15,7 +15,7 @@
                         <img src="<?= APP_ROOT ?>/content/styles/images/rio-olympics.jpg"
                                          alt="Chania" width="460" height="345">
                         <div class="carousel-caption">
-                            <h3>Place</h3>
+                            <h3>Venues</h3>
                             <p>See Where Olympic Games Will Take Place</p>
                         </div>
                     </a>
@@ -37,7 +37,7 @@
                              alt="Flower" width="460" height="345">
                         <div class="carousel-caption">
                             <h3>Athletes</h3>
-                            <p>See All Athletes In Olympic Games</p>
+                            <p>See All Athletes In The Olympic Games</p>
                         </div>
                     </a>
                 </div>
@@ -48,7 +48,7 @@
                              alt="Flower" width="460" height="345">
                         <div class="carousel-caption">
                             <h3>News</h3>
-                            <p>Follow All News From Olympic Games</p>
+                            <p>Follow All News From The Olympic Games</p>
                         </div>
                     </a>
                 </div>
