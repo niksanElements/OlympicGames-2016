@@ -36,14 +36,23 @@ class ManagecountriesController extends BaseController
         $this->authorizeAdmin();
         $this->country = $this->model->getCountry($id);
         if($this->isPost) {
-            $fullName = $_POST['full_name'];
-            $shortName = $_POST['short_name'];
-            if($this->model->editCountry($id, $fullName, $shortName)){
-                $this->addInfoMessage("Success!!");
-                $this->redirect("managecountries");
+            $fullName = $_POST["full_name"];
+            if (strlen($fullName) < 2 || strlen($fullName) > 100) {
+                $this->setValidationError("full_name", "Invalid country name");
             }
-            else{
-                $this->addErrorMessage("Place try again!");
+            $shortName = $_POST["short_name"];
+            if (strlen($shortName) < 1 or strlen($shortName) > 3) {
+                $this->setValidationError("short_name", "Invalid country name");
+            }
+            if($this->formValid())
+            {
+              if($this->model->editCountry($id, $fullName, $shortName)){
+                  $this->addInfoMessage("Success!!");
+                  $this->redirect("managecountries");
+              }
+              else{
+                  $this->addErrorMessage("Place try again!");
+              }
             }
         }
     }
