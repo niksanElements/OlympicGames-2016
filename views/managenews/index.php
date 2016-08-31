@@ -2,15 +2,15 @@
 <main>
     <div class="container">
         <form>
-            <table class="ui table tablet stackable col-sm-2">
-                    <th class="col-sm-1">ID</th>
-                    <th class="col-sm-1">Title</th>
-                    <th class="col-sm-1">Comments:</th>
-                    <th class="col-sm-1">User Id</th>
-                    <th class="col-sm-1">Date</th>
-                    <th class="col-sm-1">Action</th>
+            <table class="ui table tablet stackable">
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Comments:</th>
+                    <th>User Id</th>
+                    <th>Date</th>
+                    <th>Action</th>
                 <?php foreach($this->news as $element): ?>
-                    <tr class="col-sm-111">
+                    <tr>
                         <th><?=$element["id"]?></th>
                         <th><?=$element["title"]?></th>
                         <th >
