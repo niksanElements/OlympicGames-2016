@@ -15,10 +15,6 @@
             <textarea class="content" name="body"><?=htmlspecialchars($this->news['body'])?></textarea>
             <br/>
 
-            <label class="control-label" for="tags">Tags</label>
-            <input class="form-control" type="text" name="tags"/><br/>
-
-
             <button class="btn btn-primary" type="submit" name="submit">
                 <span class="glyphicon glyphicon-save"> Save</span>
             </button>
