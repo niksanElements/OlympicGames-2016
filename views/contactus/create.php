@@ -6,7 +6,7 @@
 
     <div>Name</div>
     <input class="form-control" type="text" name="name"/>
-    <div>Body:</div>
+    <div>Some other info</div>
     <textarea class="form-control" rows="10" name="body"></textarea>
     <div>Age</div>
     <input class="form-control" type="number" name="age"/>

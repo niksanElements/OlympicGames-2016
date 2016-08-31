@@ -1,4 +1,4 @@
-<h1>Profil</h1>
+<h1>Profile</h1>
 
 <main>
     <div class="container">
@@ -56,7 +56,7 @@
                         </tr>
                     </table>
                 </div>
-                <h2>Tekst</h2>
+                <h2>Other Info</h2>
                 <div>
                <textarea class="content" name="body" readonly>
                    <?= htmlspecialchars($this->contactus['body']) ?>
