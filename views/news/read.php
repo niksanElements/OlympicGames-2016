@@ -7,15 +7,16 @@
         <i>by</i> <?= htmlspecialchars($this->news['full_name']) ?>
     </div>
     <p class="body panel panel-body"><?= $this->news['body']?></p>
-
-    <?php
+</article>
+<article class="panel panel-group center-block news">
+<?php
     if($this->isRedactor) {
-    ?>
+        ?>
         <div class="action">
             <div>[<a href="<?= APP_ROOT ?>/news/edit/<?= $this->news['id'] ?>">edit</a>]</div>
             <div>[<a href="<?= APP_ROOT ?>/news/remove/<?= $this->news['id'] ?>">delete</a>]</div>
         </div>
-    <?php
+        <?php
     }
     include ("_layout/comments.php");
     ?>

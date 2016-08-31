@@ -14,8 +14,4 @@
     <p class="body panel panel-body"><?= $this->post['body']?></p>
 
 </article>
-<<<<<<< HEAD
  <?php include ("_layout/comments.php"); ?>
-=======
- <?php include ("_layout\comments.php"); ?>
->>>>>>> 6cad598997bfa9a6da37395c6cd21a23b9916371
