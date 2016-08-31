@@ -15,10 +15,12 @@
             <textarea class="content" name="body"></textarea>
             <br/>
 
-            <input class="submit" type="submit" name="submit" value="submit"/>
+            <button class="btn btn-primary btn-success pull-left" type="submit" name="submit" >
+                <span class="glyphicon glyphicon-plus-sign"> <b>Create</b></span></button>
 
         </form>
-        <div class="action pull-right">[<a href="<?= APP_ROOT ?>/news">back</a>]</div>
+        <a class="btn btn-primary pull-right" href="<?=APP_ROOT?>/news" >
+            <span class="glyphicon glyphicon-backward"> <b>Back</b></span></a>
     </div>
 </main>
 

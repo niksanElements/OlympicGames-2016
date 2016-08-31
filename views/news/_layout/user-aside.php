@@ -1,11 +1,13 @@
 <aside>
-    <ul class="scroll navbar navbar-inverse col-lg-2 col-md-2 col-sm-2">
-        <li><a href="<?= APP_ROOT?>/news/create">Create</a></li>
-        <h4 class="publications">Yours publications:</h4>
+    <div class="scroll navbar navbar-inverse col-lg-2 col-md-2 col-sm-2">
+        <a class="btn btn-primary btn-success center-block"href="<?= APP_ROOT?>/news/create" >
+            <span class="glyphicon glyphicon-plus"> <b>Create</b></span></a>
+        <h3 class="text-center">Yours publications:</h3>
         <?php foreach ($this->userNews as $element) : ?>
-            <li class="news">
-                <a href="<?= APP_ROOT?>/news/read/<?=$element['id']?>"><?= $element['title'] ?></a>
-            </li>
+            <div class=" ui active step teal segment">
+                <i class="newspaper icon"></i>
+                <a class="title" href="<?= APP_ROOT?>/news/read/<?=$element['id']?>"><?= $element['title'] ?> </a>
+            </div>
         <?php endforeach; ?>
-    </ul>
+    </div>
 </aside>
