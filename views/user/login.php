@@ -26,7 +26,7 @@
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10" >
                 <button type="submit" name="Submit" class="btn btn-primary">
-                    <span class="glyphicon glyphicon-log-in"></span> Sign in</button>
+                    <span class="glyphicon glyphicon-log-in"></span> Login</button>
             </div>
         </div>
     </form>

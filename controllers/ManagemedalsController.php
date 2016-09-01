@@ -47,10 +47,10 @@ class ManagemedalsController extends BaseController
     {
       $name = $_POST["name"];
       if (strlen($name) < 1 || strlen ($name)> 100) {
-          $this->setValidationError("medal", "Invalid medal info");
+          $this->setValidationError("name", "Invalid medal name");
       }
       $type = $_POST["type"];
-      if ($type < 1 and $type > 3) {
+      if ($type < 1 or $type > 3) {
         $this->setValidationError("medal", "Invalid medal info");
       }
       $playerID = $_POST["playerID"];

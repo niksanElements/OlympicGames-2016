@@ -34,7 +34,7 @@
             </div>
             <div class="form-group" style="align-content: center; margin-left:40%;margin-right: 10%;">
                 <div class="col-sm-offset-2 col-sm-10" >
-                    <button type="submit" name="Submit" class="btn btn-primary">Registrate</button>
+                    <button type="submit" name="Submit" class="btn btn-primary">Sign Up</button>
                 </div>
             </div>
         </form>

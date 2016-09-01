@@ -15,7 +15,7 @@ class ManagesportsController extends BaseController
     {
       $name = $_POST["name"];
       if (strlen($name) < 2 || strlen ($name)> 100) {
-          $this->setValidationError("sport", "Invalid sport name");
+          $this->setValidationError("name", "Invalid sport name");
       }
       $venueID = $_POST["venueID"];
 
@@ -44,7 +44,7 @@ class ManagesportsController extends BaseController
     {
       $name = $_POST["name"];
       if (strlen($name) < 2 || strlen ($name)> 100) {
-          $this->setValidationError("sport", "Invalid sport name");
+          $this->setValidationError("name", "Invalid sport name");
       }
       $venueID = $_POST["venueID"];
 

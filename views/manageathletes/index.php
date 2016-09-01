@@ -4,7 +4,7 @@
     <form>
       <div class="text-right ">
         <a class="positive ui button  "  href="<?=APP_ROOT?>/manageathletes/add">
-          <span class="glyphicon glyphicon-plus-sign">Add Country</span> </a><br />
+          <span class="glyphicon glyphicon-plus-sign">Add Athlete</span> </a><br />
       </div>
       <table class="ui table tablet stackable">
         <tr>

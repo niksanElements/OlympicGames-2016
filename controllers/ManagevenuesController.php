@@ -14,15 +14,15 @@ class ManagevenuesController extends BaseController
     {
       $venue_name = $_POST["venue_name"];
       if (strlen($venue_name) < 2 || strlen ($venue_name)> 100) {
-          $this->setValidationError("venues", "Invalid venue name");
+          $this->setValidationError("venue_name", "Invalid venue name");
       }
       $sport = $_POST["sport"];
       if (strlen($sport) < 2 || strlen ($sport)> 100) {
-        $this->setValidationError("venues", "Invalid venue sport");
+        $this->setValidationError("sport", "Invalid venue sport");
       }
       $capacity = $_POST["capacity"];
-      if ($capacity < 0 and $capacity > 1000000) {
-        $this->setValidationError("venues", "Invalid venue capacity");
+      if (!$capacity or $capacity < 0) {
+        $this->setValidationError("capacity", "Invalid venue capacity");
       }
       $lon = $_POST["lon"];
       $lat = $_POST["lat"];
@@ -51,15 +51,15 @@ class ManagevenuesController extends BaseController
     {
       $venue_name = $_POST["venue_name"];
       if (strlen($venue_name) < 2 || strlen ($venue_name)> 100) {
-        $this->setValidationError("venues", "Invalid venue name");
+        $this->setValidationError("venue_name", "Invalid venue name");
       }
       $sport = $_POST["sport"];
       if (strlen($sport) < 2 || strlen ($sport)> 100) {
-        $this->setValidationError("venues", "Invalid venue sport");
+        $this->setValidationError("sport", "Invalid venue sport");
       }
       $capacity = $_POST["capacity"];
-      if ($capacity < 0 || $capacity > 1000000) {
-        $this->setValidationError("venues", "Invalid venue capacity");
+      if (!$capacity || $capacity < 0) {
+        $this->setValidationError("capacity", "Invalid venue capacity");
       }
       $lon = $_POST["lon"];
       $lat = $_POST["lat"];

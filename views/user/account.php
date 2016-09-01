@@ -9,19 +9,12 @@
             <table class="table table-responsive">
                 <tbody>
                 <tr class="col-2">
-                    <th>Username:</th>
+                    <th>Full name:</th>
                     <th class="col-xs-12">
                         <div class="col-xm-12">
-                            <input type="text" name="username" value="<?=$this->user["username"]?>"
-                                   class="form-control" id="username">
+                          <input type="text" name="full_name" value="<?=$this->user["full_name"]?>"
+                                 class="form-control" id="full_name" placeholder="Password" maxlength="50">
                         </div>
-                    </th>
-                </tr>
-                <tr>
-                    <th>Full name:</th>
-                    <th>
-                        <input type="text" name="full_name" value="<?=$this->user["full_name"]?>"
-                               class="form-control" id="full_name" placeholder="Password" maxlength="50">
                     </th>
                 </tr>
                 <tr>
@@ -51,7 +44,7 @@
                 </tr>
                 <tr>
                     <th colspan="2">
-                        
+
                         <button type="submit" name="submit-edit" class="btn btn-primary">
                             <span class="glyphicon glyphicon-save"></span>Save</button>
                     </th>

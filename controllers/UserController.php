@@ -22,7 +22,7 @@ class UserController extends BaseController
                 $this -> setValidationError("password", "Invalid Password - password must be at least 3 symbols.");
             }
             if ($password != $passwordRepeat) {
-                $this -> setValidationError("password", "The 2 passwords do not match.");
+                $this -> setValidationError("password-repeat", "The 2 passwords do not match.");
             }
 
             $fullName =$_POST['fullName'];
@@ -81,12 +81,14 @@ class UserController extends BaseController
             }
         }
     }
+
     public function logout()
     {
         session_destroy();
         $this->addInfoMessage("Logout successful.");
         $this->redirect("home");
     }
+
     public function account()
     {
         $this->authorize();
@@ -99,7 +101,7 @@ class UserController extends BaseController
             $password_confirm = $_POST["password_confirm"];
 
             if (strlen($full_name) < 2|| strlen ($full_name)> 200) {
-                $this->setValidationError("fullName", "Full Name must be between 2 and 200 characters.");
+                $this->setValidationError("full_name", "Full Name must be between 2 and 200 characters.");
             }
             if (strlen($email) < 2 || strlen($email) > 80) {
                 $this->setValidationError("email", "Please, enter your email address.");
